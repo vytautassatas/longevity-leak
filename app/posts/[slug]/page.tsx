@@ -82,10 +82,10 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--muted)]">
               <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK
             </p>
-            <h1 className="mt-6 text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.1] sm:text-5xl md:text-6xl">
               {post.title}
             </h1>
-            <p className="mt-8 text-2xl font-normal leading-[1.6] text-[var(--muted)] sm:text-3xl">
+            <p className="mt-8 text-xl font-normal leading-[1.6] text-[var(--muted)] sm:text-2xl">
               {post.excerpt}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
