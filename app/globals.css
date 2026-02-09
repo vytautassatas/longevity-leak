@@ -3,19 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --text: #e5e5e5;
-  --muted: #a3a3a3;
+  --bg: #070709;
+  --surface: #0f1014;
+  --surface-soft: #0b0c10;
+  --text: #ededf2;
+  --muted: #9ea2ad;
   --accent: #ff6b00;
-  --border: rgba(229, 229, 229, 0.14);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.26);
 }
 
 :root[data-theme="light"] {
-  --bg: #fafafa;
-  --text: #1a1a1a;
-  --muted: #616161;
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface-soft: #fbfbfc;
+  --text: #15161a;
+  --muted: #5e6470;
   --accent: #e55b00;
-  --border: rgba(26, 26, 26, 0.14);
+  --border: rgba(21, 22, 26, 0.12);
+  --border-strong: rgba(21, 22, 26, 0.22);
 }
 
 * {
@@ -41,6 +47,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   transition: background-color 200ms ease, color 200ms ease;
+  background-image: radial-gradient(1200px 500px at 50% -20%, rgba(255, 255, 255, 0.08), transparent 55%);
 }
 
 a {
@@ -51,4 +58,8 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.news-card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
 }

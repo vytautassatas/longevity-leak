@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PostCard } from "@/components/post-card";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { getAllTags, getPostsByTag } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
@@ -46,21 +47,23 @@ export default async function TagPage({ params }: { params: MaybePromise<Params>
   const posts = getPostsByTag(tag);
 
   return (
-    <main className="mx-auto max-w-[660px] px-5 pb-14 pt-8">
-      <header className="mb-8 flex items-center justify-between gap-4">
-        <Link className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]" href="/">
-          ← Back
-        </Link>
-        <ThemeToggle />
-      </header>
+    <>
+      <SiteHeader />
+      <main className="mx-auto w-full max-w-5xl px-5 pb-12 pt-10">
+        <header className="mb-7">
+          <Link className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
+            ← Back to news
+          </Link>
+          <h1 className="mt-4 text-5xl font-extrabold leading-[1.1] tracking-tight">Posts tagged: {tag}</h1>
+        </header>
 
-      <h1 className="text-4xl font-extrabold leading-[1.2] tracking-tight">Posts tagged: {tag}</h1>
-
-      <nav aria-label={`Posts tagged ${tag}`} className="mt-6">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
-      </nav>
-    </main>
+        <nav aria-label={`Posts tagged ${tag}`} className="grid gap-4 sm:gap-5">
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </nav>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
