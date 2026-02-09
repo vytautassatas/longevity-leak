@@ -21,7 +21,7 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
           </p>
-          <h2 className="text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          <h2 className="text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
             <Link className="transition-opacity hover:opacity-80" href={`/posts/${post.slug}`}>
               {post.title}
             </Link>
@@ -61,7 +61,7 @@ export function PostCard({ post }: { post: Post }): JSX.Element {
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
         </p>
-        <h2 className="text-3xl font-medium leading-[1.1] tracking-tight md:text-4xl">
+        <h2 className="text-3xl font-semibold leading-[1.1] md:text-4xl">
           <Link className="transition-opacity hover:opacity-80" href={`/posts/${post.slug}`}>
             {post.title}
           </Link>
