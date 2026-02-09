@@ -9,6 +9,7 @@ import { formatDate, getAllPosts, getRelatedPosts } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 type Params = { slug: string };
+type MaybePromise<T> = T | Promise<T>;
 
 export const dynamicParams = false;
 
@@ -16,8 +17,9 @@ export function generateStaticParams(): Params[] {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const post = getAllPosts().find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: { params: MaybePromise<Params> }): Promise<Metadata> {
+  const resolvedParams = await Promise.resolve(params);
+  const post = getAllPosts().find((item) => item.slug === resolvedParams.slug);
 
   if (!post) {
     return { title: "Post Not Found" };
@@ -45,9 +47,10 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function PostPage({ params }: { params: Params }): JSX.Element {
+export default async function PostPage({ params }: { params: MaybePromise<Params> }): Promise<JSX.Element> {
+  const resolvedParams = await Promise.resolve(params);
   const posts = getAllPosts();
-  const post = posts.find((item) => item.slug === params.slug);
+  const post = posts.find((item) => item.slug === resolvedParams.slug);
 
   if (!post) notFound();
 
@@ -81,7 +84,7 @@ export default function PostPage({ params }: { params: Params }): JSX.Element {
             <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
           </p>
           <nav aria-label="Tags" className="mt-4 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
+            {post.tags.filter(Boolean).map((tag) => (
               <Link
                 key={tag}
                 className="rounded border border-[var(--border)] px-2 py-1 text-xs uppercase tracking-wide text-[var(--muted)] transition-colors hover:text-[var(--accent)]"

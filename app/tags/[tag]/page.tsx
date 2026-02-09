@@ -6,6 +6,7 @@ import { getAllTags, getPostsByTag } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 type Params = { tag: string };
+type MaybePromise<T> = T | Promise<T>;
 
 export const dynamicParams = false;
 
@@ -13,8 +14,9 @@ export function generateStaticParams(): Params[] {
   return getAllTags().map((tag) => ({ tag }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const tag = params.tag.toLowerCase();
+export async function generateMetadata({ params }: { params: MaybePromise<Params> }): Promise<Metadata> {
+  const resolvedParams = await Promise.resolve(params);
+  const tag = (resolvedParams.tag ?? "").toLowerCase();
   const title = `Posts tagged: ${tag}`;
   const description = `Clinical study breakdowns for ${tag}.`;
 
@@ -38,8 +40,9 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   };
 }
 
-export default function TagPage({ params }: { params: Params }): JSX.Element {
-  const tag = params.tag.toLowerCase();
+export default async function TagPage({ params }: { params: MaybePromise<Params> }): Promise<JSX.Element> {
+  const resolvedParams = await Promise.resolve(params);
+  const tag = (resolvedParams.tag ?? "").toLowerCase();
   const posts = getPostsByTag(tag);
 
   return (

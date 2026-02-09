@@ -29,6 +29,15 @@ function sortByDateDesc(a: { date: string }, b: { date: string }): number {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 }
 
+function normalizeTags(input: unknown): string[] {
+  if (!Array.isArray(input)) return [];
+
+  return input
+    .filter((tag): tag is string => typeof tag === "string")
+    .map((tag) => tag.trim())
+    .filter((tag) => tag.length > 0);
+}
+
 export function getPostSlugs(): string[] {
   return fs
     .readdirSync(postsDirectory)
@@ -41,10 +50,16 @@ export function getPostBySlug(slug: string): Post {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const frontmatter = data as PostFrontmatter;
+  const frontmatter = data as Partial<PostFrontmatter>;
 
   return {
-    ...frontmatter,
+    title: frontmatter.title ?? slug,
+    date: frontmatter.date ?? "1970-01-01",
+    slug: frontmatter.slug ?? slug,
+    excerpt: frontmatter.excerpt ?? "",
+    metaDescription: frontmatter.metaDescription ?? "",
+    study_url: frontmatter.study_url ?? "#",
+    tags: normalizeTags(frontmatter.tags),
     content,
     readingTime: estimateReadingTime(content)
   };
@@ -56,22 +71,22 @@ export function getAllPosts(): Post[] {
 }
 
 export function getAllTags(): string[] {
-  const allTags = getAllPosts().flatMap((post) => post.tags.map((tag) => tag.toLowerCase()));
+  const allTags = getAllPosts().flatMap((post) => normalizeTags(post.tags).map((tag) => tag.toLowerCase()));
   return Array.from(new Set(allTags)).sort();
 }
 
 export function getPostsByTag(tag: string): Post[] {
   const lowered = tag.toLowerCase();
-  return getAllPosts().filter((post) => post.tags.map((t) => t.toLowerCase()).includes(lowered));
+  return getAllPosts().filter((post) => normalizeTags(post.tags).some((t) => t.toLowerCase() === lowered));
 }
 
 export function getRelatedPosts(currentPost: Post, limit = 3): Post[] {
-  const currentTags = currentPost.tags.map((tag) => tag.toLowerCase());
+  const currentTags = normalizeTags(currentPost.tags).map((tag) => tag.toLowerCase());
 
   return getAllPosts()
     .filter((post) => post.slug !== currentPost.slug)
     .map((post) => {
-      const overlap = post.tags.filter((tag) => currentTags.includes(tag.toLowerCase())).length;
+      const overlap = normalizeTags(post.tags).filter((tag) => currentTags.includes(tag.toLowerCase())).length;
       return { post, overlap };
     })
     .filter(({ overlap }) => overlap > 0)
