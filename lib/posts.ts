@@ -10,6 +10,7 @@ export type PostFrontmatter = {
   metaDescription: string;
   study_url: string;
   tags: string[];
+  image?: string;
 };
 
 export type Post = PostFrontmatter & {
@@ -60,6 +61,7 @@ export function getPostBySlug(slug: string): Post {
     metaDescription: frontmatter.metaDescription ?? "",
     study_url: frontmatter.study_url ?? "#",
     tags: normalizeTags(frontmatter.tags),
+    image: frontmatter.image,
     content,
     readingTime: estimateReadingTime(content)
   };

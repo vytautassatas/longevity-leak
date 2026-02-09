@@ -78,6 +78,15 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
         </Link>
 
         <article className="mt-10 overflow-hidden">
+          {post.image && (
+            <div className="mb-12 aspect-[21/9] overflow-hidden rounded-sm border border-[var(--border)] shadow-sm">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          )}
           <header className="border-b border-[var(--border)] pb-12">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--muted)]">
               <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK

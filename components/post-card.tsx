@@ -26,7 +26,7 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
               {post.title}
             </Link>
           </h2>
-          <p className="max-w-2xl text-xl leading-[1.6] text-[var(--muted)] md:text-2xl">{post.excerpt}</p>
+          <p className="max-w-2xl text-xl font-normal leading-[1.6] text-[var(--muted)] sm:text-2xl">{post.excerpt}</p>
         </header>
         <footer className="mt-10 flex items-center justify-between">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--text)]">{post.tags[0] ?? "Study"}</p>
@@ -40,10 +40,18 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
       </div>
       <Link
         aria-label={`Read ${post.title}`}
-        className="block min-h-[400px] rounded-sm border border-[var(--border)] shadow-sm transition-transform hover:scale-[1.01]"
+        className="relative block min-h-[400px] overflow-hidden rounded-sm border border-[var(--border)] shadow-sm transition-transform hover:scale-[1.01]"
         href={`/posts/${post.slug}`}
-        style={panelStyle(post.slug)}
-      />
+        style={!post.image ? panelStyle(post.slug) : {}}
+      >
+        {post.image && (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        )}
+      </Link>
     </article>
   );
 }
@@ -53,10 +61,18 @@ export function PostCard({ post }: { post: Post }): JSX.Element {
     <article className="min-w-0 group">
       <Link
         aria-label={`Read ${post.title}`}
-        className="block aspect-[4/2.5] rounded-sm border border-[var(--border)] shadow-sm transition-transform group-hover:scale-[1.02]"
+        className="relative block aspect-[4/2.5] overflow-hidden rounded-sm border border-[var(--border)] shadow-sm transition-transform group-hover:scale-[1.02]"
         href={`/posts/${post.slug}`}
-        style={panelStyle(post.slug)}
-      />
+        style={!post.image ? panelStyle(post.slug) : {}}
+      >
+        {post.image && (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
+      </Link>
       <header className="space-y-4 pt-6">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
