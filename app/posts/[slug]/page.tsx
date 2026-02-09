@@ -72,17 +72,34 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-5xl px-5 pb-12 pt-10">
+      <main className="mx-auto w-full max-w-[1180px] px-5 pb-12 pt-10">
         <Link className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
           ← Back to news
         </Link>
 
         <article className="news-card mt-6 rounded-2xl border border-[var(--border)] px-5 py-7 sm:px-8 sm:py-9">
-          <header>
+          <header className="border-b border-[var(--border)] pb-8">
             <p className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
-              <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime}
+              <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK
             </p>
-            <h1 className="mt-4 text-5xl font-extrabold leading-[1.08] tracking-tight">{post.title}</h1>
+            <h1 className="mt-4 max-w-4xl text-[44px] font-semibold leading-[1.08] tracking-tight sm:text-[58px]">{post.title}</h1>
+            <p className="mt-4 max-w-3xl text-[19px] leading-[1.8] text-[var(--muted)]">{post.excerpt}</p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                className="inline-flex items-center rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-white"
+                href={post.study_url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read the study
+              </a>
+              <Link
+                className="inline-flex items-center rounded-full border border-[var(--border-strong)] px-5 py-2.5 text-sm font-semibold uppercase tracking-wide transition-colors hover:border-[var(--text)]"
+                href="/feed.xml"
+              >
+                Follow via RSS
+              </Link>
+            </div>
             <nav aria-label="Tags" className="mt-5 flex flex-wrap gap-2">
               {post.tags.filter(Boolean).map((tag) => (
                 <Link
@@ -96,7 +113,31 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </nav>
           </header>
 
-          <section className="mt-8">
+          <section className="mt-8 max-w-3xl rounded-xl border border-[var(--border)] bg-[var(--surface-soft)] p-5 sm:p-6">
+            <h2 className="text-xl font-extrabold leading-[1.2]">Clinical Brief</h2>
+            <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-2">
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Source</dt>
+                <dd className="mt-1 text-[var(--text)]">Peer-reviewed clinical study</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Published</dt>
+                <dd className="mt-1 text-[var(--text)]">
+                  <time dateTime={post.date}>{formatDate(post.date)}</time>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Topic</dt>
+                <dd className="mt-1 text-[var(--text)]">{post.tags.slice(0, 3).join(" · ")}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">Reading Time</dt>
+                <dd className="mt-1 text-[var(--text)]">{post.readingTime}</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section className="mt-10 max-w-3xl">
             <MDXRemote
               components={mdxComponents}
               options={{
@@ -108,20 +149,22 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             />
           </section>
 
-          <p className="mt-10">
+          <section className="mt-12 max-w-3xl border-t border-[var(--border)] pt-7">
+            <h2 className="text-xl font-extrabold leading-[1.2]">Study Link</h2>
+            <p className="mt-3 text-[var(--muted)]">Read the source paper directly.</p>
             <a
-              className="inline-flex items-center rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-white"
+              className="mt-4 inline-flex items-center rounded-full border border-[var(--accent)] px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-white"
               href={post.study_url}
               rel="noopener noreferrer"
               target="_blank"
             >
               Read the study →
             </a>
-          </p>
+          </section>
         </article>
 
         {relatedPosts.length > 0 && (
-          <section className="mt-12">
+          <section className="mt-12 max-w-3xl">
             <h2 className="text-2xl font-extrabold leading-[1.2]">Related posts</h2>
             <ul className="mt-4 grid gap-3">
               {relatedPosts.map((related) => (
@@ -135,7 +178,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
           </section>
         )}
 
-        <section className="news-card mt-12 rounded-2xl border border-[var(--border)] p-5 sm:p-6">
+        <section className="news-card mt-12 max-w-3xl rounded-2xl border border-[var(--border)] p-5 sm:p-6">
           <h2 className="text-2xl font-extrabold leading-[1.2]">Get the next leak</h2>
           <form action="#" className="mt-4 flex flex-col gap-3 sm:flex-row" method="post">
             <label className="sr-only" htmlFor="email">
