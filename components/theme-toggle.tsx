@@ -7,7 +7,7 @@ const STORAGE_KEY = "longevity-leak-theme";
 type Theme = "dark" | "light";
 
 function getPreferredTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "light";
 
   const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null;
   if (stored === "dark" || stored === "light") return stored;
@@ -16,7 +16,7 @@ function getPreferredTheme(): Theme {
 }
 
 export function ThemeToggle(): JSX.Element {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const initial = getPreferredTheme();
@@ -36,31 +36,11 @@ export function ThemeToggle(): JSX.Element {
   return (
     <button
       aria-label="Toggle color theme"
-      className="inline-flex h-10 w-10 items-center justify-center rounded border border-[var(--border)] text-[var(--text)] transition-colors hover:text-[var(--accent)]"
+      className="inline-flex h-10 px-4 items-center justify-center rounded-full border border-[var(--border)] text-xs font-bold uppercase tracking-widest text-[var(--muted)] transition-all hover:border-[var(--text)] hover:text-[var(--text)]"
       onClick={toggleTheme}
       type="button"
     >
-      {isDark ? (
-        <svg aria-hidden="true" className="h-5 w-5" fill="none" viewBox="0 0 24 24">
-          <path
-            d="M12 3v2m0 14v2M5.64 5.64l1.41 1.41M16.95 16.95l1.41 1.41M3 12h2m14 0h2M5.64 18.36l1.41-1.41M16.95 7.05l1.41-1.41M12 8a4 4 0 100 8 4 4 0 000-8z"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.75"
-          />
-        </svg>
-      ) : (
-        <svg aria-hidden="true" className="h-5 w-5" fill="none" viewBox="0 0 24 24">
-          <path
-            d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="1.75"
-          />
-        </svg>
-      )}
+      {isDark ? "Light Mode" : "Dark Mode"}
     </button>
   );
 }

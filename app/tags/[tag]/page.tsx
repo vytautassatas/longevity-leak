@@ -49,15 +49,17 @@ export default async function TagPage({ params }: { params: MaybePromise<Params>
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-5xl px-5 pb-12 pt-10">
-        <header className="mb-7">
-          <Link className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
+      <main className="mx-auto w-full max-w-[1100px] px-5 pb-24 pt-12">
+        <header className="mb-12 border-b border-[var(--border)] pb-12">
+          <Link className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
             ← Back to news
           </Link>
-          <h1 className="mt-4 text-5xl font-extrabold leading-[1.1] tracking-tight">Posts tagged: {tag}</h1>
+          <h1 className="mt-8 text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+            Topic: <span className="capitalize text-[var(--muted)]">{tag}</span>
+          </h1>
         </header>
 
-        <nav aria-label={`Posts tagged ${tag}`} className="grid gap-4 sm:gap-5">
+        <nav aria-label={`Posts tagged ${tag}`} className="grid gap-x-8 gap-y-16 md:grid-cols-2">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

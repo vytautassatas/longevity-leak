@@ -26,14 +26,17 @@ export const metadata: Metadata = {
   }
 };
 
-const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
+const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-        <style>{`:root{color-scheme:dark;} :root[data-theme="light"]{color-scheme:light;} body{margin:0}`}</style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+        <style>{`:root{color-scheme:light;} :root[data-theme="dark"]{color-scheme:dark;} body{margin:0}`}</style>
       </head>
       <body>{children}</body>
     </html>
