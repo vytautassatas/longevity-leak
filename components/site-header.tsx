@@ -17,19 +17,21 @@ export function SiteHeader(): JSX.Element {
                 className="text-[var(--text)] transition-transform group-hover:scale-105"
               >
                 <path
-                  d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z"
+                  d="M18 4C21.6 8.2 25.4 12.5 25.4 17C25.4 21.3 22 24.8 18 24.8C14 24.8 10.6 21.3 10.6 17C10.6 12.5 14.4 8.2 18 4Z"
                   stroke="currentColor"
-                  strokeWidth="1.8"
+                  strokeWidth="1.9"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
-                  d="M8 19H12.8L15.6 12.6L19.7 23L22.5 17.3H28"
+                  d="M8 28C9.8 26.9 11.6 26.9 13.4 28C15.2 29.1 17 29.1 18.8 28C20.6 26.9 22.4 26.9 24.2 28C26 29.1 27.8 29.1 29.6 28"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
+                <circle cx="26.8" cy="11.2" r="1.2" fill="currentColor" />
+                <circle cx="29.8" cy="14.2" r="0.9" fill="currentColor" />
               </svg>
             </span>
             <div className="flex flex-col leading-none">

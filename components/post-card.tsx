@@ -1,21 +1,9 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
 import { formatDate, type Post } from "@/lib/posts";
-
-function panelStyle(seed: string): CSSProperties {
-  const hash = seed.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-  const hueA = hash % 360;
-  const hueB = (hash + 90) % 360;
-
-  // Reduced opacity for a more subtle, luxury feel
-  return {
-    backgroundImage: `radial-gradient(120% 140% at 0% 100%, hsla(${hueA} 82% 56% / 0.12), transparent 48%), radial-gradient(120% 160% at 100% 0%, hsla(${hueB} 88% 64% / 0.08), transparent 56%), var(--card-gradient)`
-  };
-}
 
 export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
   return (
-    <article className="grid gap-10 border-b border-[var(--border)] py-16 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+    <article className="border-b border-[var(--border)] py-16">
       <div className="flex min-w-0 flex-col">
         <header className="space-y-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
@@ -38,20 +26,6 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
           </Link>
         </footer>
       </div>
-      <Link
-        aria-label={`Read ${post.title}`}
-        className="relative block min-h-[400px] overflow-hidden rounded-sm border border-[var(--border)] shadow-sm transition-transform hover:scale-[1.01]"
-        href={`/posts/${post.slug}`}
-        style={!post.image ? panelStyle(post.slug) : {}}
-      >
-        {post.image && (
-          <img
-            src={post.image}
-            alt={post.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-          />
-        )}
-      </Link>
     </article>
   );
 }
@@ -59,21 +33,7 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
 export function PostCard({ post }: { post: Post }): JSX.Element {
   return (
     <article className="min-w-0 group">
-      <Link
-        aria-label={`Read ${post.title}`}
-        className="relative block aspect-[4/2.5] overflow-hidden rounded-sm border border-[var(--border)] shadow-sm transition-transform group-hover:scale-[1.02]"
-        href={`/posts/${post.slug}`}
-        style={!post.image ? panelStyle(post.slug) : {}}
-      >
-        {post.image && (
-          <img
-            src={post.image}
-            alt={post.title}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        )}
-      </Link>
-      <header className="space-y-4 pt-6">
+      <header className="space-y-4">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
           <time dateTime={post.date}>{formatDate(post.date)}</time>
         </p>
