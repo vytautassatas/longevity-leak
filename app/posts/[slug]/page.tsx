@@ -73,8 +73,8 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[820px] px-5 pb-24 pt-12">
-        <Link className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
+      <main className="mx-auto w-full max-w-[820px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+        <Link className="inline-flex min-h-11 items-center text-xs font-bold uppercase tracking-[0.14em] text-[var(--muted)] transition-colors hover:text-[var(--text)] sm:text-sm sm:tracking-[0.2em]" href="/">
           ← Back to news
         </Link>
 
@@ -83,16 +83,16 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--muted)] sm:text-sm">
               <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK
             </p>
-            <h1 className="mt-6 text-4xl font-semibold leading-[1.1] sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 text-[2.1rem] font-semibold leading-[1.1] sm:text-5xl md:text-6xl">
               {post.title}
             </h1>
-            <p className="mt-7 text-xl font-normal leading-[1.65] text-[var(--muted)] sm:text-[1.7rem]">
+            <p className="mt-6 text-lg font-normal leading-[1.65] text-[var(--muted)] sm:mt-7 sm:text-[1.7rem]">
               {post.excerpt}
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               {hasStudyUrl && (
                 <a
-                  className="inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
                   href={post.study_url}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -101,7 +101,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
                 </a>
               )}
               <Link
-                className="inline-flex items-center rounded-full border border-[var(--border-strong)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] transition-colors hover:bg-[var(--surface-soft)]"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[var(--border-strong)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-[var(--surface-soft)] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
                 href="/feed.xml"
               >
                 Follow via RSS
@@ -156,20 +156,20 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             />
           </section>
 
-          <section className="mt-24 border-t border-[var(--border)] pt-12">
-            <h2 className="text-3xl font-bold tracking-tight">Source Documentation</h2>
-            <p className="mt-4 text-xl text-[var(--muted)]">Access the original full-text paper for deeper clinical validation.</p>
-            {hasStudyUrl && (
+          {hasStudyUrl && (
+            <section className="mt-24 border-t border-[var(--border)] pt-12">
+              <h2 className="text-3xl font-bold tracking-tight">Source Documentation</h2>
+              <p className="mt-4 text-xl text-[var(--muted)]">Access the original full-text paper for deeper clinical validation.</p>
               <a
-                className="mt-8 inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
                 href={post.study_url}
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 Read Full Study →
               </a>
-            )}
-          </section>
+            </section>
+          )}
         </article>
 
         {relatedPosts.length > 0 && (
@@ -182,8 +182,8 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
                     className="block rounded-xl border border-[var(--border)] p-6 transition-all hover:border-[var(--text)] hover:shadow-md"
                     href={`/posts/${related.slug}`}
                   >
-                    <h3 className="text-2xl font-medium tracking-tight">{related.title}</h3>
-                    <p className="mt-2 text-lg text-[var(--muted)] line-clamp-2">{related.excerpt}</p>
+                    <h3 className="text-xl font-medium tracking-tight sm:text-2xl">{related.title}</h3>
+                    <p className="mt-2 text-base text-[var(--muted)] sm:text-lg line-clamp-2">{related.excerpt}</p>
                   </Link>
                 </li>
               ))}
@@ -191,22 +191,22 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
           </section>
         )}
 
-        <section className="mt-24 rounded-3xl bg-[var(--text)] p-10 sm:p-16 text-[var(--bg)]">
-          <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">Get the next leak.</h2>
-          <p className="mt-4 text-xl opacity-80 max-w-xl">Join 15,000+ researchers and longevity enthusiasts receiving the latest clinical insights.</p>
+        <section className="mt-24 rounded-3xl bg-[var(--text)] p-7 text-[var(--bg)] sm:p-16">
+          <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">Get the next leak.</h2>
+          <p className="mt-4 max-w-xl text-base opacity-80 sm:text-xl">Join 15,000+ researchers and longevity enthusiasts receiving the latest clinical insights.</p>
           <form action="#" className="mt-10 flex flex-col gap-4 sm:flex-row" method="post">
             <label className="sr-only" htmlFor="email">
               Email
             </label>
             <input
-              className="h-14 flex-1 rounded-full border border-white/20 bg-white/10 px-6 text-lg outline-none transition-colors focus:bg-white/20"
+              className="h-12 flex-1 rounded-full border border-white/20 bg-white/10 px-5 text-base outline-none transition-colors focus:bg-white/20 sm:h-14 sm:px-6 sm:text-lg"
               id="email"
               name="email"
               placeholder="Enter your email"
               type="email"
             />
             <button
-              className="h-14 rounded-full bg-[var(--bg)] px-10 text-lg font-bold text-[var(--text)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              className="h-12 rounded-full bg-[var(--bg)] px-8 text-base font-bold text-[var(--text)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:h-14 sm:px-10 sm:text-lg"
               type="submit"
             >
               Subscribe

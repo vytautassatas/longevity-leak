@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export function SiteHeader(): JSX.Element {
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur">
-      <div className="mx-auto flex h-16 w-full max-w-[1320px] items-center justify-between px-5">
+      <div className="mx-auto flex h-16 w-full max-w-[1320px] items-center justify-between gap-3 px-4 sm:px-5">
         <div className="flex items-center">
           <Link className="flex items-center gap-2 group" href="/">
             <span className="flex items-center justify-center">
@@ -38,7 +38,7 @@ export function SiteHeader(): JSX.Element {
               <span className="text-[11px] font-bold uppercase tracking-[0.18em]" style={{ fontFamily: "Inter, sans-serif" }}>
                 Longevity
               </span>
-              <span className="text-[1.75rem] font-semibold italic tracking-tight" style={{ fontFamily: "'Newsreader', serif" }}>
+              <span className="text-[1.5rem] font-semibold italic tracking-tight sm:text-[1.75rem]" style={{ fontFamily: "'Newsreader', serif" }}>
                 Leak
               </span>
             </div>

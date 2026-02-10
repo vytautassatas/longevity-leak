@@ -16,10 +16,10 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
           </h2>
           <p className="max-w-2xl text-xl font-normal leading-[1.6] text-[var(--muted)] sm:text-2xl">{post.excerpt}</p>
         </header>
-        <footer className="mt-10 flex items-center justify-between">
+        <footer className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--text)]">{post.tags[0] ?? "Study"}</p>
           <Link
-            className="rounded-full border border-[var(--border-strong)] px-8 py-3 text-sm font-bold uppercase tracking-[0.16em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
+            className="inline-flex h-11 items-center rounded-full border border-[var(--border-strong)] px-7 text-sm font-bold uppercase tracking-[0.12em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
             href={`/posts/${post.slug}`}
           >
             Read More
@@ -46,7 +46,7 @@ export function PostCard({ post }: { post: Post }): JSX.Element {
       </header>
       <footer className="mt-6">
         <Link
-          className="inline-block rounded-full border border-[var(--border-strong)] px-6 py-2 text-xs font-bold uppercase tracking-[0.16em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
+          className="inline-flex h-11 items-center rounded-full border border-[var(--border-strong)] px-6 text-xs font-bold uppercase tracking-[0.14em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
           href={`/posts/${post.slug}`}
         >
           Read

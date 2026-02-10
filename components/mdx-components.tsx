@@ -1,12 +1,12 @@
 import type { MDXComponents } from "mdx/types";
 
 export const mdxComponents: MDXComponents = {
-  h2: (props) => <h2 className="mt-14 text-3xl font-semibold leading-[1.2] sm:text-[2.05rem]" {...props} />,
-  h3: (props) => <h3 className="mt-10 text-2xl font-semibold leading-[1.25]" {...props} />,
-  p: (props) => <p className="mt-6 text-[1.08rem] leading-[1.78] text-[var(--text)]" {...props} />,
+  h2: (props) => <h2 className="mt-12 text-[1.7rem] font-semibold leading-[1.2] sm:mt-14 sm:text-[2.05rem]" {...props} />,
+  h3: (props) => <h3 className="mt-9 text-[1.4rem] font-semibold leading-[1.25] sm:mt-10 sm:text-2xl" {...props} />,
+  p: (props) => <p className="mt-6 text-base leading-[1.75] text-[var(--text)] sm:text-[1.08rem] sm:leading-[1.78]" {...props} />,
   a: (props) => (
     <a
-      className="font-medium text-[var(--text)] underline decoration-[1.5px] underline-offset-4 transition-opacity hover:opacity-70"
+      className="font-medium text-[var(--text)] underline decoration-[1.5px] underline-offset-4 transition-opacity hover:opacity-70 break-words"
       rel={props.href?.startsWith("http") ? "noopener noreferrer" : undefined}
       target={props.href?.startsWith("http") ? "_blank" : undefined}
       {...props}

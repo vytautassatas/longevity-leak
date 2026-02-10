@@ -37,12 +37,12 @@ export default function HomePage(): JSX.Element {
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[1360px] px-5 pb-24 pt-12">
+      <main className="mx-auto w-full max-w-[1360px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
         <h1 className="sr-only">Longevity Leak News</h1>
 
         {featuredPost ? <FeaturedPostCard post={featuredPost} /> : null}
 
-        <nav aria-label="Recent Posts" className="grid gap-x-12 gap-y-20 pt-16 md:grid-cols-2 xl:grid-cols-3">
+        <nav aria-label="Recent Posts" className="grid gap-x-12 gap-y-14 pt-12 sm:gap-y-20 sm:pt-16 md:grid-cols-2 xl:grid-cols-3">
           {restPosts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

@@ -3,7 +3,7 @@ import Link from "next/link";
 export function SiteFooter(): JSX.Element {
   return (
     <footer className="mt-16 border-t border-[var(--border)] py-8">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 text-sm text-[var(--muted)]">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-start gap-5 px-5 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-2">
           <svg width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 text-[var(--text)]">
             <path
@@ -27,7 +27,7 @@ export function SiteFooter(): JSX.Element {
           <p className="mt-2">© 2026 Longevity Leak</p>
           </div>
         </div>
-        <Link className="font-bold uppercase tracking-widest hover:text-[var(--text)]" href="/feed.xml" style={{ fontSize: "10px" }}>
+        <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/feed.xml">
           RSS Feed
         </Link>
       </div>

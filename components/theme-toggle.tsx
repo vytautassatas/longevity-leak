@@ -36,7 +36,7 @@ export function ThemeToggle(): JSX.Element {
   return (
     <button
       aria-label="Toggle color theme"
-      className="inline-flex h-10 px-4 items-center justify-center rounded-full border border-[var(--border)] text-xs font-bold uppercase tracking-widest text-[var(--muted)] transition-all hover:border-[var(--text)] hover:text-[var(--text)]"
+      className="inline-flex h-11 min-w-[7.75rem] px-4 items-center justify-center rounded-full border border-[var(--border)] text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--muted)] transition-all hover:border-[var(--text)] hover:text-[var(--text)]"
       onClick={toggleTheme}
       type="button"
     >
