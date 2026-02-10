@@ -38,8 +38,15 @@ function estimateReadingTime(content: string): string {
   return `${minutes} min read`;
 }
 
+function toUtcDate(date: string): Date {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
+  if (!match) return new Date(date);
+  const [, y, m, d] = match;
+  return new Date(Date.UTC(Number(y), Number(m) - 1, Number(d)));
+}
+
 function sortByDateDesc(a: { date: string }, b: { date: string }): number {
-  return new Date(b.date).getTime() - new Date(a.date).getTime();
+  return toUtcDate(b.date).getTime() - toUtcDate(a.date).getTime();
 }
 
 function normalizeTags(input: unknown): string[] {
@@ -118,7 +125,7 @@ export function getRelatedPosts(currentPost: Post, limit = 3): Post[] {
     .filter(({ overlap }) => overlap > 0)
     .sort((a, b) => {
       if (b.overlap !== a.overlap) return b.overlap - a.overlap;
-      return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+      return toUtcDate(b.post.date).getTime() - toUtcDate(a.post.date).getTime();
     })
     .slice(0, limit)
     .map(({ post }) => post);
@@ -128,6 +135,7 @@ export function formatDate(date: string): string {
   return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "short",
-    day: "numeric"
-  }).format(new Date(date));
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(toUtcDate(date));
 }
