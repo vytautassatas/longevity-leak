@@ -49,12 +49,12 @@ export default async function TagPage({ params }: { params: MaybePromise<Params>
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[1100px] px-5 pb-24 pt-12">
+      <main className="mx-auto w-full max-w-[1100px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
         <header className="mb-12 border-b border-[var(--border)] pb-12">
-          <Link className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
+          <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
             ← Back to news
           </Link>
-          <h1 className="mt-8 text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          <h1 className="mt-8 text-[2.2rem] font-medium leading-[1.1] tracking-tight sm:text-6xl md:text-7xl">
             Topic: <span className="capitalize text-[var(--muted)]">{tag}</span>
           </h1>
         </header>

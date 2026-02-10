@@ -73,26 +73,26 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[820px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
-        <Link className="inline-flex min-h-11 items-center text-xs font-bold uppercase tracking-[0.14em] text-[var(--muted)] transition-colors hover:text-[var(--text)] sm:text-sm sm:tracking-[0.2em]" href="/">
+      <main className="mx-auto w-full max-w-[760px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+        <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
           ← Back to news
         </Link>
 
         <article className="mt-10 overflow-hidden">
           <header className="border-b border-[var(--border)] pb-10">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--muted)] sm:text-sm">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[var(--muted)] sm:text-sm">
               <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK
             </p>
-            <h1 className="mt-6 text-[2.1rem] font-semibold leading-[1.1] sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 text-[2rem] font-semibold leading-[1.12] sm:text-[2.6rem] md:text-[3.1rem]">
               {post.title}
             </h1>
-            <p className="mt-6 text-lg font-normal leading-[1.65] text-[var(--muted)] sm:mt-7 sm:text-[1.7rem]">
+            <p className="mt-6 text-[1.08rem] font-normal leading-[1.75] text-[var(--muted)] sm:mt-7 sm:text-[1.2rem]">
               {post.excerpt}
             </p>
             <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               {hasStudyUrl && (
                 <a
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-sm font-semibold text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4"
                   href={post.study_url}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -101,7 +101,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
                 </a>
               )}
               <Link
-                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[var(--border-strong)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:bg-[var(--surface-soft)] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[var(--border-strong)] px-6 py-3 text-sm font-semibold transition-colors hover:bg-[var(--surface-soft)] sm:w-auto sm:px-8 sm:py-4"
                 href="/feed.xml"
               >
                 Follow via RSS
@@ -111,7 +111,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               {post.tags.filter(Boolean).map((tag) => (
                 <Link
                   key={tag}
-                  className="rounded-full bg-[var(--surface-soft)] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-[var(--muted)] transition-colors hover:text-[var(--text)]"
+                  className="rounded-full bg-[var(--surface-soft)] px-4 py-1.5 text-xs font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]"
                   href={`/tags/${tag.toLowerCase()}`}
                 >
                   {tag}
@@ -120,26 +120,26 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </nav>
           </header>
 
-          <section className="mt-12 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-8 sm:p-10">
-            <h2 className="text-2xl font-bold uppercase tracking-[0.1em]">Clinical Brief</h2>
+          <section className="mt-12 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-7 sm:p-9">
+            <h2 className="text-[1.4rem] font-semibold tracking-tight sm:text-[1.6rem]">Clinical Brief</h2>
             <dl className="mt-8 grid gap-8 sm:grid-cols-2">
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">Source</dt>
-                <dd className="mt-2 text-xl font-medium text-[var(--text)]">Peer-reviewed Clinical Study</dd>
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-[var(--muted)]">Source</dt>
+                <dd className="mt-2 text-lg font-medium text-[var(--text)] sm:text-xl">Peer-reviewed Clinical Study</dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">Published</dt>
-                <dd className="mt-2 text-xl font-medium text-[var(--text)]">
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-[var(--muted)]">Published</dt>
+                <dd className="mt-2 text-lg font-medium text-[var(--text)] sm:text-xl">
                   <time dateTime={post.date}>{formatDate(post.date)}</time>
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">Primary Topic</dt>
-                <dd className="mt-2 text-xl font-medium text-[var(--text)]">{post.tags[0] ?? "Longevity Research"}</dd>
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-[var(--muted)]">Primary Topic</dt>
+                <dd className="mt-2 text-lg font-medium text-[var(--text)] sm:text-xl">{post.tags[0] ?? "Longevity Research"}</dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">Reading Time</dt>
-                <dd className="mt-2 text-xl font-medium text-[var(--text)]">{post.readingTime}</dd>
+                <dt className="text-xs font-medium uppercase tracking-[0.08em] text-[var(--muted)]">Reading Time</dt>
+                <dd className="mt-2 text-lg font-medium text-[var(--text)] sm:text-xl">{post.readingTime}</dd>
               </div>
             </dl>
           </section>
@@ -161,7 +161,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               <h2 className="text-3xl font-bold tracking-tight">Source Documentation</h2>
               <p className="mt-4 text-xl text-[var(--muted)]">Access the original full-text paper for deeper clinical validation.</p>
               <a
-                className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4 sm:text-sm sm:tracking-[0.15em]"
+                className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--text)] px-6 py-3 text-sm font-semibold text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:px-8 sm:py-4"
                 href={post.study_url}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -199,14 +199,14 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               Email
             </label>
             <input
-              className="h-12 flex-1 rounded-full border border-white/20 bg-white/10 px-5 text-base outline-none transition-colors focus:bg-white/20 sm:h-14 sm:px-6 sm:text-lg"
+              className="newsletter-input flex-1 sm:min-h-[56px] sm:px-6"
               id="email"
               name="email"
               placeholder="Enter your email"
               type="email"
             />
             <button
-              className="h-12 rounded-full bg-[var(--bg)] px-8 text-base font-bold text-[var(--text)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:h-14 sm:px-10 sm:text-lg"
+              className="h-12 rounded-full bg-[var(--bg)] px-8 text-lg font-semibold text-[var(--text)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:h-14 sm:px-10"
               type="submit"
             >
               Subscribe
