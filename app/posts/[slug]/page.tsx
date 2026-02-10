@@ -72,7 +72,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[900px] px-5 pb-24 pt-12">
+      <main className="mx-auto w-full max-w-[820px] px-5 pb-24 pt-12">
         <Link className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
           ← Back to news
         </Link>
@@ -87,14 +87,14 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               />
             </div>
           )}
-          <header className="border-b border-[var(--border)] pb-12">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--muted)]">
+          <header className="border-b border-[var(--border)] pb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--muted)] sm:text-sm">
               <time dateTime={post.date}>{formatDate(post.date)}</time> · {post.readingTime} · LONGEVITY LEAK
             </p>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] sm:text-5xl md:text-6xl">
               {post.title}
             </h1>
-            <p className="mt-8 text-xl font-normal leading-[1.6] text-[var(--muted)] sm:text-2xl">
+            <p className="mt-7 text-xl font-normal leading-[1.65] text-[var(--muted)] sm:text-[1.7rem]">
               {post.excerpt}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -150,7 +150,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </dl>
           </section>
 
-          <section className="mt-16 prose-xl prose-stone dark:prose-invert">
+          <section className="mt-14 max-w-none">
             <MDXRemote
               components={mdxComponents}
               options={{

@@ -9,33 +9,34 @@ export function SiteHeader(): JSX.Element {
           <Link className="flex items-center gap-2 group" href="/">
             <span className="flex items-center justify-center">
               <svg
-                width="32"
-                height="32"
-                viewBox="0 0 40 40"
+                width="34"
+                height="34"
+                viewBox="0 0 36 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-[var(--text)] transition-transform group-hover:scale-110"
+                className="text-[var(--text)] transition-transform group-hover:scale-105"
               >
                 <path
-                  d="M20 33C25.5228 33 30 28.5228 30 23C30 18.25 24.5 9 20 4C15.5 9 10 18.25 10 23C10 28.5228 14.4772 33 20 33Z"
-                  fill="currentColor"
-                  fillOpacity="0.1"
+                  d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
-                  d="M20 28C22.2091 28 24 26.2091 24 24C24 22.1 21.8 18.4 20 16.4C18.2 18.4 16 22.1 16 24C16 26.2091 17.7909 28 20 28Z"
-                  fill="currentColor"
+                  d="M8 19H12.8L15.6 12.6L19.7 23L22.5 17.3H28"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </span>
-            <div className="flex flex-col -space-y-1.5">
-              <span className="text-xl font-medium tracking-tight uppercase" style={{ fontFamily: "Inter, sans-serif", fontSize: "14px", fontWeight: "700", letterSpacing: "0.2em" }}>
+            <div className="flex flex-col leading-none">
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em]" style={{ fontFamily: "Inter, sans-serif" }}>
                 Longevity
               </span>
-              <span className="text-3xl font-semibold italic" style={{ fontFamily: "'Newsreader', serif" }}>
+              <span className="text-[1.75rem] font-semibold italic tracking-tight" style={{ fontFamily: "'Newsreader', serif" }}>
                 Leak
               </span>
             </div>

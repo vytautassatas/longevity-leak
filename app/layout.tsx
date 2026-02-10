@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   }
 };
 
-const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=s||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
+const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=(s==='dark'||s==='light')?s:'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
