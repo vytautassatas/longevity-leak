@@ -3,10 +3,10 @@ import path from "node:path";
 import matter from "gray-matter";
 
 export type PostFrontmatter = {
-  title: string;
+  title?: string;
   date?: string;
   publishDate?: string;
-  slug: string;
+  slug?: string;
   excerpt?: string;
   description?: string;
   metaDescription?: string;
@@ -17,7 +17,15 @@ export type PostFrontmatter = {
   image?: string;
 };
 
-export type Post = PostFrontmatter & {
+export type Post = {
+  title: string;
+  date: string;
+  slug: string;
+  excerpt: string;
+  metaDescription: string;
+  study_url: string;
+  tags: string[];
+  image?: string;
   content: string;
   readingTime: string;
 };
@@ -62,7 +70,7 @@ export function getPostBySlug(slug: string): Post {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const frontmatter = data as Partial<PostFrontmatter>;
+  const frontmatter = data as PostFrontmatter;
 
   return {
     title: frontmatter.title ?? slug,
