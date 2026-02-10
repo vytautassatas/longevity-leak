@@ -57,6 +57,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
 
   const relatedPosts = getRelatedPosts(post, 3);
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
+  const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -89,14 +90,16 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               {post.excerpt}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                className="inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                href={post.study_url}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Read Original Study
-              </a>
+              {hasStudyUrl && (
+                <a
+                  className="inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                  href={post.study_url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Read Original Study
+                </a>
+              )}
               <Link
                 className="inline-flex items-center rounded-full border border-[var(--border-strong)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] transition-colors hover:bg-[var(--surface-soft)]"
                 href="/feed.xml"
@@ -156,14 +159,16 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
           <section className="mt-24 border-t border-[var(--border)] pt-12">
             <h2 className="text-3xl font-bold tracking-tight">Source Documentation</h2>
             <p className="mt-4 text-xl text-[var(--muted)]">Access the original full-text paper for deeper clinical validation.</p>
-            <a
-              className="mt-8 inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-              href={post.study_url}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Read Full Study →
-            </a>
+            {hasStudyUrl && (
+              <a
+                className="mt-8 inline-flex items-center rounded-full bg-[var(--text)] px-8 py-4 text-sm font-bold uppercase tracking-[0.15em] text-[var(--bg)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                href={post.study_url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Read Full Study →
+              </a>
+            )}
           </section>
         </article>
 

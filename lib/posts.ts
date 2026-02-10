@@ -4,12 +4,16 @@ import matter from "gray-matter";
 
 export type PostFrontmatter = {
   title: string;
-  date: string;
+  date?: string;
+  publishDate?: string;
   slug: string;
-  excerpt: string;
-  metaDescription: string;
-  study_url: string;
-  tags: string[];
+  excerpt?: string;
+  description?: string;
+  metaDescription?: string;
+  study_url?: string;
+  tags?: string[];
+  keywords?: string[];
+  category?: string;
   image?: string;
 };
 
@@ -39,6 +43,13 @@ function normalizeTags(input: unknown): string[] {
     .filter((tag) => tag.length > 0);
 }
 
+function normalizeStudyUrl(input: unknown): string {
+  if (typeof input !== "string") return "";
+  const trimmed = input.trim();
+  if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) return trimmed;
+  return "";
+}
+
 export function getPostSlugs(): string[] {
   return fs
     .readdirSync(postsDirectory)
@@ -55,12 +66,17 @@ export function getPostBySlug(slug: string): Post {
 
   return {
     title: frontmatter.title ?? slug,
-    date: frontmatter.date ?? "1970-01-01",
+    date: frontmatter.date ?? frontmatter.publishDate ?? "1970-01-01",
     slug: frontmatter.slug ?? slug,
-    excerpt: frontmatter.excerpt ?? "",
-    metaDescription: frontmatter.metaDescription ?? "",
-    study_url: frontmatter.study_url ?? "#",
-    tags: normalizeTags(frontmatter.tags),
+    excerpt: frontmatter.excerpt ?? frontmatter.description ?? "",
+    metaDescription: frontmatter.metaDescription ?? frontmatter.description ?? "",
+    study_url: normalizeStudyUrl(frontmatter.study_url),
+    tags: normalizeTags(frontmatter.tags).length > 0
+      ? normalizeTags(frontmatter.tags)
+      : [
+          ...normalizeTags(frontmatter.keywords),
+          ...(typeof frontmatter.category === "string" && frontmatter.category.trim() ? [frontmatter.category.trim()] : [])
+        ],
     image: frontmatter.image,
     content,
     readingTime: estimateReadingTime(content)
