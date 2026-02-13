@@ -3,10 +3,20 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { EvidenceRiskNote } from "@/components/evidence-risk-guide";
 import { mdxComponents } from "@/components/mdx-components";
+import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { formatDate, getAllPosts, getRelatedPosts } from "@/lib/posts";
+import {
+  getClinicLinkReasonForPost,
+  getClinicsForPostSlug,
+  getConditionLinkReasonForPost,
+  getConditionsForPostSlug,
+  getSupplementLinkReasonForPost,
+  getSupplementsForPostSlug
+} from "@/lib/relationships";
 import { siteConfig } from "@/lib/site";
 
 type Params = { slug: string };
@@ -56,6 +66,9 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   if (!post) notFound();
 
   const relatedPosts = getRelatedPosts(post, 3);
+  const relatedSupplements = getSupplementsForPostSlug(post.slug);
+  const relatedConditions = getConditionsForPostSlug(post.slug);
+  const relatedClinics = getClinicsForPostSlug(post.slug);
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
   const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
 
@@ -144,6 +157,8 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </dl>
           </section>
 
+          <EvidenceRiskNote />
+
           <section className="mt-14 max-w-none">
             <MDXRemote
               components={mdxComponents}
@@ -171,6 +186,48 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </section>
           )}
         </article>
+
+        <RelatedLinksPanel
+          className="mt-24 border-t border-[var(--border)] pt-12"
+          columns={2}
+          items={relatedSupplements.map((supplement) => ({
+            id: supplement.slug,
+            href: `/supplements/${supplement.slug}`,
+            eyebrow: `Evidence ${supplement.evidenceLevel} · ${supplement.safety}`,
+            title: supplement.name,
+            description: supplement.focus,
+            reason: getSupplementLinkReasonForPost(post.slug, supplement.slug)
+          }))}
+          title="Related Supplements"
+        />
+
+        <RelatedLinksPanel
+          className="mt-24 border-t border-[var(--border)] pt-12"
+          columns={2}
+          items={relatedConditions.map((condition) => ({
+            id: condition.slug,
+            href: `/conditions/${condition.slug}`,
+            eyebrow: `Evidence ${condition.evidenceLevel}`,
+            title: condition.name,
+            description: condition.goal,
+            reason: getConditionLinkReasonForPost(post.slug, condition.slug)
+          }))}
+          title="Related Conditions"
+        />
+
+        <RelatedLinksPanel
+          className="mt-24 border-t border-[var(--border)] pt-12"
+          columns={2}
+          items={relatedClinics.map((clinic) => ({
+            id: clinic.slug,
+            href: `/clinics/${clinic.slug}`,
+            eyebrow: clinic.location,
+            title: clinic.name,
+            description: clinic.specialization,
+            reason: getClinicLinkReasonForPost(post.slug, clinic.slug)
+          }))}
+          title="Related Clinics"
+        />
 
         {relatedPosts.length > 0 && (
           <section className="mt-24 border-t border-[var(--border)] pt-12">
