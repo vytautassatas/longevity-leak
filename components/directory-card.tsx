@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import type { ClinicEntry, ConditionEntry, EvidenceLevel, SupplementEntry } from "@/lib/directory";
 
 function evidenceTone(level: EvidenceLevel): string {
@@ -13,120 +14,133 @@ function safetyTone(safety: SupplementEntry["safety"]): string {
   return "text-[#be123c]";
 }
 
-function EvidenceBadge({ level }: { level: EvidenceLevel }): JSX.Element {
+function Card({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <span className="inline-flex h-8 items-center gap-2 rounded-full border border-[var(--border-strong)] bg-[var(--surface-soft)] px-3 text-xs font-bold uppercase tracking-[0.12em]">
-      <span className={`h-2.5 w-2.5 rounded-full ${evidenceTone(level)}`} />
-      Evidence {level}
+    <article className="directory-card flex h-full min-h-[390px] flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6">
+      {children}
+    </article>
+  );
+}
+
+function EvidenceStamp({ level }: { level: EvidenceLevel }): JSX.Element {
+  return (
+    <span className="inline-flex h-9 min-w-[106px] overflow-hidden rounded-md border border-[var(--border)] bg-[var(--surface-soft)]">
+      <span className={`w-1.5 ${evidenceTone(level)}`} />
+      <span className="flex flex-1 items-center justify-between px-2.5">
+        <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--muted)]">Grade</span>
+        <span className="text-base font-semibold leading-none">{level}</span>
+      </span>
     </span>
+  );
+}
+
+function Header({ label, evidenceLevel }: { label: string; evidenceLevel: EvidenceLevel }): JSX.Element {
+  return (
+    <div className="flex items-start justify-between gap-3">
+      <p className="max-w-[64%] text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">{label}</p>
+      <EvidenceStamp level={evidenceLevel} />
+    </div>
+  );
+}
+
+function Title({ children }: { children: ReactNode }): JSX.Element {
+  return <h3 className="mt-4 font-sans text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.02em] sm:text-[2.1rem]">{children}</h3>;
+}
+
+function Summary({ children }: { children: ReactNode }): JSX.Element {
+  return <p className="mt-2 line-clamp-2 text-[1rem] leading-[1.42] text-[var(--muted)]">{children}</p>;
+}
+
+function Facts({ children }: { children: ReactNode }): JSX.Element {
+  return <div className="mt-4 rounded-md border border-[var(--border)] bg-[var(--surface-soft)]">{children}</div>;
+}
+
+function FactRow({ label, value, valueClassName }: { label: string; value: ReactNode; valueClassName?: string }): JSX.Element {
+  return (
+    <div className="grid grid-cols-[96px_minmax(0,1fr)] gap-3 border-b border-[var(--border)] px-3 py-3 last:border-b-0 sm:grid-cols-[110px_minmax(0,1fr)]">
+      <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--muted)]">{label}</p>
+      <p className={valueClassName ?? "line-clamp-2 text-[0.97rem] leading-[1.35]"}>{value}</p>
+    </div>
+  );
+}
+
+function Tags({ tags }: { tags: string[] }): JSX.Element {
+  return (
+    <ul className="mt-3 flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <li key={tag} className="rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-3 py-1 text-[11px] font-semibold">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Footer({ href, aux, tags }: { href: string; aux?: string; tags?: string[] }): JSX.Element {
+  return (
+    <div className="mt-auto pt-4">
+      {aux && <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--muted)]">{aux}</p>}
+      {tags && tags.length > 0 && <Tags tags={tags} />}
+      <Link className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--text)] underline underline-offset-4" href={href}>
+        Open profile
+        <span aria-hidden="true">→</span>
+      </Link>
+    </div>
   );
 }
 
 export function SupplementCard({ supplement }: { supplement: SupplementEntry }): JSX.Element {
   return (
-    <article className="directory-card group flex h-full min-h-[500px] flex-col rounded-3xl border border-[var(--border)] bg-[linear-gradient(165deg,var(--surface)_10%,var(--surface-soft)_160%)] p-5 shadow-[0_18px_42px_rgba(8,15,28,0.08)] sm:p-6">
-      <div className="flex items-start justify-between gap-3">
-        <p className="max-w-[60%] text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{supplement.focus}</p>
-        <EvidenceBadge level={supplement.evidenceLevel} />
-      </div>
-      <h3 className="mt-5 text-[2.15rem] leading-[1.05] sm:text-[2.55rem]">{supplement.name}</h3>
-      <p className="mt-3 text-[1.08rem] leading-[1.5] text-[var(--muted)]">{supplement.evidenceSummary}</p>
-      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.11em] text-[var(--muted)]">Mentioned in {supplement.articleRefs.length} article{supplement.articleRefs.length > 1 ? "s" : ""}</p>
+    <Card>
+      <Header evidenceLevel={supplement.evidenceLevel} label={supplement.focus} />
+      <Title>{supplement.name}</Title>
+      <Summary>{supplement.evidenceSummary}</Summary>
 
-      <div className="mt-5 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Research Dose</p>
-        <p className="mt-2 text-base leading-[1.35]">{supplement.dosing.typicalDailyDose}</p>
-      </div>
+      <Facts>
+        <FactRow label="Dose" value={supplement.dosing.typicalDailyDose} />
+        <FactRow label="Effect" value={supplement.effectSize} />
+        <FactRow label="Safety" value={supplement.safety} valueClassName={`text-[1.02rem] font-semibold leading-[1.3] ${safetyTone(supplement.safety)}`} />
+      </Facts>
 
-      <dl className="mt-8 grid gap-3 sm:grid-cols-2">
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Effect Size</dt>
-          <dd className="mt-2 text-lg leading-[1.35]">{supplement.effectSize}</dd>
-        </div>
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-          <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Safety</dt>
-          <dd className={`mt-2 text-lg font-semibold leading-[1.35] ${safetyTone(supplement.safety)}`}>{supplement.safety}</dd>
-        </div>
-      </dl>
-
-      <ul className="mt-6 flex flex-wrap gap-2">
-        {supplement.conditionTags.map((tag) => (
-          <li key={tag} className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs font-semibold">
-            {tag}
-          </li>
-        ))}
-      </ul>
-
-      <Link
-        className="mt-auto inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--text)] px-5 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99]"
+      <Footer
+        aux={`Mentioned in ${supplement.articleRefs.length} article${supplement.articleRefs.length > 1 ? "s" : ""}`}
         href={`/supplements/${supplement.slug}`}
-      >
-        View Profile
-      </Link>
-    </article>
+        tags={supplement.conditionTags.slice(0, 4)}
+      />
+    </Card>
   );
 }
 
 export function ConditionCard({ condition }: { condition: ConditionEntry }): JSX.Element {
   return (
-    <article className="directory-card group flex h-full min-h-[500px] flex-col rounded-3xl border border-[var(--border)] bg-[linear-gradient(165deg,var(--surface)_10%,var(--surface-soft)_160%)] p-5 shadow-[0_18px_42px_rgba(8,15,28,0.08)] sm:p-6">
-      <div className="flex items-start justify-between gap-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">Condition Strategy</p>
-        <EvidenceBadge level={condition.evidenceLevel} />
-      </div>
-      <h3 className="mt-5 text-[2.15rem] leading-[1.05] sm:text-[2.55rem]">{condition.name}</h3>
-      <p className="mt-3 text-[1.08rem] leading-[1.45] text-[var(--muted)]">{condition.goal}</p>
+    <Card>
+      <Header evidenceLevel={condition.evidenceLevel} label="Condition Strategy" />
+      <Title>{condition.name}</Title>
+      <Summary>{condition.goal}</Summary>
 
-      <div className="mt-6 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-        <p className="text-sm leading-[1.5]">{condition.guidanceSummary}</p>
-      </div>
+      <Facts>
+        <FactRow label="Guidance" value={condition.guidanceSummary} valueClassName="line-clamp-3 text-[0.96rem] leading-[1.35]" />
+        <FactRow label="Top steps" value={condition.topInterventions.slice(0, 3).join(" • ")} valueClassName="line-clamp-2 text-[0.95rem] leading-[1.35]" />
+      </Facts>
 
-      <ul className="mt-6 grid gap-2 text-sm">
-        {condition.topInterventions.map((intervention) => (
-          <li key={intervention} className="rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-2 font-medium">
-            {intervention}
-          </li>
-        ))}
-      </ul>
-
-      <Link
-        className="mt-auto inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--text)] px-5 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99]"
-        href={`/conditions/${condition.slug}`}
-      >
-        View Profile
-      </Link>
-    </article>
+      <Footer href={`/conditions/${condition.slug}`} />
+    </Card>
   );
 }
 
 export function ClinicCard({ clinic }: { clinic: ClinicEntry }): JSX.Element {
   return (
-    <article className="directory-card group flex h-full min-h-[500px] flex-col rounded-3xl border border-[var(--border)] bg-[linear-gradient(165deg,var(--surface)_10%,var(--surface-soft)_160%)] p-5 shadow-[0_18px_42px_rgba(8,15,28,0.08)] sm:p-6">
-      <div className="flex items-start justify-between gap-3">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">{clinic.location}</p>
-        <EvidenceBadge level={clinic.evidenceLevel} />
-      </div>
-      <h3 className="mt-5 text-[2.15rem] leading-[1.05] sm:text-[2.55rem]">{clinic.name}</h3>
-      <p className="mt-3 text-[1.08rem] leading-[1.45] text-[var(--muted)]">{clinic.specialization}</p>
+    <Card>
+      <Header evidenceLevel={clinic.evidenceLevel} label={clinic.location} />
+      <Title>{clinic.name}</Title>
+      <Summary>{clinic.specialization}</Summary>
 
-      <div className="mt-6 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-        <p className="text-sm leading-[1.5]">{clinic.notes}</p>
-      </div>
+      <Facts>
+        <FactRow label="Notes" value={clinic.notes} valueClassName="line-clamp-3 text-[0.96rem] leading-[1.35]" />
+        <FactRow label="Focus" value={clinic.protocolFocus.slice(0, 3).join(" • ")} valueClassName="line-clamp-2 text-[0.95rem] leading-[1.35]" />
+      </Facts>
 
-      <ul className="mt-6 flex flex-wrap gap-2">
-        {clinic.protocolFocus.map((focus) => (
-          <li key={focus} className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs font-semibold">
-            {focus}
-          </li>
-        ))}
-      </ul>
-
-      <Link
-        className="mt-auto inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--text)] px-5 text-xs font-bold uppercase tracking-[0.12em] text-[var(--bg)] transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99]"
-        href={`/clinics/${clinic.slug}`}
-      >
-        View Profile
-      </Link>
-    </article>
+      <Footer href={`/clinics/${clinic.slug}`} />
+    </Card>
   );
 }
