@@ -11,6 +11,12 @@ export type SupplementEntry = {
   conditionTags: string[];
   bestFor: string[];
   cautions: string;
+  dosing: {
+    typicalDailyDose: string;
+    timing: string;
+    protocolDuration: string;
+    notes: string;
+  };
   sourceUrls: string[];
   articleRefs: string[];
   updatedAt: string;
@@ -60,6 +66,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["sleep", "stress", "recovery"],
     bestFor: ["sleep onset support", "evening calming stacks"],
     cautions: "May potentiate sedatives.",
+    dosing: {
+      typicalDailyDose: "25-100 mg",
+      timing: "30-60 minutes before bedtime",
+      protocolDuration: "4-12 weeks in sleep-focused protocols",
+      notes: "Most studies and protocols start at lower evening doses and titrate based on sleep response."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=apigenin+sleep+trial"],
     articleRefs: ["apigenin-natural-sleep-aid"],
     updatedAt: "2026-02-13"
@@ -75,6 +87,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["insulin resistance", "weight management", "metabolic syndrome"],
     bestFor: ["metabolic reset protocols"],
     cautions: "Can interact with glucose-lowering drugs.",
+    dosing: {
+      typicalDailyDose: "900-1500 mg (divided with meals)",
+      timing: "Two to three doses with food",
+      protocolDuration: "8-24 weeks in metabolic studies",
+      notes: "Common research pattern uses ~500 mg two to three times daily with meals."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=berberine+metabolic+trial"],
     articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-13"
@@ -90,6 +108,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["fatigue", "mitochondrial decline", "cardiovascular health"],
     bestFor: ["energy restoration", "statin users"],
     cautions: "Formulation quality matters.",
+    dosing: {
+      typicalDailyDose: "100-300 mg",
+      timing: "With a fat-containing meal",
+      protocolDuration: "8-16 weeks in fatigue/cardiometabolic studies",
+      notes: "Ubiquinol forms are often used at lower mg than ubiquinone due to higher bioavailability."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=coq10+clinical+trial"],
     articleRefs: ["coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-13"
@@ -105,6 +129,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["frailty", "inflammation", "metabolic health"],
     bestFor: ["clinician-guided anti-aging programs"],
     cautions: "Physician oversight required.",
+    dosing: {
+      typicalDailyDose: "Not self-directed; protocol-dependent",
+      timing: "Intermittent schedules under physician supervision",
+      protocolDuration: "Set by specialist with ongoing monitoring",
+      notes: "Use in longevity settings is highly protocolized and should not be interpreted as OTC dosing guidance."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=rapamycin+aging+trial"],
     articleRefs: ["rapamycin-pearl-trial-women-benefits", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-13"
@@ -120,6 +150,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["cardiovascular", "cognition", "autophagy"],
     bestFor: ["dietary longevity stack"],
     cautions: "Product quality varies.",
+    dosing: {
+      typicalDailyDose: "1-2 mg spermidine equivalent",
+      timing: "Daily, usually with food",
+      protocolDuration: "3-12 months in observational/intervention protocols",
+      notes: "Many human protocols standardize to spermidine content rather than raw extract weight."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=spermidine+human+trial"],
     articleRefs: ["spermidine-autophagy-cellular-renewal", "spermidine-cardiac-disease-trial"],
     updatedAt: "2026-02-13"
@@ -135,6 +171,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["inflammation", "bone density", "cellular senescence"],
     bestFor: ["experimental senolytic cycles"],
     cautions: "Long-term human efficacy uncertain.",
+    dosing: {
+      typicalDailyDose: "100-500 mg in cycling protocols",
+      timing: "Short pulse cycles rather than continuous daily use",
+      protocolDuration: "Intermittent cycles (for example 2-5 days per month)",
+      notes: "Human evidence remains limited; cycle design varies widely across experimental protocols."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fisetin+clinical+trial"],
     articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "senolytics-bone-density-mayo-clinic"],
     updatedAt: "2026-02-13"
@@ -150,6 +192,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["focus", "working memory", "neuroplasticity"],
     bestFor: ["acute cognitive windows"],
     cautions: "Extraction quality varies.",
+    dosing: {
+      typicalDailyDose: "500-3000 mg extract",
+      timing: "Once daily, often in morning or early afternoon",
+      protocolDuration: "8-16 weeks in cognition-focused studies",
+      notes: "Dose targets depend strongly on extract standardization and fruiting body vs mycelium source."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lion%27s+mane+clinical"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-13"
@@ -165,6 +213,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["memory", "sleep quality", "neuroprotection"],
     bestFor: ["aging cognition protocols"],
     cautions: "Read elemental magnesium dosing carefully.",
+    dosing: {
+      typicalDailyDose: "1000-2000 mg compound (about 72-144 mg elemental magnesium)",
+      timing: "Split doses, often afternoon/evening",
+      protocolDuration: "6-12 weeks in cognition/sleep studies",
+      notes: "Research and label doses are usually expressed as total compound weight, not elemental magnesium."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=magnesium+l-threonate+trial"],
     articleRefs: ["magnesium-threonate-brain-health"],
     updatedAt: "2026-02-13"
@@ -180,6 +234,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["cellular energy", "cognitive decline", "metabolic resilience"],
     bestFor: ["NAD restoration programs"],
     cautions: "Stability and purity vary by brand.",
+    dosing: {
+      typicalDailyDose: "250-600 mg",
+      timing: "Morning or split morning/noon dosing",
+      protocolDuration: "4-12 weeks in most current human studies",
+      notes: "Clinical protocols often begin at 250 mg and adjust based on tolerance and biomarker goals."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nmn+human+trial"],
     articleRefs: [
       "nmn-brain-aging-breakthrough",
@@ -201,6 +261,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["cellular energy", "metabolic support"],
     bestFor: ["NAD precursor alternatives"],
     cautions: "Benefits appear context-dependent.",
+    dosing: {
+      typicalDailyDose: "250-1000 mg",
+      timing: "Morning with food or split dosing",
+      protocolDuration: "6-12 weeks in common intervention studies",
+      notes: "Higher ranges are typically used in metabolic/endurance protocols under supervision."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+riboside+trial"],
     articleRefs: ["nad-boosters-human-trial-comparison"],
     updatedAt: "2026-02-13"
@@ -216,6 +282,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["nad pathway", "metabolic support"],
     bestFor: ["budget NAD support"],
     cautions: "Dose-dependent tolerability issues.",
+    dosing: {
+      typicalDailyDose: "250-1000 mg",
+      timing: "With meals",
+      protocolDuration: "Variable; often 4-12 weeks in intervention studies",
+      notes: "Upper-end doses may increase side-effect risk and should be individualized."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+nad+study"],
     articleRefs: ["nad-boosters-human-trial-comparison"],
     updatedAt: "2026-02-13"
@@ -231,6 +303,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["vascular aging", "cognition", "inflammation"],
     bestFor: ["polyphenol longevity stacks"],
     cautions: "Bioavailability is a major limiter.",
+    dosing: {
+      typicalDailyDose: "150-500 mg (trans-resveratrol equivalent)",
+      timing: "With meals, frequently alongside fats",
+      protocolDuration: "8-24 weeks across cardiometabolic studies",
+      notes: "Formulation and absorption enhancers can materially change effective exposure."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resveratrol+aging+trial"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-13"
@@ -246,6 +324,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["senolytic protocols", "inflammation", "vascular support"],
     bestFor: ["adjunctive senolytic cycles"],
     cautions: "Most strong evidence is combination-based.",
+    dosing: {
+      typicalDailyDose: "500-1000 mg",
+      timing: "Daily or pulse-cycle depending on protocol",
+      protocolDuration: "4-12 weeks (or intermittent senolytic cycles)",
+      notes: "Standalone data are limited; many protocols pair quercetin with other agents."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=quercetin+senolytic"],
     articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-13"
@@ -261,6 +345,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["immune resilience", "bone health", "longevity markers"],
     bestFor: ["baseline deficiency correction"],
     cautions: "Monitor blood levels to avoid oversupplementation.",
+    dosing: {
+      typicalDailyDose: "1000-4000 IU (25-100 mcg), adjusted by blood level",
+      timing: "Daily with food containing fat",
+      protocolDuration: "Ongoing with periodic lab reassessment",
+      notes: "Target and dose should be individualized to 25(OH)D status and clinician guidance."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+d3+trial"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-13"
@@ -276,6 +366,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["cardiovascular", "inflammation", "brain health"],
     bestFor: ["foundational prevention"],
     cautions: "Effect sizes depend on EPA/DHA dose.",
+    dosing: {
+      typicalDailyDose: "1000-3000 mg combined EPA+DHA",
+      timing: "Daily with meals",
+      protocolDuration: "8-24 weeks in many lipid/inflammation studies",
+      notes: "Research outcomes are usually linked to EPA+DHA content, not total fish oil capsule weight."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=omega-3+clinical+trial"],
     articleRefs: ["vitamin-d-telomere-protection-vital", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-13"
@@ -291,6 +387,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["cognition", "vascular function", "metabolic support"],
     bestFor: ["clinic-guided cognition plans"],
     cautions: "Composition varies widely across products.",
+    dosing: {
+      typicalDailyDose: "Protocol-dependent stack, commonly 500-1500 mg total polyphenols",
+      timing: "Daily with meals",
+      protocolDuration: "8-16 weeks minimum in cognition protocols",
+      notes: "Use product-specific standardization labels because stack composition is heterogeneous."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+stack+cognition"],
     articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-13"
@@ -306,6 +408,12 @@ const supplements: SupplementEntry[] = [
     conditionTags: ["neurodegeneration", "mitochondrial health", "experimental longevity"],
     bestFor: ["research watchlists"],
     cautions: "Not a mature consumer supplement category.",
+    dosing: {
+      typicalDailyDose: "No established consumer dose",
+      timing: "Research setting only",
+      protocolDuration: "Trial-defined",
+      notes: "Current evidence is early-stage; dosing should follow study protocols, not self-experimentation."
+    },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sirt3+activator+trial"],
     articleRefs: ["sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-13"
@@ -558,6 +666,10 @@ function validateSupplementEntries(entries: SupplementEntry[]): void {
     ensureNonEmptyStringField(recordName, "evidenceSummary", entry.evidenceSummary);
     ensureNonEmptyStringField(recordName, "effectSize", entry.effectSize);
     ensureNonEmptyStringField(recordName, "cautions", entry.cautions);
+    ensureNonEmptyStringField(recordName, "dosing.typicalDailyDose", entry.dosing?.typicalDailyDose);
+    ensureNonEmptyStringField(recordName, "dosing.timing", entry.dosing?.timing);
+    ensureNonEmptyStringField(recordName, "dosing.protocolDuration", entry.dosing?.protocolDuration);
+    ensureNonEmptyStringField(recordName, "dosing.notes", entry.dosing?.notes);
     ensureStringArray(recordName, "conditionTags", entry.conditionTags);
     ensureStringArray(recordName, "bestFor", entry.bestFor);
     ensureUrlArray(recordName, entry.sourceUrls);

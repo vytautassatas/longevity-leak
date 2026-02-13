@@ -1,0 +1,55 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`JSON-LD snapshots > matches clinic detail schema 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles, CA",
+    },
+    "medicalSpecialty": "Metabolic and hormone optimization",
+    "name": "Precision Longevity LA",
+    "url": "https://longevityleak.com/clinics/precision-longevity-la",
+  },
+]
+`;
+
+exports[`JSON-LD snapshots > matches condition detail schema 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "description": "Lifestyle and protocolized coaching outperform single-agent approaches.",
+    "mainEntityOfPage": "https://longevityleak.com/conditions/metabolic-syndrome",
+    "name": "Metabolic Syndrome",
+    "url": "https://longevityleak.com/conditions/metabolic-syndrome",
+  },
+]
+`;
+
+exports[`JSON-LD snapshots > matches home website schema 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "description": "Clinical studies. Zero jargon. The stuff that actually works.",
+    "name": "Longevity Leak",
+    "url": "https://longevityleak.com",
+  },
+]
+`;
+
+exports[`JSON-LD snapshots > matches supplement detail schema 1`] = `
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalEntity",
+    "description": "Emerging clinical sleep data and mechanistic evidence support non-sedative calming effects.",
+    "mainEntityOfPage": "https://longevityleak.com/supplements/apigenin",
+    "name": "Apigenin",
+    "url": "https://longevityleak.com/supplements/apigenin",
+  },
+]
+`;

@@ -90,6 +90,28 @@ export default async function SupplementDetailPage({ params }: { params: MaybePr
           <p className="mt-6 text-sm text-[var(--muted)]">{supplement.cautions}</p>
         </section>
 
+        <section className="mt-8 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+          <h2 className="text-2xl">Research Dosing</h2>
+          <p className="mt-2 text-sm text-[var(--muted)]">
+            Dosing below reflects common research and protocol ranges, not personal medical advice.
+          </p>
+          <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+              <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Typical Daily Dose</dt>
+              <dd className="mt-2 text-base">{supplement.dosing.typicalDailyDose}</dd>
+            </div>
+            <div className="rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+              <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Timing</dt>
+              <dd className="mt-2 text-base">{supplement.dosing.timing}</dd>
+            </div>
+            <div className="rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] p-4 sm:col-span-2">
+              <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Protocol Duration in Studies</dt>
+              <dd className="mt-2 text-base">{supplement.dosing.protocolDuration}</dd>
+            </div>
+          </dl>
+          <p className="mt-4 text-sm text-[var(--muted)]">{supplement.dosing.notes}</p>
+        </section>
+
         <section className="mt-8 grid gap-6 lg:grid-cols-2">
           <article className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
             <h2 className="text-2xl">Best Fit Profiles</h2>
