@@ -31,12 +31,12 @@ export function SupplementsBrowser({ supplements }: { supplements: SupplementEnt
 
   return (
     <section className="mt-10">
-      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-4 sm:p-5">
+      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-[0_10px_25px_rgba(8,15,28,0.05)] sm:p-5">
         <div className="grid gap-3 lg:grid-cols-[1.5fr_1fr_1fr]">
           <label className="flex flex-col gap-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">Search</span>
             <input
-              className="h-12 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
+              className="h-12 rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Find by name, focus, or tag"
               type="text"
@@ -47,7 +47,7 @@ export function SupplementsBrowser({ supplements }: { supplements: SupplementEnt
           <label className="flex flex-col gap-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">Evidence</span>
             <select
-              className="h-12 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
+              className="h-12 rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
               onChange={(event) => setEvidence(event.target.value as EvidenceFilter)}
               value={evidence}
             >
@@ -62,7 +62,7 @@ export function SupplementsBrowser({ supplements }: { supplements: SupplementEnt
           <label className="flex flex-col gap-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">Safety</span>
             <select
-              className="h-12 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
+              className="h-12 rounded-lg border border-[var(--border)] bg-[var(--surface-soft)] px-4 text-sm outline-none transition-colors focus:border-[var(--border-strong)]"
               onChange={(event) => setSafety(event.target.value as SafetyFilter)}
               value={safety}
             >

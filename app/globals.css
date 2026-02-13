@@ -184,27 +184,13 @@ select {
 .directory-card {
   position: relative;
   overflow: hidden;
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-}
-
-.directory-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.28), transparent 40%);
-  opacity: 0;
-  transition: opacity 220ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .directory-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 52px rgba(8, 15, 28, 0.14);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(8, 15, 28, 0.08);
   border-color: var(--border-strong);
-}
-
-.directory-card:hover::before {
-  opacity: 1;
 }
 
 @media (max-width: 640px) {
