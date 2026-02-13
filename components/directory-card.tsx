@@ -33,6 +33,11 @@ export function SupplementCard({ supplement }: { supplement: SupplementEntry }):
       <p className="mt-3 text-[1.08rem] leading-[1.5] text-[var(--muted)]">{supplement.evidenceSummary}</p>
       <p className="mt-3 text-xs font-semibold uppercase tracking-[0.11em] text-[var(--muted)]">Mentioned in {supplement.articleRefs.length} article{supplement.articleRefs.length > 1 ? "s" : ""}</p>
 
+      <div className="mt-5 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
+        <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Research Dose</p>
+        <p className="mt-2 text-base leading-[1.35]">{supplement.dosing.typicalDailyDose}</p>
+      </div>
+
       <dl className="mt-8 grid gap-3 sm:grid-cols-2">
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
           <dt className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Effect Size</dt>
