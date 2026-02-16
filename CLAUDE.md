@@ -62,6 +62,27 @@
 - Avoid conflicting evidence/risk/dosing labels across surfaces for the same supplement.
 - Prefer explicit uncertainty over forced certainty.
 
+## SEO and Performance Guardrails
+- Prefer static generation for core content pages; avoid runtime data dependencies that delay first render.
+- Use one canonical host across metadata, sitemap, and redirects; avoid conflicting app-level and platform-level redirect logic.
+- Every indexable page must include:
+  - unique title
+  - unique meta description
+  - canonical URL
+  - Open Graph/Twitter metadata aligned with on-page content
+- Maintain valid sitemap/robots output and exclude hidden or disabled page types from indexable routes.
+- Keep structured data (JSON-LD) aligned with visible content and use appropriate types (WebSite, Article, MedicalEntity, MedicalCondition, MedicalClinic).
+- Internal linking is mandatory for discoverability:
+  - article -> related supplements/conditions (and clinics when enabled)
+  - supplement/condition -> related articles
+  - avoid orphan pages with no inbound/outbound contextual links
+- Link text should be descriptive and intent-bearing; avoid generic anchor text.
+- Content freshness and trust signals should always be visible (publish date, source links, clear evidence/risk framing).
+- Performance budget expectations:
+  - keep directory/list pages lightweight in client JS
+  - optimize image/media payloads
+  - preserve readable spacing/type for fast scanning, especially on mobile
+
 ## Ongoing Quality Gates
 - Required checks before merge:
   - `npm run lint`

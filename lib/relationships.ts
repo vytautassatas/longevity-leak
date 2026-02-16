@@ -28,7 +28,17 @@ const supplementAliases: Record<string, string[]> = {
   "vitamin-d3": ["vitamin d", "sunshine vitamin", "cholecalciferol"],
   "omega-3": ["omega 3", "epa", "dha", "fish oil"],
   "polyphenol-stack": ["polyphenol stack"],
-  "sirt3-activators": ["sirt3 activator", "sirt3 activators"]
+  "sirt3-activators": ["sirt3 activator", "sirt3 activators"],
+  "creatine-monohydrate": ["creatine"],
+  "green-tea-extract-egcg": ["green tea extract", "egcg", "epigallocatechin gallate"],
+  "n-acetylcysteine": ["nac"],
+  "acetyl-l-carnitine": ["alcar", "acetyl l carnitine", "l-carnitine"],
+  pqq: ["pyrroloquinoline quinone"],
+  "alpha-lipoic-acid": ["ala", "lipoic acid"],
+  citicoline: ["cdp-choline", "cdp choline"],
+  "bacopa-monnieri": ["bacopa"],
+  ashwagandha: ["withania somnifera"],
+  "rhodiola-rosea": ["rhodiola"]
 };
 
 const conditionTokenStopwords = new Set(["and", "the", "risk", "load", "with", "for", "into", "from"]);
