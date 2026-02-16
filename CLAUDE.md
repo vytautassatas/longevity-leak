@@ -62,6 +62,12 @@
 - Avoid conflicting evidence/risk/dosing labels across surfaces for the same supplement.
 - Prefer explicit uncertainty over forced certainty.
 
+## Source Quality Standard
+- Use trusted medical/scientific source domains only for directory `sourceUrls` (PubMed/PMC, ClinicalTrials.gov, major peer-reviewed journals/guideline hosts).
+- For `evidenceLevel: "A"` entries, avoid source lists that are only search-query URLs; include at least one direct study/guideline link whenever possible.
+- For high-confidence entries, maintain broader support coverage (for supplements, prefer at least 2 relevant linked articles in `articleRefs`).
+- Keep `updatedAt` fresh and periodically refresh high-impact entries before they become stale.
+
 ## SEO and Performance Guardrails
 - Prefer static generation for core content pages; avoid runtime data dependencies that delay first render.
 - Use one canonical host across metadata, sitemap, and redirects; avoid conflicting app-level and platform-level redirect logic.
@@ -85,6 +91,7 @@
 
 ## Ongoing Quality Gates
 - Required checks before merge:
+  - `npm run quality:directory`
   - `npm run lint`
   - `npx tsc --noEmit`
   - `npm test`

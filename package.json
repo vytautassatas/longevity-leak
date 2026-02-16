@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "quality:directory": "node scripts/directory-quality-report.mjs",
+    "quality:directory:strict": "node scripts/directory-quality-report.mjs --strict"
   },
   "dependencies": {
     "eslint-config-next": "^14.2.35",

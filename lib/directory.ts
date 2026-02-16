@@ -862,6 +862,678 @@ const supplements: SupplementEntry[] = [
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=melatonin+insomnia+meta+analysis"],
     articleRefs: ["apigenin-natural-sleep-aid", "magnesium-threonate-brain-health"],
     updatedAt: "2026-02-16"
+  },
+  {
+    slug: "urolithin-a",
+    name: "Urolithin A",
+    focus: "Mitophagy and muscle-endurance support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human studies suggest support for mitochondrial function and muscle performance outcomes.",
+    effectSize: "Modest improvements in endurance and mitochondrial biomarkers",
+    safety: "Low Risk",
+    conditionTags: ["mitochondrial fatigue", "muscle endurance", "healthy aging", "recovery"],
+    bestFor: ["mitochondrial renewal protocols"],
+    cautions: "Long-term outcome data are still maturing across diverse populations.",
+    dosing: {
+      typicalDailyDose: "500-1000 mg",
+      timing: "Once daily with meals",
+      protocolDuration: "8-16 weeks in current human interventions",
+      notes: "Most available clinical protocols use daily dosing rather than cyclic use."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=urolithin+a+human+trial"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "caloric-restriction-mimetics-2025-review"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "acarbose",
+    name: "Acarbose",
+    focus: "Post-meal glucose control and metabolic risk reduction",
+    evidenceLevel: "A",
+    evidenceSummary: "Strong glycemic evidence in diabetes prevention and postprandial control settings.",
+    effectSize: "Reliable reduction in postprandial glucose excursion",
+    safety: "Needs Monitoring",
+    conditionTags: ["prediabetes", "postprandial glucose spikes", "metabolic syndrome"],
+    bestFor: ["physician-guided glucose variability protocols"],
+    cautions: "Prescription medication; GI side effects and medication interactions require clinical supervision.",
+    dosing: {
+      typicalDailyDose: "25-100 mg with carbohydrate-containing meals",
+      timing: "At the first bite of meals",
+      protocolDuration: "Longitudinal with periodic clinical review",
+      notes: "Dose titration is typically gradual to improve tolerance."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=acarbose+prediabetes+trial"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "trimethylglycine",
+    name: "Trimethylglycine (TMG)",
+    focus: "Methylation and homocysteine support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human evidence supports homocysteine reduction and methylation pathway support.",
+    effectSize: "Modest reduction in homocysteine and methylation stress",
+    safety: "Low Risk",
+    conditionTags: ["homocysteine", "cardiovascular risk", "methylation support", "energy metabolism"],
+    bestFor: ["methylation-focused lab-driven protocols"],
+    cautions: "Should be paired with B-vitamin context in elevated homocysteine protocols.",
+    dosing: {
+      typicalDailyDose: "500-3000 mg",
+      timing: "Once or twice daily with meals",
+      protocolDuration: "4-12 weeks before reassessing homocysteine markers",
+      notes: "Dose selection is usually individualized to baseline homocysteine and B-vitamin status."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=trimethylglycine+homocysteine+trial"],
+    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "vitamin-d-telomere-protection-vital"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "glucosamine-sulfate",
+    name: "Glucosamine Sulfate",
+    focus: "Joint comfort and cartilage support",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical evidence suggests symptom support for chronic joint discomfort in selected populations.",
+    effectSize: "Modest pain and mobility improvement",
+    safety: "Low Risk",
+    conditionTags: ["joint stiffness", "mobility", "functional movement", "exercise longevity"],
+    bestFor: ["long-horizon joint support strategies"],
+    cautions: "Response varies and benefit tends to accumulate gradually over months.",
+    dosing: {
+      typicalDailyDose: "1500 mg",
+      timing: "Daily with meals",
+      protocolDuration: "8-24 weeks in common musculoskeletal studies",
+      notes: "Consistency over time is usually required for detectable benefit."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=glucosamine+sulfate+randomized+trial"],
+    articleRefs: ["senolytics-bone-density-mayo-clinic", "fisetin-removes-zombie-cells-mayo-clinic"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "collagen-peptides",
+    name: "Collagen Peptides",
+    focus: "Tendon, skin, and connective tissue support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human studies indicate support for skin elasticity and some connective tissue outcomes.",
+    effectSize: "Modest improvements in connective tissue and skin-related endpoints",
+    safety: "Low Risk",
+    conditionTags: ["joint support", "skin aging", "recovery", "mobility"],
+    bestFor: ["connective tissue resilience routines"],
+    cautions: "Protein quality and peptide profile vary across products.",
+    dosing: {
+      typicalDailyDose: "5-15 g",
+      timing: "Daily, often with vitamin C-containing meals",
+      protocolDuration: "8-24 weeks in skin and connective tissue studies",
+      notes: "Regular daily use is more important than exact dosing time."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=collagen+peptides+clinical+trial"],
+    articleRefs: ["senolytics-bone-density-mayo-clinic", "vitamin-d-immune-system-deficiency"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "beetroot-nitrate",
+    name: "Beetroot Nitrate",
+    focus: "Nitric oxide and vascular performance support",
+    evidenceLevel: "B",
+    evidenceSummary: "Consistent human signal for blood flow and exercise performance support.",
+    effectSize: "Modest-to-meaningful endothelial and performance support",
+    safety: "Low Risk",
+    conditionTags: ["blood pressure", "vascular function", "exercise tolerance", "endothelial health"],
+    bestFor: ["cardiorespiratory fitness and blood-flow programs"],
+    cautions: "Effect size depends on nitrate dose and timing relative to activity.",
+    dosing: {
+      typicalDailyDose: "300-800 mg nitrate equivalent",
+      timing: "Daily or 2-3 hours pre-exercise",
+      protocolDuration: "2-12 weeks in performance and vascular studies",
+      notes: "Nitrate-equivalent labeling is the key metric, not raw powder grams."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beetroot+nitrate+trial"],
+    articleRefs: ["resveratrol-longevity-clinic-protocol", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "probiotic-multistrain",
+    name: "Probiotic (Multi-Strain)",
+    focus: "Microbiome support and digestive symptom reduction",
+    evidenceLevel: "B",
+    evidenceSummary: "Strain-specific evidence supports GI symptom and microbiome-targeted outcomes.",
+    effectSize: "Modest improvement in digestive comfort and bowel regularity",
+    safety: "Low Risk",
+    conditionTags: ["gut microbiome", "digestive comfort", "immune support", "inflammation"],
+    bestFor: ["gut health protocols with diet-first foundation"],
+    cautions: "Benefits are strain-specific and product quality is highly variable.",
+    dosing: {
+      typicalDailyDose: "10-50 billion CFU (strain-dependent)",
+      timing: "Daily with or without food per product guidance",
+      protocolDuration: "4-12 weeks before symptom reassessment",
+      notes: "Choose protocols by named strains and indication rather than CFU count alone."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=multi-strain+probiotic+randomized+trial"],
+    articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "psyllium-husk",
+    name: "Psyllium Husk",
+    focus: "Fiber-driven glycemic and lipid support",
+    evidenceLevel: "A",
+    evidenceSummary: "Robust evidence for bowel regularity, LDL support, and postprandial glycemic modulation.",
+    effectSize: "Reliable bowel and lipid improvements; modest glycemic support",
+    safety: "Low Risk",
+    conditionTags: ["constipation", "lipid support", "glucose spikes", "gut health"],
+    bestFor: ["foundational dietary fiber correction"],
+    cautions: "Requires adequate hydration and gradual dose escalation to reduce GI discomfort.",
+    dosing: {
+      typicalDailyDose: "5-15 g",
+      timing: "With meals and substantial water intake",
+      protocolDuration: "Ongoing foundational nutrition intervention",
+      notes: "Fiber tolerance and hydration status should guide dose progression."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=psyllium+meta+analysis+lipid+glucose"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "vitamin-b12",
+    name: "Vitamin B12",
+    focus: "Neurologic function and methylation support",
+    evidenceLevel: "A",
+    evidenceSummary: "Strong evidence for deficiency correction and neurologic/hematologic risk reduction.",
+    effectSize: "High efficacy in deficiency correction",
+    safety: "Low Risk",
+    conditionTags: ["neurologic support", "fatigue", "homocysteine", "deficiency correction"],
+    bestFor: ["lab-confirmed deficiency and higher-risk dietary patterns"],
+    cautions: "B12 status should be interpreted with MMA/homocysteine context when needed.",
+    dosing: {
+      typicalDailyDose: "250-2000 mcg (route and dose individualized)",
+      timing: "Daily or weekly based on protocol",
+      protocolDuration: "8-12 weeks then lab-guided maintenance",
+      notes: "Dose and route depend on absorption capacity and deficiency severity."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+b12+deficiency+trial"],
+    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "lutein-zeaxanthin",
+    name: "Lutein + Zeaxanthin",
+    focus: "Retinal and visual-processing support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human studies support macular pigment and visual function endpoints in targeted populations.",
+    effectSize: "Modest visual function and retinal protection support",
+    safety: "Low Risk",
+    conditionTags: ["visual aging", "retinal support", "screen strain", "cognitive visual processing"],
+    bestFor: ["age-related visual support protocols"],
+    cautions: "Benefits are gradual and usually emerge with consistent long-term use.",
+    dosing: {
+      typicalDailyDose: "10-20 mg lutein + 2-4 mg zeaxanthin",
+      timing: "Daily with fat-containing meals",
+      protocolDuration: "12-24 weeks for measurable visual outcomes",
+      notes: "Macular carotenoids require sustained intake for tissue-level changes."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lutein+zeaxanthin+randomized+trial"],
+    articleRefs: ["epigenetic-reprogramming-eye-disease-trial", "nmn-brain-aging-breakthrough"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "zinc",
+    name: "Zinc",
+    focus: "Immune and enzymatic systems support",
+    evidenceLevel: "A",
+    evidenceSummary: "Strong evidence for deficiency correction and select immune-related outcomes.",
+    effectSize: "Meaningful impact in deficiency states",
+    safety: "Moderate Risk",
+    conditionTags: ["immune resilience", "deficiency correction", "wound recovery", "enzymatic function"],
+    bestFor: ["nutrient repletion strategies when intake is low"],
+    cautions: "Chronic high-dose intake can impair copper status and should be monitored.",
+    dosing: {
+      typicalDailyDose: "10-30 mg elemental zinc",
+      timing: "With food to reduce nausea",
+      protocolDuration: "8-12 weeks before reassessment",
+      notes: "Dose selection should consider baseline intake and concurrent copper exposure."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=zinc+supplementation+randomized+trial"],
+    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "selenium",
+    name: "Selenium",
+    focus: "Antioxidant enzyme and thyroid support",
+    evidenceLevel: "B",
+    evidenceSummary: "Supportive evidence for deficiency correction and antioxidant enzyme system function.",
+    effectSize: "Modest risk-marker improvement in selected populations",
+    safety: "Moderate Risk",
+    conditionTags: ["thyroid support", "oxidative stress", "immune support", "deficiency correction"],
+    bestFor: ["low-selenium dietary patterns and targeted repletion plans"],
+    cautions: "Narrow therapeutic window; chronic excess can cause adverse effects.",
+    dosing: {
+      typicalDailyDose: "50-200 mcg",
+      timing: "Daily with meals",
+      protocolDuration: "8-12 weeks then lab/diet reassessment",
+      notes: "Baseline intake and total selenium exposure should guide dosing."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=selenium+supplementation+clinical+trial"],
+    articleRefs: ["sirt3-activators-breakthrough-aging", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "whey-protein-isolate",
+    name: "Whey Protein Isolate",
+    focus: "Muscle protein synthesis and functional recovery",
+    evidenceLevel: "A",
+    evidenceSummary: "Strong evidence supports lean-mass and strength outcomes, especially with resistance training.",
+    effectSize: "Reliable lean-mass and strength support in training and aging populations",
+    safety: "Low Risk",
+    conditionTags: ["sarcopenia", "protein intake deficit", "frailty", "recovery"],
+    bestFor: ["muscle-preservation protocols in adults 40+"],
+    cautions: "Dose should be individualized for total protein intake and renal considerations.",
+    dosing: {
+      typicalDailyDose: "20-40 g per serving",
+      timing: "Post-training or distributed across meals",
+      protocolDuration: "Ongoing, with periodic nutrition reassessment",
+      notes: "Total daily protein target and meal distribution are more important than narrow timing windows."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=whey+protein+isolate+older+adults+trial"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "senolytics-bone-density-mayo-clinic"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "essential-amino-acids",
+    name: "Essential Amino Acids (EAA)",
+    focus: "Anabolic signaling and muscle retention",
+    evidenceLevel: "A",
+    evidenceSummary: "Human trials support EAA blends for preserving muscle protein synthesis in lower-protein contexts.",
+    effectSize: "Modest-to-meaningful support for muscle maintenance",
+    safety: "Low Risk",
+    conditionTags: ["sarcopenia", "muscle preservation", "recovery", "protein intake deficit"],
+    bestFor: ["low appetite or low-protein populations"],
+    cautions: "Use within an overall protein plan, not as a complete replacement for dietary protein.",
+    dosing: {
+      typicalDailyDose: "8-15 g EAA blend",
+      timing: "Between meals or peri-training",
+      protocolDuration: "8-16 weeks in muscle maintenance protocols",
+      notes: "Leucine content and total essential amino profile determine anabolic potency."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=essential+amino+acids+older+adults+trial"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "hmb",
+    name: "HMB (Beta-Hydroxy Beta-Methylbutyrate)",
+    focus: "Muscle preservation under stress and aging",
+    evidenceLevel: "B",
+    evidenceSummary: "Evidence supports reduced muscle breakdown and modest functional support in selected populations.",
+    effectSize: "Modest support for muscle retention and recovery",
+    safety: "Low Risk",
+    conditionTags: ["frailty", "sarcopenia", "recovery", "muscle loss"],
+    bestFor: ["deconditioning and recovery phases"],
+    cautions: "Works best when paired with adequate protein intake and resistance exercise.",
+    dosing: {
+      typicalDailyDose: "3 g",
+      timing: "Split into 2-3 doses with meals",
+      protocolDuration: "8-24 weeks in muscle-focused studies",
+      notes: "Effect size is generally larger in less-trained and older populations."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hmb+older+adults+trial"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "spermidine-cardiac-disease-trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "citrulline-malate",
+    name: "Citrulline Malate",
+    focus: "Nitric oxide support and exercise tolerance",
+    evidenceLevel: "B",
+    evidenceSummary: "Trials suggest support for blood flow and high-intensity exercise tolerance.",
+    effectSize: "Modest performance and vascular-support signal",
+    safety: "Low Risk",
+    conditionTags: ["endothelial function", "exercise tolerance", "fatigue", "cardiorespiratory fitness"],
+    bestFor: ["performance and vascular support protocols"],
+    cautions: "Dose timing and total citrulline content vary across products.",
+    dosing: {
+      typicalDailyDose: "3-8 g citrulline equivalent",
+      timing: "30-90 minutes pre-exercise or split daily",
+      protocolDuration: "4-12 weeks in performance interventions",
+      notes: "Product labels often list total compound weight rather than active citrulline content."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=citrulline+malate+clinical+trial"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "resveratrol-longevity-clinic-protocol"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "beta-alanine",
+    name: "Beta-Alanine",
+    focus: "Muscle buffering capacity and fatigue resistance",
+    evidenceLevel: "B",
+    evidenceSummary: "Human data support improved high-intensity exercise capacity through carnosine elevation.",
+    effectSize: "Modest-to-meaningful support for repeated high-intensity efforts",
+    safety: "Low Risk",
+    conditionTags: ["fatigue resistance", "exercise tolerance", "muscle performance", "conditioning"],
+    bestFor: ["high-intensity training blocks"],
+    cautions: "Transient paresthesia is common at larger single doses.",
+    dosing: {
+      typicalDailyDose: "2-6 g",
+      timing: "Split doses across the day",
+      protocolDuration: "4-12 weeks for tissue carnosine loading",
+      notes: "Smaller divided doses improve tolerability and reduce tingling."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beta+alanine+randomized+trial"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "boswellia-serrata",
+    name: "Boswellia Serrata",
+    focus: "Joint comfort and inflammatory pathway support",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical studies suggest symptomatic support for joint discomfort and stiffness.",
+    effectSize: "Modest reduction in pain and stiffness outcomes",
+    safety: "Low Risk",
+    conditionTags: ["joint stiffness", "mobility", "inflammation", "functional movement"],
+    bestFor: ["joint support protocols"],
+    cautions: "Standardization and boswellic acid profile drive product variability.",
+    dosing: {
+      typicalDailyDose: "100-300 mg standardized extract",
+      timing: "Once or twice daily with meals",
+      protocolDuration: "8-16 weeks in symptom-focused studies",
+      notes: "Most protocols rely on standardized extracts rather than crude resin powders."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=boswellia+serrata+randomized+trial"],
+    articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "ginger-extract",
+    name: "Ginger Extract",
+    focus: "Digestive comfort and anti-inflammatory support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human evidence supports selected GI and inflammatory symptom endpoints.",
+    effectSize: "Modest support for digestive and inflammatory symptom load",
+    safety: "Low Risk",
+    conditionTags: ["digestive discomfort", "inflammation", "joint stiffness", "metabolic support"],
+    bestFor: ["food-tolerance and inflammation-aware plans"],
+    cautions: "May interact with anticoagulant regimens at higher doses.",
+    dosing: {
+      typicalDailyDose: "500-1500 mg extract",
+      timing: "With meals",
+      protocolDuration: "4-12 weeks in common interventions",
+      notes: "Standardized gingerol content improves dose comparability."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ginger+extract+clinical+trial"],
+    articleRefs: ["resveratrol-longevity-clinic-protocol", "spermidine-cardiac-disease-trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "aged-garlic-extract",
+    name: "Aged Garlic Extract",
+    focus: "Vascular support and blood-pressure modulation",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical studies show supportive effects on blood pressure and vascular risk markers.",
+    effectSize: "Modest blood pressure and vascular-support benefit",
+    safety: "Low Risk",
+    conditionTags: ["hypertension", "cardiovascular risk", "endothelial function", "inflammation"],
+    bestFor: ["vascular-risk reduction stacks"],
+    cautions: "Can increase bleeding risk when layered with anticoagulants or antiplatelets.",
+    dosing: {
+      typicalDailyDose: "600-1200 mg",
+      timing: "Daily with meals",
+      protocolDuration: "8-24 weeks in vascular studies",
+      notes: "Standardized aged formulations are preferred over raw garlic extrapolations."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=aged+garlic+extract+blood+pressure+trial"],
+    articleRefs: ["spermidine-cardiac-disease-trial", "resveratrol-longevity-clinic-protocol"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "cocoa-flavanols",
+    name: "Cocoa Flavanols",
+    focus: "Vascular-cognitive support",
+    evidenceLevel: "B",
+    evidenceSummary: "Trials indicate support for endothelial function and selected cognitive outcomes.",
+    effectSize: "Modest improvements in vascular and cognition-related endpoints",
+    safety: "Low Risk",
+    conditionTags: ["endothelial function", "cognitive resilience", "blood flow", "oxidative stress"],
+    bestFor: ["polyphenol-first cognition protocols"],
+    cautions: "Effective flavanol dose is often higher than typical chocolate intake provides.",
+    dosing: {
+      typicalDailyDose: "400-800 mg cocoa flavanols",
+      timing: "Daily with meals",
+      protocolDuration: "8-16 weeks in vascular/cognition studies",
+      notes: "Use standardized flavanol products rather than sugar-heavy cocoa foods."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+flavanols+randomized+trial"],
+    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "silicon-valleys-200-month-memory-upgrade"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "olive-leaf-extract",
+    name: "Olive Leaf Extract",
+    focus: "Cardiometabolic polyphenol support",
+    evidenceLevel: "B",
+    evidenceSummary: "Early-to-mid stage evidence supports blood pressure and oxidative stress endpoints.",
+    effectSize: "Modest support for cardiometabolic risk markers",
+    safety: "Low Risk",
+    conditionTags: ["blood pressure", "metabolic syndrome", "oxidative stress", "vascular aging"],
+    bestFor: ["Mediterranean-style prevention stacks"],
+    cautions: "May potentiate glucose- or blood-pressure-lowering therapies in some users.",
+    dosing: {
+      typicalDailyDose: "500-1000 mg standardized extract",
+      timing: "Once or twice daily with meals",
+      protocolDuration: "8-16 weeks in cardiometabolic interventions",
+      notes: "Hydroxytyrosol and oleuropein standardization improves product consistency."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=olive+leaf+extract+clinical+trial"],
+    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "resveratrol-longevity-clinic-protocol"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "milk-thistle-silymarin",
+    name: "Milk Thistle (Silymarin)",
+    focus: "Liver enzyme and oxidative-stress support",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical studies suggest supportive effects on selected liver and oxidative stress markers.",
+    effectSize: "Modest support for liver-related biomarkers in selected groups",
+    safety: "Low Risk",
+    conditionTags: ["liver support", "oxidative stress", "metabolic health", "detox pathways"],
+    bestFor: ["liver-risk mitigation protocols"],
+    cautions: "Should be coordinated with medication regimens due to potential interaction pathways.",
+    dosing: {
+      typicalDailyDose: "140-420 mg standardized silymarin",
+      timing: "Once or twice daily with meals",
+      protocolDuration: "8-16 weeks with biomarker reassessment",
+      notes: "Standardized silymarin content is key for reproducibility across products."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=silymarin+clinical+trial"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "inulin-prebiotic-fiber",
+    name: "Inulin (Prebiotic Fiber)",
+    focus: "Microbiome fermentation and metabolic support",
+    evidenceLevel: "B",
+    evidenceSummary: "Human evidence supports prebiotic effects on gut ecology and selected metabolic endpoints.",
+    effectSize: "Modest improvement in bowel regularity and metabolic support markers",
+    safety: "Low Risk",
+    conditionTags: ["gut microbiome", "constipation", "glucose support", "digestive resilience"],
+    bestFor: ["diet-first gut ecosystem protocols"],
+    cautions: "Rapid dose escalation can increase bloating and GI discomfort.",
+    dosing: {
+      typicalDailyDose: "3-10 g",
+      timing: "With meals and adequate hydration",
+      protocolDuration: "4-12 weeks with symptom-guided titration",
+      notes: "Gradual dose titration improves tolerance while preserving prebiotic benefits."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=inulin+prebiotic+randomized+trial"],
+    articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "potassium-citrate",
+    name: "Potassium Citrate",
+    focus: "Acid-base and kidney stone risk support",
+    evidenceLevel: "A",
+    evidenceSummary: "Established clinical use for urinary citrate support and stone-risk reduction in selected settings.",
+    effectSize: "Meaningful reduction in kidney stone recurrence risk in indicated populations",
+    safety: "Needs Monitoring",
+    conditionTags: ["kidney stone risk", "electrolyte balance", "renal support", "hydration protocols"],
+    bestFor: ["clinician-guided stone prevention protocols"],
+    cautions: "Requires clinical oversight in renal disease and with potassium-sensitive medications.",
+    dosing: {
+      typicalDailyDose: "10-30 mEq (individualized)",
+      timing: "Divided doses with meals",
+      protocolDuration: "Longitudinal with laboratory and urinary monitoring",
+      notes: "Dose should be guided by urinary chemistry and renal function context."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=potassium+citrate+kidney+stone+trial"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "vitamin-d-immune-system-deficiency"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "phosphatidylserine",
+    name: "Phosphatidylserine",
+    focus: "Stress reactivity and cognitive support",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical signal supports stress response modulation and selected cognitive outcomes.",
+    effectSize: "Modest improvements in stress and attention outcomes",
+    safety: "Low Risk",
+    conditionTags: ["cognitive fatigue", "stress load", "attention", "memory support"],
+    bestFor: ["high-cognitive-load schedules with stress reactivity"],
+    cautions: "May have additive calming effects when combined with multiple sedative-adjacent compounds.",
+    dosing: {
+      typicalDailyDose: "100-300 mg",
+      timing: "Morning or split morning/evening",
+      protocolDuration: "4-12 weeks in stress/cognition interventions",
+      notes: "Protocol timing can be personalized to daytime stress pattern."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=phosphatidylserine+clinical+trial"],
+    articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "chromium-picolinate",
+    name: "Chromium Picolinate",
+    focus: "Insulin signaling and glycemic support",
+    evidenceLevel: "B",
+    evidenceSummary: "Studies suggest supportive glycemic effects in selected insulin-resistant populations.",
+    effectSize: "Modest glucose and insulin marker support",
+    safety: "Low Risk",
+    conditionTags: ["insulin resistance", "postprandial glucose", "metabolic syndrome", "appetite regulation"],
+    bestFor: ["adjunctive metabolic support protocols"],
+    cautions: "Should be coordinated with existing glucose-lowering therapy plans.",
+    dosing: {
+      typicalDailyDose: "200-1000 mcg",
+      timing: "With meals",
+      protocolDuration: "8-16 weeks before biomarker reassessment",
+      notes: "Clinical response is variable and strongest in higher baseline dysregulation settings."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chromium+picolinate+randomized+trial"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "myo-inositol",
+    name: "Myo-Inositol",
+    focus: "Insulin sensitivity and endocrine-metabolic support",
+    evidenceLevel: "B",
+    evidenceSummary: "Evidence supports insulin and metabolic effects in selected endocrine-metabolic populations.",
+    effectSize: "Modest insulin-sensitivity and cycle/metabolic-support signal",
+    safety: "Low Risk",
+    conditionTags: ["insulin resistance", "metabolic flexibility", "hormonal support", "glucose control"],
+    bestFor: ["metabolic and endocrine support protocols"],
+    cautions: "Best used within a full nutrition and activity plan rather than as standalone therapy.",
+    dosing: {
+      typicalDailyDose: "2-4 g",
+      timing: "Once or twice daily",
+      protocolDuration: "8-24 weeks in endocrine-metabolic studies",
+      notes: "Dose can be split to improve GI comfort."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=myo+inositol+insulin+resistance+trial"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "calcium-alpha-ketoglutarate",
+    name: "Calcium Alpha-Ketoglutarate (Ca-AKG)",
+    focus: "Cellular metabolism and healthy aging pathways",
+    evidenceLevel: "C",
+    evidenceSummary: "Promising translational data with limited mature human outcome evidence.",
+    effectSize: "Early-stage signal in aging and metabolic-support pathways",
+    safety: "Moderate Risk",
+    conditionTags: ["healthy aging", "metabolic resilience", "mitochondrial support", "frailty risk"],
+    bestFor: ["research-oriented longevity protocols"],
+    cautions: "Human clinical endpoint evidence remains early and should be interpreted conservatively.",
+    dosing: {
+      typicalDailyDose: "1-3 g",
+      timing: "Daily with meals",
+      protocolDuration: "8-24 weeks in exploratory protocols",
+      notes: "Use is best framed as experimental while higher-quality human data mature."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha+ketoglutarate+human+study"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "sirt3-activators-breakthrough-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "l-carnosine",
+    name: "L-Carnosine",
+    focus: "Anti-glycation and oxidative-stress support",
+    evidenceLevel: "B",
+    evidenceSummary: "Clinical data suggest supportive effects on glycation and oxidative stress endpoints.",
+    effectSize: "Modest support for glycation-related risk markers",
+    safety: "Low Risk",
+    conditionTags: ["glycation", "metabolic aging", "oxidative stress", "vascular support"],
+    bestFor: ["glycation-aware metabolic protocols"],
+    cautions: "Outcome effects are generally modest and should be paired with diet and glucose control.",
+    dosing: {
+      typicalDailyDose: "500-2000 mg",
+      timing: "Once or twice daily with meals",
+      protocolDuration: "8-16 weeks in metabolic and oxidative-stress studies",
+      notes: "Best interpreted as adjunctive support, not a replacement for glycemic control fundamentals."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=l-carnosine+randomized+trial"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "vitamin-d-telomere-protection-vital"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "tauroursodeoxycholic-acid",
+    name: "Tauroursodeoxycholic Acid (TUDCA)",
+    focus: "Cellular stress response and hepatobiliary support",
+    evidenceLevel: "C",
+    evidenceSummary: "Early clinical and translational evidence supports ER-stress and liver-pathway signals.",
+    effectSize: "Translational-stage support signal",
+    safety: "Needs Monitoring",
+    conditionTags: ["liver support", "cellular stress", "metabolic dysfunction", "biliary support"],
+    bestFor: ["clinician-guided advanced metabolic support"],
+    cautions: "Use should be supervised due to limited long-term consumer safety data.",
+    dosing: {
+      typicalDailyDose: "250-1000 mg",
+      timing: "With meals, divided if needed",
+      protocolDuration: "4-12 weeks in exploratory settings",
+      notes: "Intervention should be paired with clinical context and follow-up monitoring."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=tauroursodeoxycholic+acid+trial"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "vitamin-c",
+    name: "Vitamin C",
+    focus: "Antioxidant and immune support",
+    evidenceLevel: "A",
+    evidenceSummary: "Strong evidence for deficiency correction and context-dependent immune support benefits.",
+    effectSize: "Meaningful effect in deficiency states; modest prevention support otherwise",
+    safety: "Low Risk",
+    conditionTags: ["immune resilience", "oxidative stress", "deficiency correction", "recovery support"],
+    bestFor: ["dietary insufficiency correction and recovery protocols"],
+    cautions: "High doses can increase GI side effects and may raise stone risk in susceptible individuals.",
+    dosing: {
+      typicalDailyDose: "250-1000 mg",
+      timing: "With meals, divided at higher doses",
+      protocolDuration: "Ongoing with periodic need reassessment",
+      notes: "Dose should match dietary intake gaps and individual tolerance."
+    },
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+c+supplementation+trial"],
+    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
+    updatedAt: "2026-02-16"
   }
 ];
 
@@ -1237,6 +1909,606 @@ const conditions: ConditionEntry[] = [
     monitoring: ["AHI or equivalent", "daytime sleepiness scores", "blood pressure", "sleep continuity"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sleep+apnea+lifestyle+trial"],
     updatedAt: "2026-02-16"
+  },
+  {
+    slug: "visceral-adiposity-risk",
+    name: "Visceral Adiposity Risk",
+    goal: "Reduce abdominal fat burden linked to metabolic and vascular risk",
+    keywords: ["visceral fat", "abdominal obesity", "waist circumference", "metabolic risk", "central adiposity"],
+    evidenceLevel: "A",
+    topInterventions: ["resistance training", "protein-forward energy deficit", "sleep regularization"],
+    guidanceSummary: "Waist reduction and lean-mass preservation are the primary levers for durable visceral-fat improvement.",
+    monitoring: ["waist circumference", "body composition", "fasting insulin", "triglycerides"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=visceral+adiposity+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "elevated-resting-heart-rate",
+    name: "Elevated Resting Heart Rate",
+    goal: "Lower baseline cardiac load and improve autonomic balance",
+    keywords: ["resting heart rate", "tachycardic baseline", "cardiac load", "autonomic stress", "recovery strain"],
+    evidenceLevel: "B",
+    topInterventions: ["aerobic base training", "sleep improvement", "stress reduction protocols"],
+    guidanceSummary: "Cardiorespiratory conditioning and recovery improvements are the highest-yield long-term tools.",
+    monitoring: ["resting heart rate", "sleep regularity", "VO2 trends", "blood pressure"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resting+heart+rate+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "low-hrv-recovery-strain",
+    name: "Low HRV Recovery Strain",
+    goal: "Improve autonomic recovery and stress adaptability",
+    keywords: ["low hrv", "heart rate variability", "recovery strain", "autonomic imbalance", "stress recovery"],
+    evidenceLevel: "B",
+    topInterventions: ["sleep consistency", "zone 2 conditioning", "daily stress-regulation practice"],
+    guidanceSummary: "HRV trends respond best to improved sleep and total load management, not isolated hacks.",
+    monitoring: ["HRV trend", "resting heart rate", "sleep duration", "subjective fatigue"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heart+rate+variability+lifestyle+intervention"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "post-viral-fatigue-risk",
+    name: "Post-Viral Fatigue Risk",
+    goal: "Restore capacity after infection-associated energy decline",
+    keywords: ["post viral fatigue", "post infection fatigue", "energy crash", "recovery lag", "exercise intolerance"],
+    evidenceLevel: "B",
+    topInterventions: ["graded activity pacing", "sleep recovery", "micronutrient repletion"],
+    guidanceSummary: "Pacing and progressive load reintroduction are critical to avoid repeated crashes.",
+    monitoring: ["fatigue scores", "activity tolerance", "sleep continuity", "resting heart rate"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+viral+fatigue+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "micronutrient-insufficiency",
+    name: "Micronutrient Insufficiency",
+    goal: "Correct low nutrient reserves impacting performance and recovery",
+    keywords: ["micronutrient deficiency", "nutrient insufficiency", "vitamin deficiency", "mineral deficiency", "repletion"],
+    evidenceLevel: "A",
+    topInterventions: ["targeted lab assessment", "diet-quality correction", "protocolized repletion"],
+    guidanceSummary: "Precision repletion beats broad megadose strategies for safety and effectiveness.",
+    monitoring: ["targeted nutrient labs", "symptom response", "diet quality score", "follow-up labs"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=micronutrient+deficiency+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "age-related-vision-decline",
+    name: "Age-Related Vision Decline",
+    goal: "Preserve visual function and retinal resilience with age",
+    keywords: ["vision decline", "macular health", "retinal aging", "contrast sensitivity", "visual function"],
+    evidenceLevel: "B",
+    topInterventions: ["retinal-support nutrition", "blood pressure control", "glucose stability"],
+    guidanceSummary: "Vision outcomes improve most with systemic risk-factor control plus targeted nutrition.",
+    monitoring: ["visual acuity trend", "contrast sensitivity", "retinal exams", "metabolic markers"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=age+related+vision+nutrition+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "elevated-homocysteine-risk",
+    name: "Elevated Homocysteine Risk",
+    goal: "Lower methylation-associated vascular and neurologic risk load",
+    keywords: ["homocysteine", "methylation", "b12 deficiency", "folate status", "vascular risk"],
+    evidenceLevel: "B",
+    topInterventions: ["b-vitamin repletion", "diet quality upgrade", "metabolic risk control"],
+    guidanceSummary: "Homocysteine correction works best when B-vitamin status and metabolic stress are addressed together.",
+    monitoring: ["homocysteine", "vitamin B12", "folate", "MMA when indicated"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=homocysteine+lowering+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "protein-intake-deficit",
+    name: "Protein Intake Deficit",
+    goal: "Restore muscle-preserving protein adequacy",
+    keywords: ["low protein intake", "muscle preservation", "sarcopenia risk", "anabolic resistance", "recovery nutrition"],
+    evidenceLevel: "A",
+    topInterventions: ["daily protein targeting", "resistance training", "meal distribution strategy"],
+    guidanceSummary: "Adequate protein distribution is foundational for muscle retention in aging adults.",
+    monitoring: ["daily protein grams", "lean mass", "strength metrics", "functional tests"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=protein+intake+older+adults+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "dehydration-electrolyte-imbalance-risk",
+    name: "Dehydration and Electrolyte Imbalance Risk",
+    goal: "Improve hydration consistency and physiologic stability",
+    keywords: ["dehydration", "electrolyte imbalance", "hydration status", "cramping", "heat intolerance"],
+    evidenceLevel: "B",
+    topInterventions: ["structured fluid intake", "electrolyte repletion", "heat and activity planning"],
+    guidanceSummary: "Hydration protocols should be matched to sweat loss, climate, and activity profile.",
+    monitoring: ["hydration consistency", "bodyweight fluctuation", "symptom episodes", "training tolerance"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hydration+electrolyte+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "digestive-bloating-and-gut-discomfort",
+    name: "Digestive Bloating and Gut Discomfort",
+    goal: "Reduce daily GI symptom burden and improve tolerance to nutrient-dense foods",
+    keywords: ["bloating", "gas", "digestive discomfort", "gut sensitivity", "meal intolerance"],
+    evidenceLevel: "B",
+    topInterventions: ["fiber calibration", "food-trigger mapping", "microbiome-supportive dietary structure"],
+    guidanceSummary: "Symptom reduction is most durable when trigger control and gut substrate quality are combined.",
+    monitoring: ["bloating severity", "food tolerance", "bowel regularity", "diet adherence"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=bloating+dietary+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "balance-and-fall-risk",
+    name: "Balance and Fall Risk",
+    goal: "Reduce fall probability and preserve functional independence",
+    keywords: ["fall risk", "balance", "gait instability", "older adults", "functional decline"],
+    evidenceLevel: "A",
+    topInterventions: ["balance and strength training", "vision and footwear optimization", "home hazard mitigation"],
+    guidanceSummary: "Falls are highly modifiable with progressive balance-strength work and environment design.",
+    monitoring: ["fall events", "single-leg balance", "gait speed", "chair-rise performance"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fall+prevention+exercise+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "osteoarthritis-symptom-load",
+    name: "Osteoarthritis Symptom Load",
+    goal: "Reduce pain and stiffness while preserving movement quality",
+    keywords: ["osteoarthritis", "joint pain", "stiffness", "mobility limitation", "knee pain"],
+    evidenceLevel: "A",
+    topInterventions: ["progressive resistance training", "weight management", "mobility and gait retraining"],
+    guidanceSummary: "Strength and load management consistently outperform passive-only symptom strategies.",
+    monitoring: ["pain scores", "walking tolerance", "range of motion", "daily activity level"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=osteoarthritis+exercise+randomized+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "chronic-kidney-function-risk",
+    name: "Chronic Kidney Function Risk",
+    goal: "Protect renal function trajectory through pressure and metabolic control",
+    keywords: ["kidney function", "ckd risk", "egfr decline", "albuminuria", "renal health"],
+    evidenceLevel: "A",
+    topInterventions: ["blood pressure control", "glucose management", "protein and sodium personalization"],
+    guidanceSummary: "Renal-risk reduction relies on integrated pressure, glucose, and medication-aware nutrition planning.",
+    monitoring: ["eGFR", "urine albumin-creatinine ratio", "blood pressure", "fasting glucose"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+kidney+disease+lifestyle+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "thyroid-function-variability",
+    name: "Thyroid Function Variability",
+    goal: "Stabilize thyroid-related symptom burden and metabolic tempo",
+    keywords: ["thyroid function", "tsh variability", "hypothyroid symptoms", "energy instability", "metabolic slowdown"],
+    evidenceLevel: "B",
+    topInterventions: ["medication adherence review", "micronutrient adequacy", "sleep and stress stabilization"],
+    guidanceSummary: "Symptom stabilization improves when thyroid management is paired with recovery and nutrient foundations.",
+    monitoring: ["TSH", "free T4", "symptom trend", "resting heart rate"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=thyroid+function+intervention+study"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "anemia-and-low-ferritin-risk",
+    name: "Anemia and Low Ferritin Risk",
+    goal: "Restore oxygen-carrying capacity and reduce fatigue burden",
+    keywords: ["anemia", "low ferritin", "iron deficiency", "fatigue", "oxygen delivery"],
+    evidenceLevel: "A",
+    topInterventions: ["cause-directed iron repletion", "dietary iron optimization", "follow-up lab confirmation"],
+    guidanceSummary: "Effective correction requires identifying the cause and confirming lab recovery over time.",
+    monitoring: ["hemoglobin", "ferritin", "transferrin saturation", "fatigue severity"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=iron+deficiency+anemia+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "gout-and-uric-acid-risk",
+    name: "Gout and Uric Acid Risk",
+    goal: "Lower flare risk by controlling urate burden",
+    keywords: ["gout", "uric acid", "urate", "joint flare", "metabolic urate risk"],
+    evidenceLevel: "A",
+    topInterventions: ["weight and fructose control", "hydration support", "urate-lowering therapy adherence"],
+    guidanceSummary: "Dietary pattern and urate-focused management reduce flare frequency and long-term joint burden.",
+    monitoring: ["serum uric acid", "flare frequency", "joint symptom days", "kidney function"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gout+lifestyle+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "gastroesophageal-reflux-load",
+    name: "Gastroesophageal Reflux Load",
+    goal: "Reduce reflux symptom days and protect sleep quality",
+    keywords: ["reflux", "gerd", "heartburn", "night reflux", "esophageal irritation"],
+    evidenceLevel: "A",
+    topInterventions: ["meal timing and portion control", "weight reduction", "trigger-food minimization"],
+    guidanceSummary: "Meal timing and body-composition correction are key drivers of durable reflux relief.",
+    monitoring: ["symptom days per week", "night awakenings", "trigger log", "bodyweight trend"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gerd+lifestyle+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "irritable-bowel-symptom-load",
+    name: "Irritable Bowel Symptom Load",
+    goal: "Lower abdominal pain and improve bowel regularity quality",
+    keywords: ["irritable bowel", "ibs symptoms", "abdominal pain", "bloating", "bowel irregularity"],
+    evidenceLevel: "B",
+    topInterventions: ["targeted diet protocol", "stress management", "fiber and probiotic personalization"],
+    guidanceSummary: "IBS symptom control improves when diet structure and stress load are addressed together.",
+    monitoring: ["abdominal pain score", "stool pattern", "food tolerance", "symptom-day frequency"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ibs+diet+randomized+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "arterial-stiffness-risk",
+    name: "Arterial Stiffness Risk",
+    goal: "Improve vascular elasticity and pressure-wave load",
+    keywords: ["arterial stiffness", "vascular elasticity", "pulse pressure", "endothelial aging", "vascular load"],
+    evidenceLevel: "B",
+    topInterventions: ["aerobic training", "blood pressure optimization", "polyphenol-forward nutrition"],
+    guidanceSummary: "Stiffness risk improves with combined fitness gains and multi-marker vascular management.",
+    monitoring: ["pulse pressure", "blood pressure", "resting heart rate", "aerobic fitness"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=arterial+stiffness+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "low-daily-step-count-risk",
+    name: "Low Daily Step Count Risk",
+    goal: "Raise baseline movement to reduce all-cause risk burden",
+    keywords: ["low step count", "sedentary behavior", "daily movement", "physical inactivity", "activity deficit"],
+    evidenceLevel: "A",
+    topInterventions: ["step-target progression", "walking blocks after meals", "environment-based movement cues"],
+    guidanceSummary: "Baseline daily movement is one of the most scalable longevity levers available.",
+    monitoring: ["daily steps", "sitting time", "resting heart rate", "activity adherence"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daily+step+count+mortality+study"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "kidney-stone-recurrence-risk",
+    name: "Kidney Stone Recurrence Risk",
+    goal: "Lower recurrence risk by improving hydration and urinary chemistry",
+    keywords: ["kidney stone", "nephrolithiasis", "urinary citrate", "stone recurrence", "urologic risk"],
+    evidenceLevel: "A",
+    topInterventions: ["fluid intake structure", "urinary citrate optimization", "dietary oxalate and sodium control"],
+    guidanceSummary: "Recurrence prevention is strongest with hydration adherence and urine-guided dietary and citrate strategies.",
+    monitoring: ["24-hour urine chemistry", "fluid intake consistency", "serum creatinine", "stone events"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=kidney+stone+recurrence+prevention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "liver-enzyme-elevation-risk",
+    name: "Liver Enzyme Elevation Risk",
+    goal: "Normalize hepatic stress markers and reduce progression pressure",
+    keywords: ["liver enzymes", "alt ast elevation", "hepatic stress", "liver inflammation", "metabolic liver"],
+    evidenceLevel: "B",
+    topInterventions: ["weight and glucose correction", "alcohol reduction", "metabolic-risk management"],
+    guidanceSummary: "Liver-marker improvement depends on sustained metabolic correction and total toxic-load reduction.",
+    monitoring: ["ALT/AST", "GGT", "waist circumference", "metabolic panel"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=liver+enzyme+elevation+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "reactive-hypoglycemia-and-energy-crash-risk",
+    name: "Reactive Hypoglycemia and Energy Crash Risk",
+    goal: "Stabilize post-meal energy and reduce glucose volatility",
+    keywords: ["reactive hypoglycemia", "energy crash", "post meal glucose", "glycemic variability", "shaky after meals"],
+    evidenceLevel: "B",
+    topInterventions: ["meal composition sequencing", "protein-fiber preloading", "glycemic-load management"],
+    guidanceSummary: "Structured meal design usually reduces crash frequency more reliably than single-compound approaches.",
+    monitoring: ["post-meal glucose trend", "symptom episodes", "time in range", "meal-response logs"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=reactive+hypoglycemia+diet+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "high-glycation-burden",
+    name: "High Glycation Burden",
+    goal: "Reduce glycation pressure linked to vascular and metabolic aging",
+    keywords: ["glycation", "advanced glycation end products", "ages", "metabolic aging", "glucose damage"],
+    evidenceLevel: "B",
+    topInterventions: ["glucose control", "cooking-method optimization", "polyphenol-rich dietary pattern"],
+    guidanceSummary: "Lowering glycation requires both glycemic stability and lower dietary AGE exposure.",
+    monitoring: ["fasting glucose", "A1C", "inflammatory markers", "dietary AGE intake patterns"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=advanced+glycation+end+products+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "low-muscle-power-risk",
+    name: "Low Muscle Power Risk",
+    goal: "Improve force production speed and fall-protective capacity",
+    keywords: ["muscle power", "functional speed", "rate of force development", "frailty risk", "slowed movement"],
+    evidenceLevel: "A",
+    topInterventions: ["power-oriented resistance training", "adequate protein strategy", "neuromuscular skill work"],
+    guidanceSummary: "Power-focused training can improve independence and fall resilience beyond strength-only work.",
+    monitoring: ["sit-to-stand speed", "gait speed", "jump or power proxy tests", "functional task timing"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=muscle+power+older+adults+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "delayed-exercise-recovery-load",
+    name: "Delayed Exercise Recovery Load",
+    goal: "Reduce prolonged soreness and restore training consistency",
+    keywords: ["delayed recovery", "doms", "exercise soreness", "recovery lag", "training inconsistency"],
+    evidenceLevel: "B",
+    topInterventions: ["progressive load planning", "sleep optimization", "protein and hydration adequacy"],
+    guidanceSummary: "Recovery improves when training load, sleep, and nutrition are coordinated rather than isolated.",
+    monitoring: ["recovery time between sessions", "soreness scores", "training adherence", "sleep duration"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=delayed+onset+muscle+soreness+recovery+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "daytime-somnolence-and-alertness-drop",
+    name: "Daytime Somnolence and Alertness Drop",
+    goal: "Improve daytime vigilance and reduce performance dips",
+    keywords: ["daytime sleepiness", "somnolence", "alertness drop", "afternoon crash", "wakefulness"],
+    evidenceLevel: "B",
+    topInterventions: ["sleep quality correction", "circadian timing alignment", "post-meal glucose stability"],
+    guidanceSummary: "Persistent daytime sleepiness requires sleep-circadian and metabolic assessment, not stimulant escalation alone.",
+    monitoring: ["daytime alertness ratings", "sleep duration", "sleep fragmentation", "post-meal energy trend"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daytime+sleepiness+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "low-dietary-polyphenol-pattern",
+    name: "Low Dietary Polyphenol Pattern",
+    goal: "Increase dietary phytochemical density for vascular and metabolic resilience",
+    keywords: ["polyphenols", "low polyphenol intake", "phytochemical intake", "vascular nutrition", "metabolic resilience"],
+    evidenceLevel: "B",
+    topInterventions: ["polyphenol-rich food pattern", "fruit and vegetable diversity", "ultra-processed food reduction"],
+    guidanceSummary: "Long-term dietary pattern quality drives larger gains than isolated polyphenol spikes.",
+    monitoring: ["food diversity score", "fruit and vegetable servings", "inflammatory markers", "cardiometabolic markers"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+diet+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "high-sodium-low-potassium-pattern",
+    name: "High Sodium / Low Potassium Pattern",
+    goal: "Correct electrolyte dietary balance to reduce pressure and vascular load",
+    keywords: ["high sodium", "low potassium", "electrolyte diet", "blood pressure diet", "vascular load"],
+    evidenceLevel: "A",
+    topInterventions: ["whole-food potassium increase", "sodium reduction", "processed-food displacement"],
+    guidanceSummary: "Sodium-potassium balance is a high-impact lever for blood pressure and vascular risk reduction.",
+    monitoring: ["blood pressure", "dietary sodium intake", "dietary potassium intake", "fluid status"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sodium+potassium+ratio+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "cognitive-stress-reactivity-load",
+    name: "Cognitive Stress Reactivity Load",
+    goal: "Reduce stress-triggered cognitive volatility under high demand",
+    keywords: ["cognitive stress", "stress reactivity", "attention instability", "cortisol reactivity", "mental overload"],
+    evidenceLevel: "B",
+    topInterventions: ["stress-regulation skills", "sleep stabilization", "work-block design and pacing"],
+    guidanceSummary: "Cognitive consistency improves when stress physiology and workload architecture are addressed together.",
+    monitoring: ["focus stability", "perceived stress scale", "sleep quality", "daytime recovery breaks"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=stress+reactivity+cognitive+performance+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "elevated-lipoprotein-a-risk",
+    name: "Elevated Lipoprotein(a) Risk",
+    goal: "Improve overall vascular-risk strategy when inherited Lp(a) is high",
+    keywords: ["lipoprotein(a)", "lp(a)", "genetic lipid risk", "atherosclerotic risk", "premature cardiovascular risk"],
+    evidenceLevel: "A",
+    topInterventions: ["apoB lowering strategy", "blood pressure optimization", "lifestyle risk minimization"],
+    guidanceSummary: "When Lp(a) is elevated, aggressive management of all other modifiable risk markers becomes central.",
+    monitoring: ["Lp(a)", "apoB", "blood pressure", "hs-CRP"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lipoprotein(a)+cardiovascular+risk+management"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "nocturnal-blood-pressure-non-dipping-risk",
+    name: "Nocturnal Blood Pressure Non-Dipping Risk",
+    goal: "Restore healthier overnight blood pressure profile",
+    keywords: ["non dipping blood pressure", "nighttime hypertension", "ambulatory blood pressure", "sleep blood pressure", "vascular strain"],
+    evidenceLevel: "B",
+    topInterventions: ["sleep apnea assessment", "timed antihypertensive strategy", "sodium and stress load reduction"],
+    guidanceSummary: "Non-dipping patterns often require combined sleep, medication-timing, and lifestyle interventions.",
+    monitoring: ["24-hour ambulatory BP", "night/day BP ratio", "sleep quality", "resting heart rate"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nocturnal+non-dipping+blood+pressure+intervention"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "periodontal-inflammation-risk",
+    name: "Periodontal Inflammation Risk",
+    goal: "Reduce chronic oral inflammation linked to systemic risk load",
+    keywords: ["periodontal disease", "gum inflammation", "oral inflammation", "gingivitis", "oral microbiome"],
+    evidenceLevel: "A",
+    topInterventions: ["regular periodontal care", "daily oral hygiene optimization", "glycemic and smoking risk control"],
+    guidanceSummary: "Oral inflammatory burden contributes to systemic risk and benefits from structured preventive care.",
+    monitoring: ["periodontal assessment", "bleeding on probing", "oral hygiene adherence", "inflammatory markers"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=periodontal+inflammation+systemic+risk+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "hearing-loss-and-cognitive-strain",
+    name: "Hearing Loss and Cognitive Strain",
+    goal: "Reduce cognitive load related to untreated hearing decline",
+    keywords: ["hearing loss", "auditory decline", "cognitive load", "social withdrawal", "listening fatigue"],
+    evidenceLevel: "B",
+    topInterventions: ["formal audiology screening", "timely hearing support", "social communication optimization"],
+    guidanceSummary: "Addressing hearing decline can reduce social withdrawal and cognitive listening burden.",
+    monitoring: ["audiometry trend", "listening fatigue", "social engagement", "subjective cognitive effort"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hearing+loss+cognitive+decline+intervention"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "chronic-low-back-pain-load",
+    name: "Chronic Low Back Pain Load",
+    goal: "Lower persistent pain burden while restoring movement confidence",
+    keywords: ["chronic low back pain", "back pain", "movement fear", "mobility impairment", "functional pain"],
+    evidenceLevel: "A",
+    topInterventions: ["graded strength and mobility", "pain-informed activity progression", "sleep and stress support"],
+    guidanceSummary: "Functional restoration with graded loading is more durable than rest-centered strategies.",
+    monitoring: ["pain intensity", "movement tolerance", "activity consistency", "sleep impact"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+low+back+pain+exercise+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "social-isolation-and-loneliness-risk",
+    name: "Social Isolation and Loneliness Risk",
+    goal: "Improve social connectedness linked to healthier aging outcomes",
+    keywords: ["social isolation", "loneliness", "social connection", "depression risk", "healthy aging"],
+    evidenceLevel: "B",
+    topInterventions: ["scheduled social routines", "group activity participation", "behavioral support for engagement"],
+    guidanceSummary: "Social connection is a measurable health lever with effects across mood, cognition, and mortality risk.",
+    monitoring: ["social-contact frequency", "loneliness scale", "mood trend", "activity participation"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=social+isolation+health+intervention+older+adults"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "polypharmacy-and-interaction-risk",
+    name: "Polypharmacy and Interaction Risk",
+    goal: "Reduce medication-related adverse effects and interaction burden",
+    keywords: ["polypharmacy", "drug interaction", "medication burden", "adverse drug events", "deprescribing"],
+    evidenceLevel: "A",
+    topInterventions: ["structured medication review", "deprescribing where appropriate", "interaction-aware supplement planning"],
+    guidanceSummary: "Regular medication reconciliation is essential when stacking longevity supplements with prescriptions.",
+    monitoring: ["medication count", "interaction alerts", "adverse event frequency", "functional status"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polypharmacy+deprescribing+trial+older+adults"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "post-hospitalization-frailty-recovery-risk",
+    name: "Post-Hospitalization Frailty Recovery Risk",
+    goal: "Recover function quickly after acute illness or hospitalization",
+    keywords: ["post hospitalization", "frailty recovery", "deconditioning", "functional decline", "rehabilitation"],
+    evidenceLevel: "A",
+    topInterventions: ["early mobility progression", "protein repletion", "home-based strength continuation"],
+    guidanceSummary: "Fast-start mobility and nutrition planning can substantially reduce long-tail functional decline.",
+    monitoring: ["gait speed", "chair-rise performance", "daily activity", "readmission risk"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+hospitalization+rehabilitation+older+adults+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "low-grip-strength-risk",
+    name: "Low Grip Strength Risk",
+    goal: "Improve strength marker associated with frailty and mortality risk",
+    keywords: ["low grip strength", "handgrip weakness", "frailty marker", "functional decline", "muscle quality"],
+    evidenceLevel: "A",
+    topInterventions: ["progressive resistance training", "protein optimization", "functional strength practice"],
+    guidanceSummary: "Grip strength is a practical proxy for whole-body vitality and responds to structured training.",
+    monitoring: ["handgrip strength", "chair-rise test", "gait speed", "lean-mass trend"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=grip+strength+training+older+adults+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "medication-induced-nutrient-depletion-risk",
+    name: "Medication-Induced Nutrient Depletion Risk",
+    goal: "Prevent and correct nutrient depletion from chronic medication use",
+    keywords: ["drug nutrient depletion", "medication nutrient loss", "micronutrient depletion", "long-term medication risk", "nutrient monitoring"],
+    evidenceLevel: "B",
+    topInterventions: ["medication-specific nutrient surveillance", "targeted repletion", "diet quality reinforcement"],
+    guidanceSummary: "Long-term medication plans should include nutrient monitoring to avoid avoidable fatigue and function decline.",
+    monitoring: ["targeted nutrient labs", "symptom trend", "medication timeline", "follow-up nutrient status"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=medication+induced+nutrient+deficiency+review"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "high-alcohol-intake-risk",
+    name: "High Alcohol Intake Risk",
+    goal: "Reduce alcohol-linked cardiometabolic, sleep, and liver burden",
+    keywords: ["high alcohol intake", "alcohol use", "drinking risk", "sleep disruption", "liver risk"],
+    evidenceLevel: "A",
+    topInterventions: ["intake reduction planning", "sleep and stress support", "social trigger management"],
+    guidanceSummary: "Alcohol reduction improves sleep architecture, blood pressure, liver markers, and long-term risk profile.",
+    monitoring: ["weekly alcohol units", "sleep quality", "ALT/AST", "blood pressure"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alcohol+reduction+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "tobacco-and-nicotine-exposure-risk",
+    name: "Tobacco and Nicotine Exposure Risk",
+    goal: "Lower vascular and respiratory harm from combustible and non-combustible exposure",
+    keywords: ["tobacco exposure", "nicotine dependence", "smoking risk", "vaping", "respiratory risk"],
+    evidenceLevel: "A",
+    topInterventions: ["cessation planning", "behavioral support", "pharmacologic cessation aids when appropriate"],
+    guidanceSummary: "Exposure reduction is one of the largest modifiable risk levers for lifespan and healthspan.",
+    monitoring: ["tobacco/nicotine use frequency", "resting heart rate", "respiratory symptoms", "blood pressure"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=smoking+cessation+randomized+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "air-pollution-exposure-load",
+    name: "Air Pollution Exposure Load",
+    goal: "Reduce cardiopulmonary and inflammatory impact from chronic pollutant exposure",
+    keywords: ["air pollution", "pm2.5", "environmental exposure", "cardiopulmonary risk", "pollution inflammation"],
+    evidenceLevel: "B",
+    topInterventions: ["exposure-avoidance planning", "indoor air filtration", "high-pollution day behavior adjustments"],
+    guidanceSummary: "Risk reduction focuses on exposure control and cardiometabolic resilience strategies.",
+    monitoring: ["local AQI exposure", "respiratory symptoms", "blood pressure", "activity-adjustment adherence"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=air+pollution+exposure+health+intervention"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "orthostatic-intolerance-risk",
+    name: "Orthostatic Intolerance Risk",
+    goal: "Improve positional tolerance and reduce dizziness-related events",
+    keywords: ["orthostatic intolerance", "postural dizziness", "blood pressure drop", "standing intolerance", "near syncope"],
+    evidenceLevel: "B",
+    topInterventions: ["hydration and sodium strategy", "graded conditioning", "medication review for hypotensive effects"],
+    guidanceSummary: "Symptom reduction often requires a combined autonomic, hydration, and medication-timing approach.",
+    monitoring: ["supine-standing blood pressure", "dizziness episodes", "hydration consistency", "activity tolerance"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=orthostatic+intolerance+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "vestibular-dysfunction-and-dizziness-risk",
+    name: "Vestibular Dysfunction and Dizziness Risk",
+    goal: "Reduce dizziness burden and improve gait confidence",
+    keywords: ["vestibular dysfunction", "dizziness", "balance disorder", "vertigo", "gait instability"],
+    evidenceLevel: "B",
+    topInterventions: ["vestibular rehabilitation", "fall-prevention strength work", "vision and hearing review"],
+    guidanceSummary: "Targeted vestibular rehab can reduce dizziness and secondary fall risk significantly.",
+    monitoring: ["dizziness severity", "fall incidents", "gait confidence", "vestibular symptom triggers"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vestibular+rehabilitation+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "recurrent-urinary-tract-infection-risk",
+    name: "Recurrent Urinary Tract Infection Risk",
+    goal: "Lower recurrence frequency while preserving urinary tract function",
+    keywords: ["recurrent uti", "urinary tract infection", "urogenital health", "infection recurrence", "urinary symptoms"],
+    evidenceLevel: "A",
+    topInterventions: ["hydration and voiding hygiene", "risk-factor review", "targeted prophylaxis where indicated"],
+    guidanceSummary: "Structured prevention plans reduce recurrence burden and downstream antibiotic exposure.",
+    monitoring: ["UTI episodes per year", "urinary symptom days", "hydration consistency", "culture-confirmed infections"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=recurrent+urinary+tract+infection+prevention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "chronic-allergic-inflammation-load",
+    name: "Chronic Allergic Inflammation Load",
+    goal: "Lower persistent allergic burden that degrades sleep and recovery",
+    keywords: ["allergic inflammation", "allergic rhinitis", "chronic allergy", "histamine symptoms", "airway irritation"],
+    evidenceLevel: "B",
+    topInterventions: ["allergen exposure control", "nasal and airway care", "sleep and stress support"],
+    guidanceSummary: "Allergic load management improves daily cognition, sleep continuity, and recovery quality.",
+    monitoring: ["symptom severity", "sleep disruption", "trigger exposure log", "medication use frequency"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=allergic+rhinitis+intervention+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "heat-stress-vulnerability-risk",
+    name: "Heat Stress Vulnerability Risk",
+    goal: "Reduce heat-related cardiovascular and hydration strain",
+    keywords: ["heat stress", "heat vulnerability", "thermal strain", "dehydration risk", "heat intolerance"],
+    evidenceLevel: "B",
+    topInterventions: ["hydration-electrolyte planning", "heat-acclimation progression", "activity timing adjustments"],
+    guidanceSummary: "Heat-risk mitigation requires proactive hydration and exposure planning around environmental load.",
+    monitoring: ["heat symptom episodes", "hydration status", "activity tolerance in heat", "resting heart rate"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heat+stress+prevention+intervention"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "sedative-sleep-aid-dependency-risk",
+    name: "Sedative Sleep Aid Dependency Risk",
+    goal: "Reduce dependence on sedative sleep aids while restoring natural sleep quality",
+    keywords: ["sleep aid dependence", "sedative use", "insomnia medication", "rebound insomnia", "sleep dependence"],
+    evidenceLevel: "B",
+    topInterventions: ["CBT-I style sleep retraining", "gradual taper planning", "circadian and behavioral support"],
+    guidanceSummary: "Tapering and sleep-retraining approaches can reduce dependence and improve long-term sleep architecture.",
+    monitoring: ["sleep-aid use frequency", "sleep latency", "night awakenings", "daytime sedation"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sedative+hypnotic+deprescribing+trial"],
+    updatedAt: "2026-02-16"
+  },
+  {
+    slug: "financial-and-healthcare-access-stress-risk",
+    name: "Financial and Healthcare Access Stress Risk",
+    goal: "Reduce treatment interruption and chronic stress linked to access barriers",
+    keywords: ["healthcare access", "financial stress", "medication adherence barriers", "care continuity", "social determinants"],
+    evidenceLevel: "B",
+    topInterventions: ["care-navigation support", "cost-aware treatment planning", "adherence-focused follow-up"],
+    guidanceSummary: "Access and affordability barriers directly affect adherence, stress burden, and long-term outcomes.",
+    monitoring: ["care-visit continuity", "medication adherence", "cost-related nonadherence", "stress scale trend"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=healthcare+access+intervention+chronic+disease"],
+    updatedAt: "2026-02-16"
   }
 ];
 
@@ -1279,6 +2551,35 @@ const clinics: ClinicEntry[] = [
   }
 ];
 
+type DirectoryQualitySeverity = "warning" | "error";
+
+type DirectoryQualityIssue = {
+  severity: DirectoryQualitySeverity;
+  code: string;
+  recordName: string;
+  detail: string;
+};
+
+const trustedEvidenceDomains = new Set<string>([
+  "pubmed.ncbi.nlm.nih.gov",
+  "pmc.ncbi.nlm.nih.gov",
+  "clinicaltrials.gov",
+  "cochranelibrary.com",
+  "jamanetwork.com",
+  "thelancet.com",
+  "nejm.org",
+  "bmj.com",
+  "nature.com",
+  "cell.com",
+  "science.org",
+  "acpjournals.org",
+  "annals.org"
+]);
+
+const searchStyleQueryParams = new Set<string>(["term", "q", "query", "search"]);
+const staleContentWarningDays = 400;
+let qualityWarningsAnnounced = false;
+
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
@@ -1291,6 +2592,136 @@ function isValidIsoDate(value: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const time = Date.parse(`${value}T00:00:00Z`);
   return Number.isFinite(time);
+}
+
+function getHostname(value: string): string | null {
+  try {
+    return new URL(value).hostname.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+
+function isTrustedEvidenceUrl(value: string): boolean {
+  const host = getHostname(value);
+  if (!host) return false;
+
+  for (const trustedDomain of trustedEvidenceDomains) {
+    if (host === trustedDomain || host.endsWith(`.${trustedDomain}`)) return true;
+  }
+  return false;
+}
+
+function isSearchStyleEvidenceUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    for (const key of url.searchParams.keys()) {
+      if (searchStyleQueryParams.has(key.toLowerCase())) return true;
+    }
+    return false;
+  } catch {
+    return false;
+  }
+}
+
+function getDayDiffFromNow(isoDate: string): number {
+  const nowUtc = new Date();
+  const todayUtc = Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate());
+  const then = Date.parse(`${isoDate}T00:00:00Z`);
+  if (!Number.isFinite(then)) return 0;
+  return Math.floor((todayUtc - then) / (1000 * 60 * 60 * 24));
+}
+
+function collectSourceQualityIssues(
+  recordName: string,
+  evidenceLevel: EvidenceLevel,
+  sourceUrls: string[],
+  issues: DirectoryQualityIssue[]
+): void {
+  const trustedCount = sourceUrls.filter(isTrustedEvidenceUrl).length;
+  const searchStyleCount = sourceUrls.filter(isSearchStyleEvidenceUrl).length;
+
+  if (trustedCount === 0) {
+    issues.push({
+      severity: "error",
+      code: "no_trusted_sources",
+      recordName,
+      detail: "At least one source URL must come from a trusted medical/scientific domain."
+    });
+  }
+
+  if (evidenceLevel === "A" && searchStyleCount === sourceUrls.length) {
+    issues.push({
+      severity: "warning",
+      code: "a_level_search_only_sources",
+      recordName,
+      detail: "A-level entry uses search-style source URLs only; add at least one direct study/guideline URL."
+    });
+  }
+}
+
+function collectStalenessIssue(recordName: string, updatedAt: string, issues: DirectoryQualityIssue[]): void {
+  const ageDays = getDayDiffFromNow(updatedAt);
+  if (ageDays > staleContentWarningDays) {
+    issues.push({
+      severity: "warning",
+      code: "stale_updated_at",
+      recordName,
+      detail: `Entry was updated ${ageDays} days ago; refresh evidence and metadata.`
+    });
+  }
+}
+
+function summarizeIssues(issues: DirectoryQualityIssue[]): string {
+  const byCode = new Map<string, number>();
+  for (const issue of issues) {
+    byCode.set(issue.code, (byCode.get(issue.code) ?? 0) + 1);
+  }
+
+  const grouped = [...byCode.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([code, count]) => `${code}=${count}`)
+    .join(", ");
+
+  const sample = issues
+    .slice(0, 5)
+    .map((issue) => `${issue.recordName} (${issue.code})`)
+    .join("; ");
+
+  return `${grouped}${sample ? ` | sample: ${sample}` : ""}`;
+}
+
+export function getDirectoryQualityIssues(dataset: DirectoryDataset): DirectoryQualityIssue[] {
+  const issues: DirectoryQualityIssue[] = [];
+
+  for (const entry of dataset.supplements) {
+    const recordName = `supplements/${entry.slug}`;
+    collectSourceQualityIssues(recordName, entry.evidenceLevel, entry.sourceUrls, issues);
+    collectStalenessIssue(recordName, entry.updatedAt, issues);
+
+    if (entry.evidenceLevel === "A" && entry.articleRefs.length < 2) {
+      issues.push({
+        severity: "warning",
+        code: "a_level_thin_article_coverage",
+        recordName,
+        detail: "A-level supplement should map to at least two supporting article references."
+      });
+    }
+  }
+
+  for (const entry of dataset.conditions) {
+    const recordName = `conditions/${entry.slug}`;
+    collectSourceQualityIssues(recordName, entry.evidenceLevel, entry.sourceUrls, issues);
+    collectStalenessIssue(recordName, entry.updatedAt, issues);
+  }
+
+  for (const entry of dataset.clinics) {
+    const recordName = `clinics/${entry.slug}`;
+    collectSourceQualityIssues(recordName, entry.evidenceLevel, entry.sourceUrls, issues);
+    collectStalenessIssue(recordName, entry.updatedAt, issues);
+  }
+
+  return issues;
 }
 
 function ensureNonEmptyStringField(recordName: string, fieldName: string, value: unknown): void {
@@ -1385,6 +2816,19 @@ export function validateDirectoryDataset(dataset: DirectoryDataset): void {
   validateSupplementEntries(dataset.supplements);
   validateConditionEntries(dataset.conditions);
   validateClinicEntries(dataset.clinics);
+
+  const qualityIssues = getDirectoryQualityIssues(dataset);
+  const qualityErrors = qualityIssues.filter((issue) => issue.severity === "error");
+  if (qualityErrors.length > 0) {
+    throw new Error(`[directory] Quality validation failed: ${summarizeIssues(qualityErrors)}`);
+  }
+
+  const qualityWarnings = qualityIssues.filter((issue) => issue.severity === "warning");
+  const shouldLogQualityWarnings = process.env.DIRECTORY_QUALITY_WARNINGS === "1" || process.env.NODE_ENV === "development";
+  if (qualityWarnings.length > 0 && shouldLogQualityWarnings && !qualityWarningsAnnounced) {
+    qualityWarningsAnnounced = true;
+    console.warn(`[directory] Quality warnings: ${summarizeIssues(qualityWarnings)}`);
+  }
 }
 
 validateDirectoryDataset({ supplements, conditions, clinics });
