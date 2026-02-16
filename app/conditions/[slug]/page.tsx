@@ -6,6 +6,7 @@ import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getConditionBySlug, getConditionSlugs } from "@/lib/directory";
+import { layout } from "@/lib/layout";
 import {
   getPostLinkReasonForCondition,
   getPostsForConditionSlug,
@@ -67,7 +68,7 @@ export default async function ConditionDetailPage({ params }: { params: MaybePro
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[980px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+      <main className={layout.rails.wide}>
         <header className="directory-shell rounded-3xl p-7 sm:p-10">
           <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/conditions">
             ← Back to conditions

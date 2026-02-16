@@ -1,8 +1,10 @@
 import Link from "next/link";
 
-export function EvidenceRiskGuide(): JSX.Element {
+export function EvidenceRiskGuide({ className }: { className?: string }): JSX.Element {
+  const baseClassName = "rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-5 sm:p-6";
+
   return (
-    <section className="mt-8 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-5 sm:p-6">
+    <section className={className ? `${className} ${baseClassName}` : `mt-10 sm:mt-12 ${baseClassName}`}>
       <h2 className="text-2xl">How to Read Evidence and Risk</h2>
       <p className="mt-3 text-sm text-[var(--muted)] sm:text-base">
         These labels are directional research signals, not medical advice. Use them to compare options faster, then validate decisions with a qualified clinician.

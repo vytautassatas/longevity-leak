@@ -8,6 +8,7 @@ import { mdxComponents } from "@/components/mdx-components";
 import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { layout } from "@/lib/layout";
 import { formatDate, getAllPosts, getRelatedPosts } from "@/lib/posts";
 import {
   getClinicLinkReasonForPost,
@@ -68,7 +69,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   const relatedPosts = getRelatedPosts(post, 3);
   const relatedSupplements = getSupplementsForPostSlug(post.slug);
   const relatedConditions = getConditionsForPostSlug(post.slug);
-  const relatedClinics = getClinicsForPostSlug(post.slug);
+  const relatedClinics = siteConfig.features.clinics ? getClinicsForPostSlug(post.slug) : [];
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
   const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
 
@@ -86,7 +87,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[760px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+      <main className={layout.rails.wide}>
         <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
           ← Back to news
         </Link>
@@ -215,19 +216,21 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
           title="Related Conditions"
         />
 
-        <RelatedLinksPanel
-          className="mt-24 border-t border-[var(--border)] pt-12"
-          columns={2}
-          items={relatedClinics.map((clinic) => ({
-            id: clinic.slug,
-            href: `/clinics/${clinic.slug}`,
-            eyebrow: clinic.location,
-            title: clinic.name,
-            description: clinic.specialization,
-            reason: getClinicLinkReasonForPost(post.slug, clinic.slug)
-          }))}
-          title="Related Clinics"
-        />
+        {siteConfig.features.clinics ? (
+          <RelatedLinksPanel
+            className="mt-24 border-t border-[var(--border)] pt-12"
+            columns={2}
+            items={relatedClinics.map((clinic) => ({
+              id: clinic.slug,
+              href: `/clinics/${clinic.slug}`,
+              eyebrow: clinic.location,
+              title: clinic.name,
+              description: clinic.specialization,
+              reason: getClinicLinkReasonForPost(post.slug, clinic.slug)
+            }))}
+            title="Related Clinics"
+          />
+        ) : null}
 
         {relatedPosts.length > 0 && (
           <section className="mt-24 border-t border-[var(--border)] pt-12">

@@ -2,22 +2,24 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { layout } from "@/lib/layout";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { siteConfig } from "@/lib/site";
 
-const directoryNav = [
+const baseDirectoryNav = [
   { href: "/", label: "News" },
   { href: "/supplements", label: "Supplements" },
-  { href: "/conditions", label: "Conditions" },
-  { href: "/clinics", label: "Clinics" }
+  { href: "/conditions", label: "Conditions" }
 ];
+const directoryNav = siteConfig.features.clinics ? [...baseDirectoryNav, { href: "/clinics", label: "Clinics" }] : baseDirectoryNav;
 
 export function SiteHeader(): JSX.Element {
   const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur">
-      <div className="mx-auto flex min-h-16 w-full max-w-[1320px] flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-3 sm:px-5">
-        <div className="flex items-center">
+      <div className={`${layout.chromeRail} grid min-h-16 grid-cols-[1fr_auto] items-center gap-x-4 gap-y-3 py-3 sm:grid-cols-[1fr_auto_1fr]`}>
+        <div className="flex items-center justify-self-start">
           <Link className="flex items-center gap-2 group" href="/">
             <span className="flex items-center justify-center">
               <svg
@@ -56,7 +58,10 @@ export function SiteHeader(): JSX.Element {
             </div>
           </Link>
         </div>
-        <nav aria-label="Primary" className="order-3 w-full overflow-x-auto sm:order-2 sm:w-auto">
+        <div className="justify-self-end">
+          <ThemeToggle />
+        </div>
+        <nav aria-label="Primary" className="col-span-2 w-full overflow-x-auto sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:w-auto sm:justify-self-center">
           <ul className="flex min-w-max items-center gap-2 sm:gap-3">
             {directoryNav.map((item) => (
               <li key={item.href}>
@@ -74,9 +79,6 @@ export function SiteHeader(): JSX.Element {
             ))}
           </ul>
         </nav>
-        <div className="order-2 sm:order-3">
-          <ThemeToggle />
-        </div>
       </div>
     </header>
   );

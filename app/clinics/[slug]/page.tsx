@@ -6,6 +6,7 @@ import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getClinicBySlug, getClinicSlugs } from "@/lib/directory";
+import { layout } from "@/lib/layout";
 import {
   getConditionLinkReasonForClinic,
   getConditionsForClinicSlug,
@@ -22,10 +23,20 @@ type MaybePromise<T> = T | Promise<T>;
 export const dynamicParams = false;
 
 export function generateStaticParams(): Params[] {
+  if (!siteConfig.features.clinics) return [];
   return getClinicSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: MaybePromise<Params> }): Promise<Metadata> {
+  if (!siteConfig.features.clinics) {
+    return {
+      title: "Not Found",
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
+  }
   const resolved = await Promise.resolve(params);
   const clinic = getClinicBySlug(resolved.slug);
 
@@ -50,6 +61,7 @@ export async function generateMetadata({ params }: { params: MaybePromise<Params
 }
 
 export default async function ClinicDetailPage({ params }: { params: MaybePromise<Params> }): Promise<JSX.Element> {
+  if (!siteConfig.features.clinics) notFound();
   const resolved = await Promise.resolve(params);
   const clinic = getClinicBySlug(resolved.slug);
 
@@ -73,7 +85,7 @@ export default async function ClinicDetailPage({ params }: { params: MaybePromis
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[980px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+      <main className={layout.rails.wide}>
         <header className="directory-shell rounded-3xl p-7 sm:p-10">
           <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/clinics">
             ← Back to clinics

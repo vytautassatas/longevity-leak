@@ -86,7 +86,6 @@ export function RelatedLinksPanel({ title, items, columns = 1, limit, className 
                 {item.eyebrow && <p className="text-xs font-semibold uppercase tracking-[0.11em] text-[var(--muted)]">{item.eyebrow}</p>}
                 <h3 className="mt-1 text-lg">{item.title}</h3>
                 <p className="mt-2 text-sm text-[var(--muted)] line-clamp-2">{item.description}</p>
-                <p className="mt-3 text-xs font-medium uppercase tracking-[0.09em] text-[var(--muted)]">Why linked: {item.reason}</p>
               </Link>
             </li>
           ))}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PostCard } from "@/components/post-card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { layout } from "@/lib/layout";
 import { getAllTags, getPostsByTag } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
@@ -49,7 +50,7 @@ export default async function TagPage({ params }: { params: MaybePromise<Params>
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[1100px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
+      <main className={layout.rails.wide}>
         <header className="mb-12 border-b border-[var(--border)] pb-12">
           <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
             ← Back to news

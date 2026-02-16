@@ -10,7 +10,12 @@ const safetyOptions = ["All", "Low Risk", "Moderate Risk", "Needs Monitoring"] a
 type EvidenceFilter = (typeof evidenceOptions)[number];
 type SafetyFilter = (typeof safetyOptions)[number];
 
-export function SupplementsBrowser({ supplements }: { supplements: SupplementEntry[] }): JSX.Element {
+type SupplementsBrowserProps = {
+  supplements: SupplementEntry[];
+  className?: string;
+};
+
+export function SupplementsBrowser({ supplements, className }: SupplementsBrowserProps): JSX.Element {
   const [query, setQuery] = useState("");
   const [evidence, setEvidence] = useState<EvidenceFilter>("All");
   const [safety, setSafety] = useState<SafetyFilter>("All");
@@ -30,8 +35,8 @@ export function SupplementsBrowser({ supplements }: { supplements: SupplementEnt
   }, [supplements, query, evidence, safety]);
 
   return (
-    <section className="mt-10">
-      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-4 sm:p-5">
+    <section className={className ?? "mt-10 sm:mt-12"}>
+      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-5 sm:p-6">
         <div className="grid gap-3 lg:grid-cols-[1.5fr_1fr_1fr]">
           <label className="flex flex-col gap-2">
             <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--muted)]">Search</span>
@@ -80,7 +85,7 @@ export function SupplementsBrowser({ supplements }: { supplements: SupplementEnt
         </p>
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-6 grid gap-6 md:grid-cols-2 lg:gap-8">
         {filtered.map((supplement) => (
           <SupplementCard key={supplement.slug} supplement={supplement} />
         ))}

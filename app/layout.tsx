@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   }
 };
 
-const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=(s==='dark'||s==='light')?s:'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
+const themeBootScript = `(function(){try{var k='longevity-leak-theme';var s=localStorage.getItem(k);var t=(s==='dark'||s==='light')?s:'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
 const gaTrackingId = "G-70H3SNFE1W";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -42,7 +42,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${gaTrackingId}');`}
         </Script>
-        <style>{`:root{color-scheme:light;} :root[data-theme="dark"]{color-scheme:dark;} body{margin:0}`}</style>
+        <style>{`:root{color-scheme:dark;} :root[data-theme="light"]{color-scheme:light;} body{margin:0}`}</style>
       </head>
       <body>{children}</body>
     </html>

@@ -8,8 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const siteLastModified = posts[0]?.date ?? "1970-01-01";
   const directoryLastModified = getDirectoryLastModified();
+  const showClinics = siteConfig.features.clinics;
 
-  const directoryUrls = ["/supplements", "/conditions", "/clinics"].map((path) => ({
+  const directoryUrls = ["/supplements", "/conditions", ...(showClinics ? ["/clinics"] : [])].map((path) => ({
     url: `${base}${path}`,
     lastModified: directoryLastModified
   }));
@@ -21,10 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/conditions/${entry.slug}`,
     lastModified: entry.updatedAt
   }));
-  const clinicUrls = getClinics().map((entry) => ({
-    url: `${base}/clinics/${entry.slug}`,
-    lastModified: entry.updatedAt
-  }));
+  const clinicUrls = showClinics
+    ? getClinics().map((entry) => ({
+        url: `${base}/clinics/${entry.slug}`,
+        lastModified: entry.updatedAt
+      }))
+    : [];
 
   const postUrls = posts.map((post) => ({
     url: `${base}/posts/${post.slug}`,

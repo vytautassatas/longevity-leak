@@ -5,6 +5,7 @@ import { EvidenceRiskGuide } from "@/components/evidence-risk-guide";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getConditions } from "@/lib/directory";
+import { layout } from "@/lib/layout";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -27,24 +28,24 @@ export default function ConditionsPage(): JSX.Element {
   return (
     <>
       <SiteHeader />
-      <main className="mx-auto w-full max-w-[1200px] px-4 pb-24 pt-8 sm:px-5 sm:pt-12">
-        <header className="directory-shell rounded-3xl p-7 sm:p-10">
+      <main className={layout.rails.wide}>
+        <header className={layout.hero.shell}>
           <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
             ← Back to home
           </Link>
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--muted)]">Conditions Directory</p>
-          <h1 className="mt-4 max-w-4xl text-4xl sm:text-5xl md:text-6xl">Start with the outcome. Then choose interventions.</h1>
-          <p className="mt-5 max-w-3xl text-base text-[var(--muted)] sm:text-lg">
+          <p className={`mt-5 ${layout.hero.eyebrow}`}>Conditions Directory</p>
+          <h1 className={layout.hero.title}>Start with the outcome. Then choose interventions.</h1>
+          <p className={layout.hero.lead}>
             Each condition profile maps top interventions, evidence confidence, and where supplements fit within full-stack clinical strategy.
           </p>
-          <p className="mt-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em]">
+          <p className={layout.hero.badge}>
             {conditions.length} conditions mapped
           </p>
         </header>
 
-        <EvidenceRiskGuide />
+        <EvidenceRiskGuide className={layout.spacing.section} />
 
-        <section className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <section className={`${layout.spacing.section} grid gap-6 md:grid-cols-2 lg:gap-8`}>
           {conditions.map((condition) => (
             <ConditionCard key={condition.slug} condition={condition} />
           ))}

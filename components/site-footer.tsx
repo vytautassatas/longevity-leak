@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { layout } from "@/lib/layout";
+import { siteConfig } from "@/lib/site";
 
 export function SiteFooter(): JSX.Element {
   return (
     <footer className="mt-16 border-t border-[var(--border)] py-8">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-start gap-5 px-5 text-sm text-[var(--muted)]">
+      <div className={`${layout.chromeRail} flex flex-col items-start gap-5 text-sm text-[var(--muted)]`}>
         <div className="flex items-start gap-2">
           <svg width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="mt-0.5 text-[var(--text)]">
             <path
@@ -37,9 +39,11 @@ export function SiteFooter(): JSX.Element {
           <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/conditions">
             Conditions
           </Link>
-          <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/clinics">
-            Clinics
-          </Link>
+          {siteConfig.features.clinics ? (
+            <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/clinics">
+              Clinics
+            </Link>
+          ) : null}
           <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/feed.xml">
             RSS Feed
           </Link>
