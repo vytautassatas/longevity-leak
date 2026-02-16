@@ -17,12 +17,15 @@ function getCanonicalOrigin(rawUrl) {
 const canonicalOrigin = getCanonicalOrigin(configuredCanonicalUrl);
 const canonicalHost = new URL(canonicalOrigin).host;
 const wwwHost = `www.${canonicalHost}`;
+const enableHostCanonicalRedirect = process.env.NEXT_ENABLE_HOST_CANONICAL_REDIRECT === "true";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: false,
   async redirects() {
+    if (!enableHostCanonicalRedirect) return [];
+
     return [
       {
         source: "/:path*",
