@@ -13,7 +13,7 @@ type MaybePromise<T> = T | Promise<T>;
 export const dynamicParams = false;
 
 export function generateStaticParams(): Params[] {
-  return getAllTags().map((tag) => ({ tag }));
+  return getAllTags().map((tag) => ({ tag: encodeTagParam(tag) }));
 }
 
 export async function generateMetadata({ params }: { params: MaybePromise<Params> }): Promise<Metadata> {
