@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "quality:content": "node scripts/content-quality-report.mjs",
+    "quality:content:strict": "node scripts/content-quality-report.mjs --strict",
     "quality:directory": "node scripts/directory-quality-report.mjs",
     "quality:directory:strict": "node scripts/directory-quality-report.mjs --strict"
   },

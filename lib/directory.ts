@@ -1557,7 +1557,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["obesity", "adiposity", "weight loss", "body fat", "appetite"],
     evidenceLevel: "A",
     topInterventions: ["protein-forward nutrition", "resistance training", "sleep/stress management"],
-    guidanceSummary: "Durable fat-loss outcomes depend on dietary adherence, behavioral support, and muscle-preserving training structures.",
+    guidanceSummary: "Durable adiposity reduction is most likely when calorie control, protein adequacy, resistance training, and behavioral adherence systems are combined and adjusted over months, not weeks.",
     monitoring: ["waist circumference", "body composition", "A1C", "fasting insulin"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29466592/", "https://pubmed.ncbi.nlm.nih.gov/21836103/"],
     updatedAt: "2026-02-17"
@@ -1689,7 +1689,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["brain fog", "cognitive fatigue", "attention drift", "working memory", "mental stamina"],
     evidenceLevel: "B",
     topInterventions: ["sleep timing discipline", "metabolic stabilization", "targeted nootropic protocols"],
-    guidanceSummary: "Brain-fog management is strongest with structured sleep-metabolic support plus targeted cognitive rehabilitation strategies.",
+    guidanceSummary: "Brain-fog management is strongest with sleep regularity, glucose stability, and structured cognitive pacing, while reversible drivers such as medication effects, mood load, and apnea are actively screened.",
     monitoring: ["subjective focus scores", "work-block duration", "sleep quality", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39040197/", "https://pubmed.ncbi.nlm.nih.gov/37158780/"],
     updatedAt: "2026-02-17"
@@ -1737,7 +1737,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["senescent cells", "cellular senescence", "senolytic", "zombie cells", "inflammaging"],
     evidenceLevel: "C",
     topInterventions: ["resistance training", "anti-inflammatory nutrition", "protocolized senolytic cycles"],
-    guidanceSummary: "Human senolytic evidence is early and condition-specific; interventions should remain conservative and research-oriented.",
+    guidanceSummary: "Human senolytic evidence is still early and condition-specific, so protocols should stay conservative, prioritize functional monitoring, and avoid extrapolating animal-effect sizes to broad anti-aging claims.",
     monitoring: ["hs-CRP", "functional strength metrics", "recovery markers", "bone health trends"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30616998/", "https://pubmed.ncbi.nlm.nih.gov/40437670/"],
     updatedAt: "2026-02-17"
@@ -2117,7 +2117,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["reflux", "gerd", "heartburn", "night reflux", "esophageal irritation"],
     evidenceLevel: "A",
     topInterventions: ["meal timing and portion control", "weight reduction", "trigger-food minimization"],
-    guidanceSummary: "Meal timing, body-composition improvement, and stepwise acid-suppression strategy drive durable reflux control.",
+    guidanceSummary: "Durable reflux control usually requires meal-timing changes, weight and abdominal-pressure reduction, trigger tracking, and stepwise acid-suppression decisions with reassessment for persistent or alarm symptoms.",
     monitoring: ["symptom days per week", "night awakenings", "trigger log", "bodyweight trend"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34807007/", "https://pubmed.ncbi.nlm.nih.gov/34324432/"],
     updatedAt: "2026-02-17"
@@ -2301,7 +2301,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["non dipping blood pressure", "nighttime hypertension", "ambulatory blood pressure", "sleep blood pressure", "vascular strain"],
     evidenceLevel: "B",
     topInterventions: ["sleep apnea assessment", "timed antihypertensive strategy", "sodium and stress load reduction"],
-    guidanceSummary: "Non-dipping patterns usually need combined ambulatory-BP-guided medication timing, sleep-risk treatment, and sodium-load reduction.",
+    guidanceSummary: "Non-dipping patterns often require ambulatory-BP-guided treatment timing, sleep-apnea evaluation, sodium-load reduction, and close follow-up because stroke and renal risk rise when nighttime pressure stays elevated.",
     monitoring: ["24-hour ambulatory BP", "night/day BP ratio", "sleep quality", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41028404/", "https://pubmed.ncbi.nlm.nih.gov/31480717/"],
     updatedAt: "2026-02-17"
@@ -2445,7 +2445,7 @@ const conditions: ConditionEntry[] = [
     keywords: ["orthostatic intolerance", "postural dizziness", "blood pressure drop", "standing intolerance", "near syncope"],
     evidenceLevel: "B",
     topInterventions: ["hydration and sodium strategy", "graded conditioning", "medication review for hypotensive effects"],
-    guidanceSummary: "Orthostatic symptom control typically needs volume strategy, medication review, and targeted autonomic management.",
+    guidanceSummary: "Orthostatic symptom control typically needs fluid-salt strategy, medication review, compression and conditioning tactics, and clinician-guided autonomic evaluation when dizziness, tachycardia, or presyncope persists.",
     monitoring: ["supine-standing blood pressure", "dizziness episodes", "hydration consistency", "activity tolerance"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30583909/", "https://pubmed.ncbi.nlm.nih.gov/41088986/"],
     updatedAt: "2026-02-17"

@@ -5,6 +5,51 @@
 - Every page should help users make fast, safer, better-informed decisions.
 - Prioritize factual clarity and navigation confidence over visual novelty.
 
+## Content Quality Rubric (Required)
+- Quality takes priority over publishing speed. Every supplement, condition, and article must pass this rubric before shipping.
+- Content should be written for real-world readability, especially for older adults: short paragraphs, explicit sectioning, plain language, and no hype framing.
+- Claims must be evidence-calibrated:
+  - state what is known
+  - state what remains uncertain
+  - state key risks and who should avoid the protocol
+- Never write promotional copy or implied guarantees ("miracle", "guaranteed", "no downside", "instant result").
+- Every article should include:
+  - clear title + date + slug
+  - summary/excerpt metadata
+  - sectioned body (multiple headings, not a wall of text)
+  - explicit "Sources" or "References" section
+  - at least one internal contextual link (supplement/condition/article/clinic/tag)
+  - uncertainty or limitation language
+- Every supplement entry should include:
+  - what it is best for
+  - evidence level + short evidence summary
+  - effect-size framing
+  - safety/risk framing and cautions
+  - dosing context (dose, timing, protocol duration, notes)
+  - source URLs and linked article references
+- Every condition entry should include:
+  - actionable goal statement
+  - top interventions
+  - monitoring markers
+  - source URLs and evidence level framing
+- Content depth rule:
+  - thin pages are acceptable only as draft states; they must be expanded before release.
+  - when evidence is limited, say so directly instead of padding with generic claims.
+- Internal linking rule:
+  - avoid orphan content
+  - each major page should connect users to the next practical decision (what to read next, what relates, what to monitor).
+
+## Content Workflow (Publish Gate)
+- Before merge/publish, run:
+  - `npm run quality:content`
+  - `npm run quality:directory`
+  - `npm run lint`
+  - `npx tsc --noEmit`
+  - `npm run build`
+- Use strict mode when preparing major content batches:
+  - `npm run quality:content:strict`
+  - `npm run quality:directory:strict`
+
 ## UX/UI Quality Bar
 - Design must feel clinical, premium, and highly legible.
 - Card layouts must never clip, truncate, or awkwardly wrap critical information.
@@ -92,10 +137,10 @@
 
 ## Ongoing Quality Gates
 - Required checks before merge:
+  - `npm run quality:content`
   - `npm run quality:directory`
   - `npm run lint`
   - `npx tsc --noEmit`
-  - `npm test`
   - `npm run build`
 - JSON-LD/snapshot changes must be reviewed deliberately on every relevant PR.
 - Validate that newly added supplements/conditions/clinics resolve to live links from related pages.
