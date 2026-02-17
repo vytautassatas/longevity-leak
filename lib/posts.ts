@@ -11,6 +11,7 @@ export type PostFrontmatter = {
   description?: string;
   metaDescription?: string;
   study_url?: string;
+  studyUrl?: string;
   tags?: string[];
   keywords?: string[];
   category?: string;
@@ -85,7 +86,7 @@ export function getPostBySlug(slug: string): Post {
     slug: frontmatter.slug ?? slug,
     excerpt: frontmatter.excerpt ?? frontmatter.description ?? "",
     metaDescription: frontmatter.metaDescription ?? frontmatter.description ?? "",
-    study_url: normalizeStudyUrl(frontmatter.study_url),
+    study_url: normalizeStudyUrl(frontmatter.study_url ?? frontmatter.studyUrl),
     tags: normalizeTags(frontmatter.tags).length > 0
       ? normalizeTags(frontmatter.tags)
       : [

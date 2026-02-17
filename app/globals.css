@@ -16,6 +16,10 @@
   --card-gradient: linear-gradient(150deg, #fcfcfd 10%, #f2f5f9 72%);
   --hero-gradient: radial-gradient(circle at 20% 5%, rgba(21, 129, 156, 0.14), transparent 35%),
     radial-gradient(circle at 88% 80%, rgba(14, 114, 80, 0.14), transparent 38%), linear-gradient(155deg, #f8fcfd 10%, #f1f5f8 80%);
+  --chip-link-bg: #e7edf7;
+  --chip-link-bg-hover: #dbe5f4;
+  --chip-link-border: rgba(15, 23, 42, 0.28);
+  --chip-link-text: #0f172a;
 }
 
 :root[data-theme="dark"] {
@@ -30,6 +34,10 @@
   --card-gradient: linear-gradient(150deg, #111317 10%, #050506 72%);
   --hero-gradient: radial-gradient(circle at 20% 5%, rgba(57, 184, 214, 0.2), transparent 35%),
     radial-gradient(circle at 88% 80%, rgba(57, 214, 138, 0.2), transparent 38%), linear-gradient(155deg, #11171b 10%, #0b1014 80%);
+  --chip-link-bg: #1a2637;
+  --chip-link-bg-hover: #22344d;
+  --chip-link-border: rgba(146, 184, 244, 0.5);
+  --chip-link-text: #e8efff;
 }
 
 * {
@@ -205,6 +213,28 @@ select {
 
 .directory-card:hover::before {
   opacity: 1;
+}
+
+.interactive-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid var(--chip-link-border);
+  background: var(--chip-link-bg);
+  color: var(--chip-link-text);
+  text-decoration: none;
+  transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.interactive-chip:hover {
+  background: var(--chip-link-bg-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.interactive-chip:focus-visible {
+  outline: 2px solid var(--chip-link-border);
+  outline-offset: 2px;
 }
 
 @media (max-width: 640px) {

@@ -64,7 +64,8 @@
 
 ## Source Quality Standard
 - Use trusted medical/scientific source domains only for directory `sourceUrls` (PubMed/PMC, ClinicalTrials.gov, major peer-reviewed journals/guideline hosts).
-- For `evidenceLevel: "A"` entries, avoid source lists that are only search-query URLs; include at least one direct study/guideline link whenever possible.
+- Avoid source lists that are only search-query URLs for any evidence level; include at least one direct study/guideline link whenever possible.
+- For `evidenceLevel: "A"` entries, require at least one direct study/guideline link in `sourceUrls`.
 - For high-confidence entries, maintain broader support coverage (for supplements, prefer at least 2 relevant linked articles in `articleRefs`).
 - Keep `updatedAt` fresh and periodically refresh high-impact entries before they become stale.
 

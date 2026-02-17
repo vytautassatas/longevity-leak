@@ -30,21 +30,21 @@ export function SiteFooter(): JSX.Element {
           </div>
         </div>
         <nav aria-label="Footer links" className="flex flex-wrap gap-2">
-          <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/">
+          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/">
             News
           </Link>
-          <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/supplements">
+          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/supplements">
             Supplements
           </Link>
-          <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/conditions">
+          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/conditions">
             Conditions
           </Link>
           {siteConfig.features.clinics ? (
-            <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/clinics">
+            <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/clinics">
               Clinics
             </Link>
           ) : null}
-          <Link className="inline-flex h-11 items-center rounded-full border border-[var(--border)] px-5 text-xs font-bold uppercase tracking-[0.14em] hover:text-[var(--text)]" href="/feed.xml">
+          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/feed.xml">
             RSS Feed
           </Link>
         </nav>

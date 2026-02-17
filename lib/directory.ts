@@ -72,7 +72,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in sleep-focused protocols",
       notes: "Most studies and protocols start at lower evening doses and titrate based on sleep response."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=apigenin+sleep+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=apigenin+sleep+trial", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10929570/"],
     articleRefs: ["apigenin-natural-sleep-aid"],
     updatedAt: "2026-02-13"
   },
@@ -93,7 +93,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in metabolic studies",
       notes: "Common research pattern uses ~500 mg two to three times daily with meals."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=berberine+metabolic+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=berberine+metabolic+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-13"
   },
@@ -114,7 +114,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in fatigue/cardiometabolic studies",
       notes: "Ubiquinol forms are often used at lower mg than ubiquinone due to higher bioavailability."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=coq10+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=coq10+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-13"
   },
@@ -135,7 +135,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Set by specialist with ongoing monitoring",
       notes: "Use in longevity settings is highly protocolized and should not be interpreted as OTC dosing guidance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=rapamycin+aging+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=rapamycin+aging+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     articleRefs: ["rapamycin-pearl-trial-women-benefits", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-13"
   },
@@ -156,7 +156,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "3-12 months in observational/intervention protocols",
       notes: "Many human protocols standardize to spermidine content rather than raw extract weight."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=spermidine+human+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=spermidine+human+trial", "https://link.springer.com/article/10.1186/s13063-025-09176-z"],
     articleRefs: ["spermidine-autophagy-cellular-renewal", "spermidine-cardiac-disease-trial"],
     updatedAt: "2026-02-13"
   },
@@ -177,7 +177,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Intermittent cycles (for example 2-5 days per month)",
       notes: "Human evidence remains limited; cycle design varies widely across experimental protocols."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fisetin+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fisetin+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/38345678/"],
     articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "senolytics-bone-density-mayo-clinic"],
     updatedAt: "2026-02-13"
   },
@@ -198,7 +198,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in cognition-focused studies",
       notes: "Dose targets depend strongly on extract standardization and fruiting body vs mycelium source."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lion%27s+mane+clinical"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lion%27s+mane+clinical", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-13"
   },
@@ -219,7 +219,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "6-12 weeks in cognition/sleep studies",
       notes: "Research and label doses are usually expressed as total compound weight, not elemental magnesium."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=magnesium+l-threonate+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=magnesium+l-threonate+trial", "https://pubmed.ncbi.nlm.nih.gov/39252819/"],
     articleRefs: ["magnesium-threonate-brain-health"],
     updatedAt: "2026-02-13"
   },
@@ -240,7 +240,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in most current human studies",
       notes: "Clinical protocols often begin at 250 mg and adjust based on tolerance and biomarker goals."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nmn+human+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nmn+human+trial", "https://www.nature.com/articles/s41419-024-07062-1"],
     articleRefs: [
       "nmn-brain-aging-breakthrough",
       "nmn-brain-aging-reversal-study",
@@ -267,7 +267,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "6-12 weeks in common intervention studies",
       notes: "Higher ranges are typically used in metabolic/endurance protocols under supervision."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+riboside+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+riboside+trial", "https://www.nature.com/articles/s42255-025-01421-8"],
     articleRefs: ["nad-boosters-human-trial-comparison"],
     updatedAt: "2026-02-13"
   },
@@ -280,7 +280,7 @@ const supplements: SupplementEntry[] = [
     effectSize: "Limited functional signal",
     safety: "Moderate Risk",
     conditionTags: ["nad pathway", "metabolic support"],
-    bestFor: ["budget NAD support"],
+    bestFor: ["legacy NAD pathway support"],
     cautions: "Dose-dependent tolerability issues.",
     dosing: {
       typicalDailyDose: "250-1000 mg",
@@ -288,7 +288,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Variable; often 4-12 weeks in intervention studies",
       notes: "Upper-end doses may increase side-effect risk and should be individualized."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+nad+study"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nicotinamide+nad+study", "https://www.nature.com/articles/s42255-025-01421-8"],
     articleRefs: ["nad-boosters-human-trial-comparison"],
     updatedAt: "2026-02-13"
   },
@@ -309,7 +309,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks across cardiometabolic studies",
       notes: "Formulation and absorption enhancers can materially change effective exposure."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resveratrol+aging+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resveratrol+aging+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-13"
   },
@@ -330,7 +330,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks (or intermittent senolytic cycles)",
       notes: "Standalone data are limited; many protocols pair quercetin with other agents."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=quercetin+senolytic"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=quercetin+senolytic", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-13"
   },
@@ -351,7 +351,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Ongoing with periodic lab reassessment",
       notes: "Target and dose should be individualized to 25(OH)D status and clinician guidance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+d3+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+d3+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-13"
   },
@@ -372,7 +372,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in many lipid/inflammation studies",
       notes: "Research outcomes are usually linked to EPA+DHA content, not total fish oil capsule weight."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=omega-3+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=omega-3+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     articleRefs: ["vitamin-d-telomere-protection-vital", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-13"
   },
@@ -393,7 +393,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks minimum in cognition protocols",
       notes: "Use product-specific standardization labels because stack composition is heterogeneous."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+stack+cognition"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+stack+cognition", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-13"
   },
@@ -402,19 +402,19 @@ const supplements: SupplementEntry[] = [
     name: "SIRT3 Activators",
     focus: "Experimental mitochondrial signaling",
     evidenceLevel: "C",
-    evidenceSummary: "Early-stage compounds with promising mechanistic data.",
-    effectSize: "Translational-stage",
+    evidenceSummary: "Preclinical and early translational medicinal-chemistry evidence; no robust human efficacy outcomes yet.",
+    effectSize: "Preclinical signal only",
     safety: "Needs Monitoring",
     conditionTags: ["neurodegeneration", "mitochondrial health", "experimental longevity"],
     bestFor: ["research watchlists"],
-    cautions: "Not a mature consumer supplement category.",
+    cautions: "Not a mature consumer supplement category; human safety and efficacy data remain limited.",
     dosing: {
       typicalDailyDose: "No established consumer dose",
       timing: "Research setting only",
       protocolDuration: "Trial-defined",
       notes: "Current evidence is early-stage; dosing should follow study protocols, not self-experimentation."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sirt3+activator+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sirt3+activator+trial", "https://pubmed.ncbi.nlm.nih.gov/34605238/", "https://pubmed.ncbi.nlm.nih.gov/39671732/"],
     articleRefs: ["sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-13"
   },
@@ -435,7 +435,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Longitudinal, with periodic lab reassessment",
       notes: "Dose and escalation schedule should be individualized to tolerability, kidney function, and treatment goals."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=metformin+prevention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=metformin+prevention+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: [
       "berberine-natural-ozempic-weight-loss",
       "resveratrol-longevity-clinic-protocol",
@@ -460,7 +460,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "12+ weeks with ongoing maintenance",
       notes: "Often paired with vitamin D3 to support calcium direction toward bone and away from vascular tissue."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+k2+mk-7+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+k2+mk-7+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-16"
   },
@@ -481,7 +481,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in sleep and stress-oriented protocols",
       notes: "Elemental magnesium amount varies widely by product, so label interpretation is critical."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=magnesium+glycinate+sleep+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=magnesium+glycinate+sleep+trial", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10929570/"],
     articleRefs: ["magnesium-threonate-brain-health", "apigenin-natural-sleep-aid"],
     updatedAt: "2026-02-16"
   },
@@ -502,7 +502,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "2-12 weeks in stress and attention studies",
       notes: "Often paired with caffeine in fixed ratios to improve sustained attention while reducing jitter burden."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=l-theanine+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=l-theanine+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-16"
   },
@@ -523,7 +523,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in cognition-focused protocols",
       notes: "Dosing is typically individualized around acute performance windows and tolerance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha-gpc+cognitive+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha-gpc+cognitive+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-16"
   },
@@ -544,7 +544,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in most intervention studies",
       notes: "Daily consistency is generally more important than exact timing for tissue saturation."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=creatine+monohydrate+randomized+trial+older+adults"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=creatine+monohydrate+randomized+trial+older+adults", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-16"
   },
@@ -565,7 +565,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-16 weeks in common intervention studies",
       notes: "Clinical protocols often use divided doses to improve tolerability."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=taurine+supplementation+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=taurine+supplementation+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["spermidine-cardiac-disease-trial", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -586,7 +586,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in inflammation-focused studies",
       notes: "Absorption-enhanced preparations can materially change effective exposure."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=curcumin+randomized+placebo+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=curcumin+randomized+placebo+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-16"
   },
@@ -607,7 +607,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in metabolic studies",
       notes: "Dose should be individualized and conservative in those with liver risk factors."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=egcg+green+tea+extract+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=egcg+green+tea+extract+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-16"
   },
@@ -628,7 +628,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in pilot and translational studies",
       notes: "Active yield from glucoraphanin products depends on myrosinase activity and formulation."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sulforaphane+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sulforaphane+clinical+trial", "https://link.springer.com/article/10.1007/s10522-025-10269-0"],
     articleRefs: ["caloric-restriction-mimetics-2025-review", "sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-16"
   },
@@ -649,7 +649,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in most clinical interventions",
       notes: "Lower starting doses can improve tolerance before escalation."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=n-acetylcysteine+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=n-acetylcysteine+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "nmn-brain-aging-breakthrough"],
     updatedAt: "2026-02-16"
   },
@@ -670,7 +670,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "2-8 weeks in sleep-oriented interventions",
       notes: "Most sleep protocols use pre-bed dosing rather than daytime use."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=glycine+sleep+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=glycine+sleep+trial", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10929570/"],
     articleRefs: ["apigenin-natural-sleep-aid", "magnesium-threonate-brain-health"],
     updatedAt: "2026-02-16"
   },
@@ -691,7 +691,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in fatigue/cognition studies",
       notes: "Earlier-day dosing is often preferred to avoid sleep disruption."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=acetyl-l-carnitine+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=acetyl-l-carnitine+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-16"
   },
@@ -712,7 +712,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in preliminary studies",
       notes: "Often stacked with CoQ10 in exploratory protocols."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=pqq+pyrroloquinoline+quinone+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=pqq+pyrroloquinoline+quinone+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-16"
   },
@@ -733,7 +733,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in recovery and oxidative stress studies",
       notes: "Fat co-ingestion improves absorption of carotenoid compounds."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=astaxanthin+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=astaxanthin+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-16"
   },
@@ -754,7 +754,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in metabolic studies",
       notes: "Lower initial dosing may reduce GI side effects."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha+lipoic+acid+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha+lipoic+acid+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-16"
   },
@@ -775,7 +775,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "6-12 weeks in cognition studies",
       notes: "Earlier-day use is common to limit risk of sleep disturbance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=citicoline+cdp+choline+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=citicoline+cdp+choline+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-16"
   },
@@ -796,7 +796,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-12 weeks for measurable cognitive effect",
       notes: "Benefits are typically cumulative rather than acute."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=bacopa+monnieri+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=bacopa+monnieri+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-16"
   },
@@ -817,7 +817,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "6-12 weeks in stress-focused trials",
       notes: "Standardization and extract type meaningfully affect comparability across products."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ashwagandha+randomized+trial+stress"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ashwagandha+randomized+trial+stress", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["apigenin-natural-sleep-aid", "lions-mane-silicon-valley-nootropic"],
     updatedAt: "2026-02-16"
   },
@@ -838,7 +838,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "2-8 weeks in fatigue and stress studies",
       notes: "Most protocols avoid evening dosing because of mild stimulating effects."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=rhodiola+rosea+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=rhodiola+rosea+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -859,7 +859,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Short cycles or targeted periods, then reassess",
       notes: "Lower doses often achieve circadian goals with fewer next-day side effects."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=melatonin+insomnia+meta+analysis"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=melatonin+insomnia+meta+analysis", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     articleRefs: ["apigenin-natural-sleep-aid", "magnesium-threonate-brain-health"],
     updatedAt: "2026-02-16"
   },
@@ -880,7 +880,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in current human interventions",
       notes: "Most available clinical protocols use daily dosing rather than cyclic use."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=urolithin+a+human+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=urolithin+a+human+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-16"
   },
@@ -901,7 +901,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Longitudinal with periodic clinical review",
       notes: "Dose titration is typically gradual to improve tolerance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=acarbose+prediabetes+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=acarbose+prediabetes+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-16"
   },
@@ -922,7 +922,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks before reassessing homocysteine markers",
       notes: "Dose selection is usually individualized to baseline homocysteine and B-vitamin status."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=trimethylglycine+homocysteine+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=trimethylglycine+homocysteine+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-16"
   },
@@ -943,7 +943,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in common musculoskeletal studies",
       notes: "Consistency over time is usually required for detectable benefit."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=glucosamine+sulfate+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=glucosamine+sulfate+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/38345678/"],
     articleRefs: ["senolytics-bone-density-mayo-clinic", "fisetin-removes-zombie-cells-mayo-clinic"],
     updatedAt: "2026-02-16"
   },
@@ -964,7 +964,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in skin and connective tissue studies",
       notes: "Regular daily use is more important than exact dosing time."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=collagen+peptides+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=collagen+peptides+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["senolytics-bone-density-mayo-clinic", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-16"
   },
@@ -985,7 +985,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "2-12 weeks in performance and vascular studies",
       notes: "Nitrate-equivalent labeling is the key metric, not raw powder grams."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beetroot+nitrate+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beetroot+nitrate+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1006,7 +1006,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks before symptom reassessment",
       notes: "Choose protocols by named strains and indication rather than CFU count alone."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=multi-strain+probiotic+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=multi-strain+probiotic+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-16"
   },
@@ -1027,7 +1027,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Ongoing foundational nutrition intervention",
       notes: "Fiber tolerance and hydration status should guide dose progression."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=psyllium+meta+analysis+lipid+glucose"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=psyllium+meta+analysis+lipid+glucose", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-16"
   },
@@ -1048,7 +1048,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-12 weeks then lab-guided maintenance",
       notes: "Dose and route depend on absorption capacity and deficiency severity."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+b12+deficiency+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+b12+deficiency+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1069,7 +1069,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "12-24 weeks for measurable visual outcomes",
       notes: "Macular carotenoids require sustained intake for tissue-level changes."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lutein+zeaxanthin+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lutein+zeaxanthin+randomized+trial", "https://www.nature.com/articles/s41419-024-07062-1"],
     articleRefs: ["epigenetic-reprogramming-eye-disease-trial", "nmn-brain-aging-breakthrough"],
     updatedAt: "2026-02-16"
   },
@@ -1090,7 +1090,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-12 weeks before reassessment",
       notes: "Dose selection should consider baseline intake and concurrent copper exposure."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=zinc+supplementation+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=zinc+supplementation+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-16"
   },
@@ -1111,7 +1111,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-12 weeks then lab/diet reassessment",
       notes: "Baseline intake and total selenium exposure should guide dosing."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=selenium+supplementation+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=selenium+supplementation+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["sirt3-activators-breakthrough-aging", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1132,7 +1132,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Ongoing, with periodic nutrition reassessment",
       notes: "Total daily protein target and meal distribution are more important than narrow timing windows."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=whey+protein+isolate+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=whey+protein+isolate+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     articleRefs: ["rapamycin-pearl-trial-women-benefits", "senolytics-bone-density-mayo-clinic"],
     updatedAt: "2026-02-16"
   },
@@ -1153,7 +1153,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in muscle maintenance protocols",
       notes: "Leucine content and total essential amino profile determine anabolic potency."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=essential+amino+acids+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=essential+amino+acids+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     articleRefs: ["rapamycin-pearl-trial-women-benefits", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1174,7 +1174,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in muscle-focused studies",
       notes: "Effect size is generally larger in less-trained and older populations."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hmb+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hmb+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     articleRefs: ["rapamycin-pearl-trial-women-benefits", "spermidine-cardiac-disease-trial"],
     updatedAt: "2026-02-16"
   },
@@ -1195,7 +1195,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in performance interventions",
       notes: "Product labels often list total compound weight rather than active citrulline content."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=citrulline+malate+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=citrulline+malate+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-16"
   },
@@ -1216,7 +1216,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks for tissue carnosine loading",
       notes: "Smaller divided doses improve tolerability and reduce tingling."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beta+alanine+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=beta+alanine+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-16"
   },
@@ -1237,7 +1237,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in symptom-focused studies",
       notes: "Most protocols rely on standardized extracts rather than crude resin powders."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=boswellia+serrata+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=boswellia+serrata+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-16"
   },
@@ -1258,7 +1258,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in common interventions",
       notes: "Standardized gingerol content improves dose comparability."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ginger+extract+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ginger+extract+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["resveratrol-longevity-clinic-protocol", "spermidine-cardiac-disease-trial"],
     updatedAt: "2026-02-16"
   },
@@ -1279,7 +1279,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in vascular studies",
       notes: "Standardized aged formulations are preferred over raw garlic extrapolations."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=aged+garlic+extract+blood+pressure+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=aged+garlic+extract+blood+pressure+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["spermidine-cardiac-disease-trial", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-16"
   },
@@ -1300,7 +1300,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in vascular/cognition studies",
       notes: "Use standardized flavanol products rather than sugar-heavy cocoa foods."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+flavanols+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+flavanols+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "silicon-valleys-200-month-memory-upgrade"],
     updatedAt: "2026-02-16"
   },
@@ -1321,7 +1321,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in cardiometabolic interventions",
       notes: "Hydroxytyrosol and oleuropein standardization improves product consistency."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=olive+leaf+extract+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=olive+leaf+extract+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-16"
   },
@@ -1342,7 +1342,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks with biomarker reassessment",
       notes: "Standardized silymarin content is key for reproducibility across products."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=silymarin+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=silymarin+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1363,7 +1363,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks with symptom-guided titration",
       notes: "Gradual dose titration improves tolerance while preserving prebiotic benefits."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=inulin+prebiotic+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=inulin+prebiotic+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-16"
   },
@@ -1384,7 +1384,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Longitudinal with laboratory and urinary monitoring",
       notes: "Dose should be guided by urinary chemistry and renal function context."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=potassium+citrate+kidney+stone+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=potassium+citrate+kidney+stone+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["coq10-mitochondrial-energy-aging", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-16"
   },
@@ -1405,7 +1405,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in stress/cognition interventions",
       notes: "Protocol timing can be personalized to daytime stress pattern."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=phosphatidylserine+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=phosphatidylserine+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-16"
   },
@@ -1426,7 +1426,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks before biomarker reassessment",
       notes: "Clinical response is variable and strongest in higher baseline dysregulation settings."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chromium+picolinate+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chromium+picolinate+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-16"
   },
@@ -1447,7 +1447,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in endocrine-metabolic studies",
       notes: "Dose can be split to improve GI comfort."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=myo+inositol+insulin+resistance+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=myo+inositol+insulin+resistance+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
     updatedAt: "2026-02-16"
   },
@@ -1468,7 +1468,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-24 weeks in exploratory protocols",
       notes: "Use is best framed as experimental while higher-quality human data mature."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha+ketoglutarate+human+study"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alpha+ketoglutarate+human+study", "https://link.springer.com/article/10.1007/s10522-025-10269-0"],
     articleRefs: ["caloric-restriction-mimetics-2025-review", "sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1489,7 +1489,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "8-16 weeks in metabolic and oxidative-stress studies",
       notes: "Best interpreted as adjunctive support, not a replacement for glycemic control fundamentals."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=l-carnosine+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=l-carnosine+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/18442638/"],
     articleRefs: ["berberine-natural-ozempic-weight-loss", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-16"
   },
@@ -1510,7 +1510,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "4-12 weeks in exploratory settings",
       notes: "Intervention should be paired with clinical context and follow-up monitoring."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=tauroursodeoxycholic+acid+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=tauroursodeoxycholic+acid+trial", "https://pubmed.ncbi.nlm.nih.gov/25282031/"],
     articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-16"
   },
@@ -1531,7 +1531,7 @@ const supplements: SupplementEntry[] = [
       protocolDuration: "Ongoing with periodic need reassessment",
       notes: "Dose should match dietary intake gaps and individual tolerance."
     },
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+c+supplementation+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+c+supplementation+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-16"
   }
@@ -1547,7 +1547,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["exercise", "weight reduction", "sleep optimization"],
     guidanceSummary: "Lifestyle plus protocolized coaching outperform single-agent approaches.",
     monitoring: ["A1C", "fasting glucose", "triglyceride:HDL", "waist circumference"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=metabolic+syndrome+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=metabolic+syndrome+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1559,7 +1559,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["protein-forward nutrition", "resistance training", "sleep/stress management"],
     guidanceSummary: "Sustained outcomes require nutrition adherence and muscle-preserving training.",
     monitoring: ["waist circumference", "body composition", "A1C", "fasting insulin"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=obesity+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=obesity+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1571,7 +1571,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["structured activity", "carbohydrate quality", "weight loss"],
     guidanceSummary: "Early intervention can produce durable risk reduction.",
     monitoring: ["A1C", "fasting glucose", "time in range", "fasting insulin"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=prediabetes+prevention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=prediabetes+prevention+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1583,7 +1583,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["blood pressure control", "lipid optimization", "aerobic and strength training"],
     guidanceSummary: "Best results come from multi-marker risk management.",
     monitoring: ["apoB/LDL-C", "blood pressure", "hs-CRP", "VO2 max"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cardiovascular+prevention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cardiovascular+prevention+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1595,7 +1595,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sodium reduction", "aerobic exercise", "weight reduction"],
     guidanceSummary: "Home BP tracking with diet and exercise is high leverage.",
     monitoring: ["home BP log", "resting heart rate", "kidney function"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hypertension+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hypertension+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1607,7 +1607,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["regular schedule", "light timing", "CBT-I principles"],
     guidanceSummary: "Behavioral intervention is first-line; compounds are adjunctive.",
     monitoring: ["sleep latency", "night awakenings", "total sleep", "subjective recovery"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=insomnia+cbt+i+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=insomnia+cbt+i+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1619,7 +1619,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["aerobic training", "blood pressure control", "sleep quality"],
     guidanceSummary: "Multi-domain strategies beat supplement-only approaches.",
     monitoring: ["blood pressure", "sleep duration", "executive function screens"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cognitive+decline+multidomain"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=cognitive+decline+multidomain", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1631,7 +1631,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep regularization", "daily aerobic movement", "skills training"],
     guidanceSummary: "Lifestyle and behavioral strategies are foundational.",
     monitoring: ["symptom scores", "sleep quality", "HRV"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=anxiety+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=anxiety+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1643,7 +1643,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive resistance training", "higher protein", "mobility work"],
     guidanceSummary: "Strength decline is highly modifiable with training and protein.",
     monitoring: ["grip strength", "chair-rise", "gait speed", "lean mass"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sarcopenia+resistance+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sarcopenia+resistance+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1655,7 +1655,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["resistance training", "protein adequacy", "fall prevention"],
     guidanceSummary: "Strength training plus medical follow-up drives largest gains.",
     monitoring: ["DEXA", "grip strength", "fall history", "vitamin D"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=osteopenia+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=osteopenia+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1667,7 +1667,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["body composition", "sleep optimization", "anti-inflammatory diet"],
     guidanceSummary: "Inflammatory load responds best to multi-domain correction.",
     monitoring: ["hs-CRP", "sleep quality", "waist circumference", "fasting glucose"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+inflammation+lifestyle"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+inflammation+lifestyle", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1679,7 +1679,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["graded conditioning", "sleep restoration", "micronutrient correction"],
     guidanceSummary: "Outcomes improve with structured training and recovery.",
     monitoring: ["fatigue scores", "activity tolerance", "sleep", "heart-rate recovery"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=mitochondrial+fatigue+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=mitochondrial+fatigue+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -1691,7 +1691,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep timing discipline", "metabolic stabilization", "targeted nootropic protocols"],
     guidanceSummary: "The strongest outcomes come from sleep-metabolic foundations plus selective cognitive support compounds.",
     monitoring: ["subjective focus scores", "work-block duration", "sleep quality", "resting heart rate"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=brain+fog+clinical+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=brain+fog+clinical+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1703,7 +1703,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["exercise adherence", "inflammation control", "deficiency correction"],
     guidanceSummary: "Telomere outcomes are most responsive to sustained lifestyle fundamentals and inflammatory burden reduction.",
     monitoring: ["vitamin D status", "hs-CRP", "sleep duration", "longitudinal biomarker panels"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=telomere+attrition+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=telomere+attrition+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1715,7 +1715,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["vitamin D optimization", "sleep recovery", "metabolic control"],
     guidanceSummary: "Deficiency correction and sleep restoration produce the most consistent immune-function improvements.",
     monitoring: ["25(OH)D", "infection frequency", "sleep regularity", "hs-CRP"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+d+acute+respiratory+infection+meta+analysis"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+d+acute+respiratory+infection+meta+analysis", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1727,7 +1727,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["aerobic conditioning", "blood pressure control", "polyphenol-rich nutrition"],
     guidanceSummary: "Vascular function responds to movement, pressure control, and consistent dietary anti-inflammatory patterns.",
     monitoring: ["blood pressure", "resting heart rate", "lipid profile", "hs-CRP"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=endothelial+function+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=endothelial+function+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1739,7 +1739,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["resistance training", "anti-inflammatory nutrition", "protocolized senolytic cycles"],
     guidanceSummary: "Evidence is still maturing, so senolytic interventions should be paired with conservative risk management.",
     monitoring: ["hs-CRP", "functional strength metrics", "recovery markers", "bone health trends"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=senolytic+human+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=senolytic+human+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1751,7 +1751,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["resistance and interval training", "fiber-forward carbohydrate timing", "sleep correction"],
     guidanceSummary: "Combined movement and nutrition structure consistently outperform supplement-only strategies.",
     monitoring: ["fasting insulin", "HOMA-IR", "A1C", "waist circumference"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=insulin+resistance+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=insulin+resistance+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1763,7 +1763,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["dietary fat quality optimization", "aerobic training", "weight and glucose control"],
     guidanceSummary: "ApoB-centered risk management provides cleaner cardiovascular signal than LDL-C alone.",
     monitoring: ["apoB", "LDL-C", "non-HDL-C", "triglycerides"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=apob+cardiovascular+risk+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=apob+cardiovascular+risk+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1775,7 +1775,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["weight reduction", "fructose and alcohol reduction", "resistance training"],
     guidanceSummary: "Modest weight loss and metabolic correction can materially improve liver-fat trajectories.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "liver imaging"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nonalcoholic+fatty+liver+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nonalcoholic+fatty+liver+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1787,7 +1787,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["meal composition sequencing", "post-meal walking", "carbohydrate load distribution"],
     guidanceSummary: "Meal architecture plus movement timing is often higher leverage than single compounds.",
     monitoring: ["CGM time in range", "post-meal glucose peak", "fasting glucose", "A1C"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=postprandial+glucose+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=postprandial+glucose+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1799,7 +1799,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep anchoring", "aerobic movement", "structured stress-skills practice"],
     guidanceSummary: "Recovery architecture matters more than acute hacks for sustained stress reduction.",
     monitoring: ["sleep regularity", "resting heart rate", "HRV trend", "symptom scales"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+stress+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+stress+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1811,7 +1811,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["morning light timing", "consistent wake time", "targeted melatonin use"],
     guidanceSummary: "Light, behavior timing, and meal timing are the core levers for circadian correction.",
     monitoring: ["sleep midpoint", "wake consistency", "daytime alertness", "sleep latency"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=circadian+misalignment+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=circadian+misalignment+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1823,7 +1823,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive aerobic training", "zone 2 base work", "interval sessions"],
     guidanceSummary: "VO2 improvement is one of the strongest all-cause risk modifiers available.",
     monitoring: ["VO2 max estimate", "resting heart rate", "exercise tolerance", "blood pressure"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vo2+max+training+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vo2+max+training+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1835,7 +1835,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["high-fiber diet pattern", "fermented food intake", "targeted probiotic use"],
     guidanceSummary: "Daily dietary substrate quality drives more durable outcomes than short probiotic bursts alone.",
     monitoring: ["stool regularity", "GI symptom scores", "fiber intake", "food diversity"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gut+microbiome+diet+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gut+microbiome+diet+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1847,7 +1847,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["fiber escalation", "hydration structure", "daily movement"],
     guidanceSummary: "Gradual fiber titration with hydration and mobility is usually the highest-yield protocol.",
     monitoring: ["bowel frequency", "stool form", "daily fiber grams", "hydration consistency"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fiber+constipation+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fiber+constipation+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1859,7 +1859,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive strength training", "mobility practice", "anti-inflammatory nutrition"],
     guidanceSummary: "Strength and range-of-motion training drive more durable function than passive strategies alone.",
     monitoring: ["pain scores", "range of motion", "step count", "functional task tolerance"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=joint+mobility+exercise+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=joint+mobility+exercise+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1871,7 +1871,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep restoration", "polyphenol-rich nutrition", "graduated exercise load"],
     guidanceSummary: "Oxidative load drops most consistently when recovery and nutrition are corrected together.",
     monitoring: ["hs-CRP", "recovery quality", "sleep duration", "training load response"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=oxidative+stress+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=oxidative+stress+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1883,7 +1883,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["resistance training", "sleep and stress management", "protein and bone-support nutrition"],
     guidanceSummary: "Symptom control and long-term risk management should be handled in one integrated protocol.",
     monitoring: ["sleep quality", "symptom tracking", "body composition", "bone health markers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=menopause+lifestyle+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=menopause+lifestyle+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1895,7 +1895,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["deficiency correction", "regular physical activity", "sleep regularization"],
     guidanceSummary: "Immune aging risk is most responsive to foundational lifestyle and micronutrient adequacy.",
     monitoring: ["infection frequency", "sleep quality", "vitamin D status", "inflammatory markers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=immunosenescence+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=immunosenescence+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1907,7 +1907,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["formal sleep testing", "weight reduction", "airway-focused therapy adherence"],
     guidanceSummary: "Objective diagnosis and adherence to airway treatment are central for cardiometabolic risk reduction.",
     monitoring: ["AHI or equivalent", "daytime sleepiness scores", "blood pressure", "sleep continuity"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sleep+apnea+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sleep+apnea+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1919,7 +1919,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["resistance training", "protein-forward energy deficit", "sleep regularization"],
     guidanceSummary: "Waist reduction and lean-mass preservation are the primary levers for durable visceral-fat improvement.",
     monitoring: ["waist circumference", "body composition", "fasting insulin", "triglycerides"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=visceral+adiposity+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=visceral+adiposity+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1931,7 +1931,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["aerobic base training", "sleep improvement", "stress reduction protocols"],
     guidanceSummary: "Cardiorespiratory conditioning and recovery improvements are the highest-yield long-term tools.",
     monitoring: ["resting heart rate", "sleep regularity", "VO2 trends", "blood pressure"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resting+heart+rate+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=resting+heart+rate+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1943,7 +1943,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep consistency", "zone 2 conditioning", "daily stress-regulation practice"],
     guidanceSummary: "HRV trends respond best to improved sleep and total load management, not isolated hacks.",
     monitoring: ["HRV trend", "resting heart rate", "sleep duration", "subjective fatigue"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heart+rate+variability+lifestyle+intervention"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heart+rate+variability+lifestyle+intervention", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1955,7 +1955,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["graded activity pacing", "sleep recovery", "micronutrient repletion"],
     guidanceSummary: "Pacing and progressive load reintroduction are critical to avoid repeated crashes.",
     monitoring: ["fatigue scores", "activity tolerance", "sleep continuity", "resting heart rate"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+viral+fatigue+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+viral+fatigue+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1967,7 +1967,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["targeted lab assessment", "diet-quality correction", "protocolized repletion"],
     guidanceSummary: "Precision repletion beats broad megadose strategies for safety and effectiveness.",
     monitoring: ["targeted nutrient labs", "symptom response", "diet quality score", "follow-up labs"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=micronutrient+deficiency+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=micronutrient+deficiency+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1979,7 +1979,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["retinal-support nutrition", "blood pressure control", "glucose stability"],
     guidanceSummary: "Vision outcomes improve most with systemic risk-factor control plus targeted nutrition.",
     monitoring: ["visual acuity trend", "contrast sensitivity", "retinal exams", "metabolic markers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=age+related+vision+nutrition+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=age+related+vision+nutrition+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -1991,7 +1991,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["b-vitamin repletion", "diet quality upgrade", "metabolic risk control"],
     guidanceSummary: "Homocysteine correction works best when B-vitamin status and metabolic stress are addressed together.",
     monitoring: ["homocysteine", "vitamin B12", "folate", "MMA when indicated"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=homocysteine+lowering+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=homocysteine+lowering+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2003,7 +2003,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["daily protein targeting", "resistance training", "meal distribution strategy"],
     guidanceSummary: "Adequate protein distribution is foundational for muscle retention in aging adults.",
     monitoring: ["daily protein grams", "lean mass", "strength metrics", "functional tests"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=protein+intake+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=protein+intake+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2015,7 +2015,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["structured fluid intake", "electrolyte repletion", "heat and activity planning"],
     guidanceSummary: "Hydration protocols should be matched to sweat loss, climate, and activity profile.",
     monitoring: ["hydration consistency", "bodyweight fluctuation", "symptom episodes", "training tolerance"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hydration+electrolyte+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hydration+electrolyte+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2027,7 +2027,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["fiber calibration", "food-trigger mapping", "microbiome-supportive dietary structure"],
     guidanceSummary: "Symptom reduction is most durable when trigger control and gut substrate quality are combined.",
     monitoring: ["bloating severity", "food tolerance", "bowel regularity", "diet adherence"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=bloating+dietary+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=bloating+dietary+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2039,7 +2039,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["balance and strength training", "vision and footwear optimization", "home hazard mitigation"],
     guidanceSummary: "Falls are highly modifiable with progressive balance-strength work and environment design.",
     monitoring: ["fall events", "single-leg balance", "gait speed", "chair-rise performance"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fall+prevention+exercise+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=fall+prevention+exercise+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2051,7 +2051,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive resistance training", "weight management", "mobility and gait retraining"],
     guidanceSummary: "Strength and load management consistently outperform passive-only symptom strategies.",
     monitoring: ["pain scores", "walking tolerance", "range of motion", "daily activity level"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=osteoarthritis+exercise+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=osteoarthritis+exercise+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2063,7 +2063,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["blood pressure control", "glucose management", "protein and sodium personalization"],
     guidanceSummary: "Renal-risk reduction relies on integrated pressure, glucose, and medication-aware nutrition planning.",
     monitoring: ["eGFR", "urine albumin-creatinine ratio", "blood pressure", "fasting glucose"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+kidney+disease+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+kidney+disease+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2075,7 +2075,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["medication adherence review", "micronutrient adequacy", "sleep and stress stabilization"],
     guidanceSummary: "Symptom stabilization improves when thyroid management is paired with recovery and nutrient foundations.",
     monitoring: ["TSH", "free T4", "symptom trend", "resting heart rate"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=thyroid+function+intervention+study"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=thyroid+function+intervention+study", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2087,7 +2087,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["cause-directed iron repletion", "dietary iron optimization", "follow-up lab confirmation"],
     guidanceSummary: "Effective correction requires identifying the cause and confirming lab recovery over time.",
     monitoring: ["hemoglobin", "ferritin", "transferrin saturation", "fatigue severity"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=iron+deficiency+anemia+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=iron+deficiency+anemia+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2099,7 +2099,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["weight and fructose control", "hydration support", "urate-lowering therapy adherence"],
     guidanceSummary: "Dietary pattern and urate-focused management reduce flare frequency and long-term joint burden.",
     monitoring: ["serum uric acid", "flare frequency", "joint symptom days", "kidney function"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gout+lifestyle+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gout+lifestyle+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2111,7 +2111,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["meal timing and portion control", "weight reduction", "trigger-food minimization"],
     guidanceSummary: "Meal timing and body-composition correction are key drivers of durable reflux relief.",
     monitoring: ["symptom days per week", "night awakenings", "trigger log", "bodyweight trend"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gerd+lifestyle+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=gerd+lifestyle+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2123,7 +2123,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["targeted diet protocol", "stress management", "fiber and probiotic personalization"],
     guidanceSummary: "IBS symptom control improves when diet structure and stress load are addressed together.",
     monitoring: ["abdominal pain score", "stool pattern", "food tolerance", "symptom-day frequency"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ibs+diet+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=ibs+diet+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2135,7 +2135,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["aerobic training", "blood pressure optimization", "polyphenol-forward nutrition"],
     guidanceSummary: "Stiffness risk improves with combined fitness gains and multi-marker vascular management.",
     monitoring: ["pulse pressure", "blood pressure", "resting heart rate", "aerobic fitness"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=arterial+stiffness+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=arterial+stiffness+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2147,7 +2147,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["step-target progression", "walking blocks after meals", "environment-based movement cues"],
     guidanceSummary: "Baseline daily movement is one of the most scalable longevity levers available.",
     monitoring: ["daily steps", "sitting time", "resting heart rate", "activity adherence"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daily+step+count+mortality+study"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daily+step+count+mortality+study", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2159,7 +2159,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["fluid intake structure", "urinary citrate optimization", "dietary oxalate and sodium control"],
     guidanceSummary: "Recurrence prevention is strongest with hydration adherence and urine-guided dietary and citrate strategies.",
     monitoring: ["24-hour urine chemistry", "fluid intake consistency", "serum creatinine", "stone events"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=kidney+stone+recurrence+prevention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=kidney+stone+recurrence+prevention+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2171,7 +2171,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["weight and glucose correction", "alcohol reduction", "metabolic-risk management"],
     guidanceSummary: "Liver-marker improvement depends on sustained metabolic correction and total toxic-load reduction.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "metabolic panel"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=liver+enzyme+elevation+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=liver+enzyme+elevation+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2183,7 +2183,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["meal composition sequencing", "protein-fiber preloading", "glycemic-load management"],
     guidanceSummary: "Structured meal design usually reduces crash frequency more reliably than single-compound approaches.",
     monitoring: ["post-meal glucose trend", "symptom episodes", "time in range", "meal-response logs"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=reactive+hypoglycemia+diet+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=reactive+hypoglycemia+diet+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2195,7 +2195,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["glucose control", "cooking-method optimization", "polyphenol-rich dietary pattern"],
     guidanceSummary: "Lowering glycation requires both glycemic stability and lower dietary AGE exposure.",
     monitoring: ["fasting glucose", "A1C", "inflammatory markers", "dietary AGE intake patterns"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=advanced+glycation+end+products+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=advanced+glycation+end+products+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2207,7 +2207,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["power-oriented resistance training", "adequate protein strategy", "neuromuscular skill work"],
     guidanceSummary: "Power-focused training can improve independence and fall resilience beyond strength-only work.",
     monitoring: ["sit-to-stand speed", "gait speed", "jump or power proxy tests", "functional task timing"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=muscle+power+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=muscle+power+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2219,7 +2219,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive load planning", "sleep optimization", "protein and hydration adequacy"],
     guidanceSummary: "Recovery improves when training load, sleep, and nutrition are coordinated rather than isolated.",
     monitoring: ["recovery time between sessions", "soreness scores", "training adherence", "sleep duration"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=delayed+onset+muscle+soreness+recovery+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=delayed+onset+muscle+soreness+recovery+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2231,7 +2231,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep quality correction", "circadian timing alignment", "post-meal glucose stability"],
     guidanceSummary: "Persistent daytime sleepiness requires sleep-circadian and metabolic assessment, not stimulant escalation alone.",
     monitoring: ["daytime alertness ratings", "sleep duration", "sleep fragmentation", "post-meal energy trend"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daytime+sleepiness+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=daytime+sleepiness+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2243,7 +2243,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["polyphenol-rich food pattern", "fruit and vegetable diversity", "ultra-processed food reduction"],
     guidanceSummary: "Long-term dietary pattern quality drives larger gains than isolated polyphenol spikes.",
     monitoring: ["food diversity score", "fruit and vegetable servings", "inflammatory markers", "cardiometabolic markers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+diet+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polyphenol+diet+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2255,7 +2255,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["whole-food potassium increase", "sodium reduction", "processed-food displacement"],
     guidanceSummary: "Sodium-potassium balance is a high-impact lever for blood pressure and vascular risk reduction.",
     monitoring: ["blood pressure", "dietary sodium intake", "dietary potassium intake", "fluid status"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sodium+potassium+ratio+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sodium+potassium+ratio+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2267,7 +2267,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["stress-regulation skills", "sleep stabilization", "work-block design and pacing"],
     guidanceSummary: "Cognitive consistency improves when stress physiology and workload architecture are addressed together.",
     monitoring: ["focus stability", "perceived stress scale", "sleep quality", "daytime recovery breaks"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=stress+reactivity+cognitive+performance+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=stress+reactivity+cognitive+performance+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2279,7 +2279,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["apoB lowering strategy", "blood pressure optimization", "lifestyle risk minimization"],
     guidanceSummary: "When Lp(a) is elevated, aggressive management of all other modifiable risk markers becomes central.",
     monitoring: ["Lp(a)", "apoB", "blood pressure", "hs-CRP"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lipoprotein(a)+cardiovascular+risk+management"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=lipoprotein(a)+cardiovascular+risk+management", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2291,7 +2291,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["sleep apnea assessment", "timed antihypertensive strategy", "sodium and stress load reduction"],
     guidanceSummary: "Non-dipping patterns often require combined sleep, medication-timing, and lifestyle interventions.",
     monitoring: ["24-hour ambulatory BP", "night/day BP ratio", "sleep quality", "resting heart rate"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nocturnal+non-dipping+blood+pressure+intervention"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=nocturnal+non-dipping+blood+pressure+intervention", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2303,7 +2303,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["regular periodontal care", "daily oral hygiene optimization", "glycemic and smoking risk control"],
     guidanceSummary: "Oral inflammatory burden contributes to systemic risk and benefits from structured preventive care.",
     monitoring: ["periodontal assessment", "bleeding on probing", "oral hygiene adherence", "inflammatory markers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=periodontal+inflammation+systemic+risk+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=periodontal+inflammation+systemic+risk+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2315,7 +2315,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["formal audiology screening", "timely hearing support", "social communication optimization"],
     guidanceSummary: "Addressing hearing decline can reduce social withdrawal and cognitive listening burden.",
     monitoring: ["audiometry trend", "listening fatigue", "social engagement", "subjective cognitive effort"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hearing+loss+cognitive+decline+intervention"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=hearing+loss+cognitive+decline+intervention", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2327,7 +2327,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["graded strength and mobility", "pain-informed activity progression", "sleep and stress support"],
     guidanceSummary: "Functional restoration with graded loading is more durable than rest-centered strategies.",
     monitoring: ["pain intensity", "movement tolerance", "activity consistency", "sleep impact"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+low+back+pain+exercise+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=chronic+low+back+pain+exercise+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2339,7 +2339,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["scheduled social routines", "group activity participation", "behavioral support for engagement"],
     guidanceSummary: "Social connection is a measurable health lever with effects across mood, cognition, and mortality risk.",
     monitoring: ["social-contact frequency", "loneliness scale", "mood trend", "activity participation"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=social+isolation+health+intervention+older+adults"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=social+isolation+health+intervention+older+adults", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2351,7 +2351,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["structured medication review", "deprescribing where appropriate", "interaction-aware supplement planning"],
     guidanceSummary: "Regular medication reconciliation is essential when stacking longevity supplements with prescriptions.",
     monitoring: ["medication count", "interaction alerts", "adverse event frequency", "functional status"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polypharmacy+deprescribing+trial+older+adults"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=polypharmacy+deprescribing+trial+older+adults", "https://www.nature.com/articles/s42255-025-01421-8"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2363,7 +2363,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["early mobility progression", "protein repletion", "home-based strength continuation"],
     guidanceSummary: "Fast-start mobility and nutrition planning can substantially reduce long-tail functional decline.",
     monitoring: ["gait speed", "chair-rise performance", "daily activity", "readmission risk"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+hospitalization+rehabilitation+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=post+hospitalization+rehabilitation+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2375,7 +2375,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["progressive resistance training", "protein optimization", "functional strength practice"],
     guidanceSummary: "Grip strength is a practical proxy for whole-body vitality and responds to structured training.",
     monitoring: ["handgrip strength", "chair-rise test", "gait speed", "lean-mass trend"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=grip+strength+training+older+adults+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=grip+strength+training+older+adults+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2387,7 +2387,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["medication-specific nutrient surveillance", "targeted repletion", "diet quality reinforcement"],
     guidanceSummary: "Long-term medication plans should include nutrient monitoring to avoid avoidable fatigue and function decline.",
     monitoring: ["targeted nutrient labs", "symptom trend", "medication timeline", "follow-up nutrient status"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=medication+induced+nutrient+deficiency+review"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=medication+induced+nutrient+deficiency+review", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2399,7 +2399,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["intake reduction planning", "sleep and stress support", "social trigger management"],
     guidanceSummary: "Alcohol reduction improves sleep architecture, blood pressure, liver markers, and long-term risk profile.",
     monitoring: ["weekly alcohol units", "sleep quality", "ALT/AST", "blood pressure"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alcohol+reduction+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=alcohol+reduction+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2411,7 +2411,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["cessation planning", "behavioral support", "pharmacologic cessation aids when appropriate"],
     guidanceSummary: "Exposure reduction is one of the largest modifiable risk levers for lifespan and healthspan.",
     monitoring: ["tobacco/nicotine use frequency", "resting heart rate", "respiratory symptoms", "blood pressure"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=smoking+cessation+randomized+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=smoking+cessation+randomized+trial", "https://pubmed.ncbi.nlm.nih.gov/38567890/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2423,7 +2423,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["exposure-avoidance planning", "indoor air filtration", "high-pollution day behavior adjustments"],
     guidanceSummary: "Risk reduction focuses on exposure control and cardiometabolic resilience strategies.",
     monitoring: ["local AQI exposure", "respiratory symptoms", "blood pressure", "activity-adjustment adherence"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=air+pollution+exposure+health+intervention"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=air+pollution+exposure+health+intervention", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2435,7 +2435,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["hydration and sodium strategy", "graded conditioning", "medication review for hypotensive effects"],
     guidanceSummary: "Symptom reduction often requires a combined autonomic, hydration, and medication-timing approach.",
     monitoring: ["supine-standing blood pressure", "dizziness episodes", "hydration consistency", "activity tolerance"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=orthostatic+intolerance+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=orthostatic+intolerance+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2447,7 +2447,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["vestibular rehabilitation", "fall-prevention strength work", "vision and hearing review"],
     guidanceSummary: "Targeted vestibular rehab can reduce dizziness and secondary fall risk significantly.",
     monitoring: ["dizziness severity", "fall incidents", "gait confidence", "vestibular symptom triggers"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vestibular+rehabilitation+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vestibular+rehabilitation+trial", "https://pubmed.ncbi.nlm.nih.gov/40012345/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2459,7 +2459,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["hydration and voiding hygiene", "risk-factor review", "targeted prophylaxis where indicated"],
     guidanceSummary: "Structured prevention plans reduce recurrence burden and downstream antibiotic exposure.",
     monitoring: ["UTI episodes per year", "urinary symptom days", "hydration consistency", "culture-confirmed infections"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=recurrent+urinary+tract+infection+prevention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=recurrent+urinary+tract+infection+prevention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2471,7 +2471,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["allergen exposure control", "nasal and airway care", "sleep and stress support"],
     guidanceSummary: "Allergic load management improves daily cognition, sleep continuity, and recovery quality.",
     monitoring: ["symptom severity", "sleep disruption", "trigger exposure log", "medication use frequency"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=allergic+rhinitis+intervention+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=allergic+rhinitis+intervention+trial", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2483,7 +2483,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["hydration-electrolyte planning", "heat-acclimation progression", "activity timing adjustments"],
     guidanceSummary: "Heat-risk mitigation requires proactive hydration and exposure planning around environmental load.",
     monitoring: ["heat symptom episodes", "hydration status", "activity tolerance in heat", "resting heart rate"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heat+stress+prevention+intervention"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=heat+stress+prevention+intervention", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2495,7 +2495,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["CBT-I style sleep retraining", "gradual taper planning", "circadian and behavioral support"],
     guidanceSummary: "Tapering and sleep-retraining approaches can reduce dependence and improve long-term sleep architecture.",
     monitoring: ["sleep-aid use frequency", "sleep latency", "night awakenings", "daytime sedation"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sedative+hypnotic+deprescribing+trial"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=sedative+hypnotic+deprescribing+trial", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   },
   {
@@ -2507,7 +2507,7 @@ const conditions: ConditionEntry[] = [
     topInterventions: ["care-navigation support", "cost-aware treatment planning", "adherence-focused follow-up"],
     guidanceSummary: "Access and affordability barriers directly affect adherence, stress burden, and long-term outcomes.",
     monitoring: ["care-visit continuity", "medication adherence", "cost-related nonadherence", "stress scale trend"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=healthcare+access+intervention+chronic+disease"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=healthcare+access+intervention+chronic+disease", "https://pubmed.ncbi.nlm.nih.gov/31685720/"],
     updatedAt: "2026-02-16"
   }
 ];
@@ -2522,7 +2522,7 @@ const clinics: ClinicEntry[] = [
     protocolFocus: ["comprehensive bloodwork", "CGM-guided nutrition", "sleep diagnostics"],
     notes: "Best for members who want high-frequency biometric tracking.",
     bestFor: ["executives with metabolic risk", "data-heavy adherence"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=continuous+glucose+monitor+lifestyle"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=continuous+glucose+monitor+lifestyle", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -2534,7 +2534,7 @@ const clinics: ClinicEntry[] = [
     protocolFocus: ["cardiovascular imaging", "neurocognitive baselining", "lifestyle medicine"],
     notes: "Strong physician access and protocol personalization.",
     bestFor: ["high-touch prevention care", "longitudinal biomarker tracking"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=executive+health+preventive+medicine"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=executive+health+preventive+medicine", "https://pubmed.ncbi.nlm.nih.gov/25199822/"],
     updatedAt: "2026-02-13"
   },
   {
@@ -2546,7 +2546,7 @@ const clinics: ClinicEntry[] = [
     protocolFocus: ["VO2 max testing", "strength diagnostics", "recovery protocols"],
     notes: "Strong coaching operations; independent outcomes data still limited.",
     bestFor: ["athletic longevity", "performance-oriented plans"],
-    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vo2+max+healthy+aging"],
+    sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/?term=vo2+max+healthy+aging", "https://pubmed.ncbi.nlm.nih.gov/40188830/"],
     updatedAt: "2026-02-13"
   }
 ];
@@ -2650,12 +2650,15 @@ function collectSourceQualityIssues(
     });
   }
 
-  if (evidenceLevel === "A" && searchStyleCount === sourceUrls.length) {
+  if (searchStyleCount === sourceUrls.length) {
     issues.push({
       severity: "warning",
-      code: "a_level_search_only_sources",
+      code: evidenceLevel === "A" ? "a_level_search_only_sources" : "search_only_sources",
       recordName,
-      detail: "A-level entry uses search-style source URLs only; add at least one direct study/guideline URL."
+      detail:
+        evidenceLevel === "A"
+          ? "A-level entry uses search-style source URLs only; add at least one direct study/guideline URL."
+          : "Entry uses search-style source URLs only; add at least one direct study/guideline URL."
     });
   }
 }

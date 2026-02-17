@@ -130,7 +130,7 @@ export default async function SupplementDetailPage({ params }: { params: MaybePr
               {relatedConditions.length > 0
                 ? relatedConditions.map((condition) => (
                     <li key={condition.slug}>
-                      <Link className="rounded-full bg-[var(--surface-soft)] px-3 py-1 transition-colors hover:bg-[var(--surface)]" href={`/conditions/${condition.slug}`}>
+                      <Link className="interactive-chip px-3 py-1 text-sm font-medium" href={`/conditions/${condition.slug}`}>
                         {condition.name}
                       </Link>
                     </li>

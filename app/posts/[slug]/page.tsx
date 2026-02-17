@@ -125,7 +125,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
               {post.tags.filter(Boolean).map((tag) => (
                 <Link
                   key={tag}
-                  className="rounded-full bg-[var(--surface-soft)] px-4 py-1.5 text-xs font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]"
+                  className="interactive-chip px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.06em]"
                   href={`/tags/${tag.toLowerCase()}`}
                 >
                   {tag}
