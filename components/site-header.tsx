@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { layout } from "@/lib/layout";
+import { SiteSearch } from "@/components/site-search";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site";
 
@@ -58,7 +59,8 @@ export function SiteHeader(): JSX.Element {
             </div>
           </Link>
         </div>
-        <div className="justify-self-end">
+        <div className="flex items-center justify-self-end gap-2">
+          <SiteSearch />
           <ThemeToggle />
         </div>
         <nav aria-label="Primary" className="col-span-2 w-full overflow-x-auto sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:w-auto sm:justify-self-center">
