@@ -59,6 +59,29 @@ function normalizeTags(input: unknown): string[] {
     .filter((tag) => tag.length > 0);
 }
 
+function normalizeTagValue(tag: string): string {
+  return tag.trim().toLowerCase();
+}
+
+export function decodeTagParam(tagParam: string): string {
+  const raw = tagParam.trim();
+  if (!raw) return "";
+
+  try {
+    return normalizeTagValue(decodeURIComponent(raw));
+  } catch {
+    return normalizeTagValue(raw);
+  }
+}
+
+export function encodeTagParam(tag: string): string {
+  return encodeURIComponent(normalizeTagValue(tag));
+}
+
+export function getTagHref(tag: string): string {
+  return `/tags/${encodeTagParam(tag)}`;
+}
+
 function normalizeStudyUrl(input: unknown): string {
   if (typeof input !== "string") return "";
   const trimmed = input.trim();
@@ -105,13 +128,13 @@ export function getAllPosts(): Post[] {
 }
 
 export function getAllTags(): string[] {
-  const allTags = getAllPosts().flatMap((post) => normalizeTags(post.tags).map((tag) => tag.toLowerCase()));
+  const allTags = getAllPosts().flatMap((post) => normalizeTags(post.tags).map(normalizeTagValue));
   return Array.from(new Set(allTags)).sort();
 }
 
 export function getPostsByTag(tag: string): Post[] {
-  const lowered = tag.toLowerCase();
-  return getAllPosts().filter((post) => normalizeTags(post.tags).some((t) => t.toLowerCase() === lowered));
+  const normalizedTag = decodeTagParam(tag);
+  return getAllPosts().filter((post) => normalizeTags(post.tags).some((t) => normalizeTagValue(t) === normalizedTag));
 }
 
 export function getRelatedPosts(currentPost: Post, limit = 3): Post[] {

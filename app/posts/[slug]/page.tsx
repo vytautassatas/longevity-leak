@@ -9,7 +9,7 @@ import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { layout } from "@/lib/layout";
-import { formatDate, getAllPosts, getRelatedPosts } from "@/lib/posts";
+import { formatDate, getAllPosts, getRelatedPosts, getTagHref } from "@/lib/posts";
 import {
   getClinicLinkReasonForPost,
   getClinicsForPostSlug,
@@ -126,7 +126,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
                 <Link
                   key={tag}
                   className="interactive-chip px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.06em]"
-                  href={`/tags/${tag.toLowerCase()}`}
+                  href={getTagHref(tag)}
                 >
                   {tag}
                 </Link>

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getClinics, getConditions, getDirectoryLastModified, getSupplements } from "@/lib/directory";
-import { getAllPosts, getAllTags, getPostsByTag } from "@/lib/posts";
+import { encodeTagParam, getAllPosts, getAllTags, getPostsByTag } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const tagUrls = getAllTags().map((tag) => ({
-    url: `${base}/tags/${tag}`,
+    url: `${base}/tags/${encodeTagParam(tag)}`,
     lastModified: getPostsByTag(tag)[0]?.date ?? siteLastModified
   }));
 

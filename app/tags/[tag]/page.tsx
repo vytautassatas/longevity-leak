@@ -4,7 +4,7 @@ import { PostCard } from "@/components/post-card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { layout } from "@/lib/layout";
-import { getAllTags, getPostsByTag } from "@/lib/posts";
+import { decodeTagParam, encodeTagParam, getAllTags, getPostsByTag } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
 type Params = { tag: string };
@@ -18,7 +18,8 @@ export function generateStaticParams(): Params[] {
 
 export async function generateMetadata({ params }: { params: MaybePromise<Params> }): Promise<Metadata> {
   const resolvedParams = await Promise.resolve(params);
-  const tag = (resolvedParams.tag ?? "").toLowerCase();
+  const tag = decodeTagParam(resolvedParams.tag ?? "");
+  const encodedTag = encodeTagParam(tag);
   const title = `Posts tagged: ${tag}`;
   const description = `Clinical study breakdowns for ${tag}.`;
 
@@ -26,13 +27,13 @@ export async function generateMetadata({ params }: { params: MaybePromise<Params
     title,
     description,
     alternates: {
-      canonical: `/tags/${tag}`
+      canonical: `/tags/${encodedTag}`
     },
     openGraph: {
       title: `${title} | Longevity Leak`,
       description,
       type: "website",
-      url: `${siteConfig.url}/tags/${tag}`
+      url: `${siteConfig.url}/tags/${encodedTag}`
     },
     twitter: {
       card: "summary_large_image",
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: { params: MaybePromise<Params
 
 export default async function TagPage({ params }: { params: MaybePromise<Params> }): Promise<JSX.Element> {
   const resolvedParams = await Promise.resolve(params);
-  const tag = (resolvedParams.tag ?? "").toLowerCase();
+  const tag = decodeTagParam(resolvedParams.tag ?? "");
   const posts = getPostsByTag(tag);
 
   return (

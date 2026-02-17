@@ -42,7 +42,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${gaTrackingId}');`}
         </Script>
-        <style>{`:root{color-scheme:dark;} :root[data-theme="light"]{color-scheme:light;} body{margin:0}`}</style>
+        <style>{`:root{color-scheme:dark;} :root[data-theme=light]{color-scheme:light;} body{margin:0}`}</style>
       </head>
       <body>{children}</body>
     </html>
