@@ -16,6 +16,10 @@ const heroScrollKeyframes = `
   0%   { transform: translateY(0); }
   100% { transform: translateY(-50%); }
 }
+@keyframes heroScrollRight {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 @keyframes logoMarquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -160,7 +164,7 @@ export default function HomePage(): JSX.Element {
             {/* Avatar social proof */}
             <div className="mt-5 flex items-center gap-3 lg:mt-4 xl:mt-6">
               {/* Width = first avatar (32px) + 4 overlapping avatars (22px each) = 32 + 4×22 = 120px */}
-              <div className="relative flex shrink-0" style={{ width: `${32 + (HERO_AVATARS.length - 1) * 22}px`, height: "32px" }}>
+              <div className="relative shrink-0" style={{ width: `${32 + (HERO_AVATARS.length - 1) * 22}px`, height: "32px" }}>
                 {HERO_AVATARS.map((a, i) => (
                   <div
                     key={a.src}
@@ -184,9 +188,55 @@ export default function HomePage(): JSX.Element {
                   </div>
                 ))}
               </div>
-              <p className="text-[12px] leading-tight" style={{ color: "var(--muted)" }}>
-                <span className="font-semibold" style={{ color: "var(--text)" }}>1,988+</span> joined this week
+              <p className="text-[12px] leading-[1.3]" style={{ color: "var(--muted)" }}>
+                <span className="font-semibold" style={{ color: "var(--text)" }}>1,988+</span><br />joined this week
               </p>
+            </div>
+          </div>
+
+          {/* ── MOBILE: horizontal scrolling biomarker cards (below copy, hidden on lg+) ── */}
+          <div className="relative -mx-5 mb-8 overflow-hidden sm:-mx-6 lg:hidden">
+            {/* Left fade */}
+            <div
+              className="pointer-events-none absolute left-0 top-0 z-10 h-full w-10"
+              style={{ background: "linear-gradient(to right, var(--bg) 0%, transparent 100%)" }}
+            />
+            {/* Right fade */}
+            <div
+              className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10"
+              style={{ background: "linear-gradient(to left, var(--bg) 0%, transparent 100%)" }}
+            />
+            <div
+              className="flex gap-3 px-5 sm:px-6"
+              style={{ animation: "heroScrollRight 40s linear infinite", willChange: "transform", width: "max-content" }}
+            >
+              {[...HERO_BIOMARKERS, ...HERO_BIOMARKERS].map((m, i) => (
+                <div
+                  key={`mob-${m.marker}-${i}`}
+                  className="w-[220px] shrink-0 rounded-xl px-4 py-3"
+                  style={{ border: "1px solid var(--border)", background: "var(--surface-soft)" }}
+                >
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: "var(--muted)" }}>
+                      {m.cat}
+                    </span>
+                    <span
+                      className="shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+                      style={
+                        m.tag === "CRITICAL"
+                          ? { borderColor: "rgba(239,68,68,0.35)", background: "rgba(239,68,68,0.08)", color: "#ef4444" }
+                          : m.tag === "HIGH IMPACT"
+                          ? { borderColor: "rgba(234,179,8,0.35)", background: "rgba(234,179,8,0.08)", color: "#ca8a04" }
+                          : { borderColor: "var(--border-strong)", background: "var(--surface)", color: "var(--muted)" }
+                      }
+                    >
+                      {m.tag}
+                    </span>
+                  </div>
+                  <p className="text-[0.85rem] font-semibold leading-snug" style={{ color: "var(--text)" }}>{m.marker}</p>
+                  <p className="mt-0.5 text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -251,42 +301,7 @@ export default function HomePage(): JSX.Element {
         <div style={{ borderBottom: "1px solid var(--border)" }} />
       </section>
 
-      {/* ── Logo marquee strip ───────────────────────────────────────────── */}
-      <div
-        className="relative overflow-hidden py-5"
-        style={{ borderBottom: "1px solid var(--border)", background: "var(--bg)" }}
-      >
-        {/* Left fade */}
-        <div
-          className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24"
-          style={{ background: "linear-gradient(to right, var(--bg) 0%, transparent 100%)" }}
-        />
-        {/* Right fade */}
-        <div
-          className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24"
-          style={{ background: "linear-gradient(to left, var(--bg) 0%, transparent 100%)" }}
-        />
-
-        <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--muted)", opacity: 0.5 }}>
-          Where the longevity community gathers
-        </p>
-
-        {/* Scrolling track — doubled for seamless loop */}
-        <div
-          className="flex items-center gap-10"
-          style={{ animation: "logoMarquee 28s linear infinite", willChange: "transform", width: "max-content" }}
-        >
-          {[...HERO_LOGOS, ...HERO_LOGOS].map((logo, i) => (
-            <span
-              key={i}
-              className={`shrink-0 text-[0.85rem] font-semibold tracking-tight ${logo.style}`}
-              style={{ color: "var(--muted)", opacity: 0.55, whiteSpace: "nowrap" }}
-            >
-              {logo.name}
-            </span>
-          ))}
-        </div>
-      </div>
+      {/* Logo marquee strip hidden for now */}
 
       <main className={layout.rails.wide}>
 
