@@ -11,12 +11,11 @@ function getAuth() {
     client_email: string;
     private_key: string;
   };
-  return new google.auth.JWT(
-    creds.client_email,
-    undefined,
-    creds.private_key,
-    ["https://www.googleapis.com/auth/spreadsheets"]
-  );
+  return new google.auth.JWT({
+    email: creds.client_email,
+    key: creds.private_key,
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+  });
 }
 
 export async function POST(req: NextRequest) {
