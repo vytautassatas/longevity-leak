@@ -71,7 +71,8 @@ try {
   const dataset = {
     supplements: directory.getSupplements(),
     conditions: directory.getConditions(),
-    clinics: directory.getClinics()
+    clinics: directory.getClinics(),
+    brands: directory.getBrands()
   };
 
   const issues = directory.getDirectoryQualityIssues(dataset);
@@ -84,6 +85,7 @@ try {
   console.log(`- Supplements: ${dataset.supplements.length}`);
   console.log(`- Conditions: ${dataset.conditions.length}`);
   console.log(`- Clinics: ${dataset.clinics.length}`);
+  console.log(`- Brands: ${dataset.brands.length}`);
   console.log(`- Errors: ${errors.length}`);
   console.log(`- Warnings: ${warnings.length}`);
 

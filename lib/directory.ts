@@ -48,10 +48,42 @@ export type ClinicEntry = {
   updatedAt: string;
 };
 
+export type BrandTransparencyScore = "high" | "medium" | "low";
+export type BrandEvidenceQualityRating = "A" | "B" | "C" | "D";
+
+export type BrandKeyProduct = {
+  name: string;
+  supplementSlug?: string;
+  description: string;
+};
+
+export type BrandEntry = {
+  slug: string;
+  name: string;
+  founded?: number;
+  hqCountry: string;
+  website: string;
+  description: string;
+  productCategories: string[];
+  manufacturingStandards: string[];
+  transparencyScore: BrandTransparencyScore;
+  transparencyScoreJustification: string;
+  evidenceQualityRating: BrandEvidenceQualityRating;
+  evidenceQualityNotes: string;
+  keyProducts: BrandKeyProduct[];
+  bestFor: string;
+  redFlags: string[];
+  sourceUrls: string[];
+  articleRefs: string[];
+  updatedAt: string;
+  verified: boolean;
+};
+
 export type DirectoryDataset = {
   supplements: SupplementEntry[];
   conditions: ConditionEntry[];
   clinics: ClinicEntry[];
+  brands: BrandEntry[];
 };
 
 const supplements: SupplementEntry[] = [
@@ -243,12 +275,10 @@ const supplements: SupplementEntry[] = [
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40096254/", "https://pubmed.ncbi.nlm.nih.gov/35215405/"],
     articleRefs: [
       "nmn-brain-aging-breakthrough",
-      "nmn-brain-aging-reversal-study",
-      "nmn-reverses-brain-aging-mouse-study",
       "the-nad-plus-uptick-that-cut-afternoon-brain-fog",
       "sirt3-activators-breakthrough-aging"
     ],
-    updatedAt: "2026-02-17"
+    updatedAt: "2026-02-19"
   },
   {
     slug: "nr",
@@ -2563,6 +2593,8 @@ const clinics: ClinicEntry[] = [
   }
 ];
 
+const brands: BrandEntry[] = [];
+
 type DirectoryQualitySeverity = "warning" | "error";
 
 type DirectoryQualityIssue = {
@@ -2736,6 +2768,11 @@ export function getDirectoryQualityIssues(dataset: DirectoryDataset): DirectoryQ
     collectStalenessIssue(recordName, entry.updatedAt, issues);
   }
 
+  for (const entry of dataset.brands) {
+    const recordName = `brands/${entry.slug}`;
+    collectStalenessIssue(recordName, entry.updatedAt, issues);
+  }
+
   return issues;
 }
 
@@ -2827,10 +2864,43 @@ function validateClinicEntries(entries: ClinicEntry[]): void {
   }
 }
 
+function validateBrandEntries(entries: BrandEntry[]): void {
+  ensureUniqueSlugs(entries, "brands");
+  for (const entry of entries) {
+    const recordName = `brands/${entry.slug}`;
+    ensureNonEmptyStringField(recordName, "name", entry.name);
+    ensureNonEmptyStringField(recordName, "hqCountry", entry.hqCountry);
+    ensureNonEmptyStringField(recordName, "website", entry.website);
+    ensureNonEmptyStringField(recordName, "description", entry.description);
+    ensureNonEmptyStringField(recordName, "transparencyScore", entry.transparencyScore);
+    ensureNonEmptyStringField(recordName, "transparencyScoreJustification", entry.transparencyScoreJustification);
+    ensureNonEmptyStringField(recordName, "evidenceQualityRating", entry.evidenceQualityRating);
+    ensureNonEmptyStringField(recordName, "evidenceQualityNotes", entry.evidenceQualityNotes);
+    ensureNonEmptyStringField(recordName, "bestFor", entry.bestFor);
+    ensureStringArray(recordName, "productCategories", entry.productCategories);
+    ensureStringArray(recordName, "manufacturingStandards", entry.manufacturingStandards);
+    ensureUrlArray(recordName, entry.sourceUrls);
+    ensureIsoDateField(recordName, "updatedAt", entry.updatedAt);
+    if (!Array.isArray(entry.keyProducts) || entry.keyProducts.length === 0) {
+      throw new Error(`[directory] ${recordName}: "keyProducts" must be a non-empty array.`);
+    }
+    if (!Array.isArray(entry.redFlags)) {
+      throw new Error(`[directory] ${recordName}: "redFlags" must be an array.`);
+    }
+    if (!Array.isArray(entry.articleRefs)) {
+      throw new Error(`[directory] ${recordName}: "articleRefs" must be an array.`);
+    }
+    if (typeof entry.verified !== "boolean") {
+      throw new Error(`[directory] ${recordName}: "verified" must be a boolean.`);
+    }
+  }
+}
+
 export function validateDirectoryDataset(dataset: DirectoryDataset): void {
   validateSupplementEntries(dataset.supplements);
   validateConditionEntries(dataset.conditions);
   validateClinicEntries(dataset.clinics);
+  validateBrandEntries(dataset.brands);
 
   const qualityIssues = getDirectoryQualityIssues(dataset);
   const qualityErrors = qualityIssues.filter((issue) => issue.severity === "error");
@@ -2846,7 +2916,7 @@ export function validateDirectoryDataset(dataset: DirectoryDataset): void {
   }
 }
 
-validateDirectoryDataset({ supplements, conditions, clinics });
+validateDirectoryDataset({ supplements, conditions, clinics, brands });
 
 export function getSupplements(): SupplementEntry[] {
   return supplements;
@@ -2884,15 +2954,28 @@ export function getClinicSlugs(): string[] {
   return clinics.map((item) => item.slug);
 }
 
-export function getDirectoryCounts(): { supplements: number; conditions: number; clinics: number } {
+export function getBrands(): BrandEntry[] {
+  return brands;
+}
+
+export function getBrandBySlug(slug: string): BrandEntry | undefined {
+  return brands.find((item) => item.slug === slug);
+}
+
+export function getBrandSlugs(): string[] {
+  return brands.map((item) => item.slug);
+}
+
+export function getDirectoryCounts(): { supplements: number; conditions: number; clinics: number; brands: number } {
   return {
     supplements: supplements.length,
     conditions: conditions.length,
-    clinics: clinics.length
+    clinics: clinics.length,
+    brands: brands.length
   };
 }
 
 export function getDirectoryLastModified(): string {
-  const allDates = [...supplements, ...conditions, ...clinics].map((entry) => entry.updatedAt);
+  const allDates = [...supplements, ...conditions, ...clinics, ...brands].map((entry) => entry.updatedAt);
   return allDates.reduce((latest, current) => (current > latest ? current : latest), allDates[0] ?? "1970-01-01");
 }
