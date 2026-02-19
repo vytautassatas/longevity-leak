@@ -159,14 +159,14 @@ export default function HomePage(): JSX.Element {
 
             {/* Avatar social proof */}
             <div className="mt-5 flex items-center gap-3 lg:mt-4 xl:mt-6">
-              <div className="flex">
+              {/* Width = first avatar (32px) + 4 overlapping avatars (22px each) = 32 + 4×22 = 120px */}
+              <div className="relative flex shrink-0" style={{ width: `${32 + (HERO_AVATARS.length - 1) * 22}px`, height: "32px" }}>
                 {HERO_AVATARS.map((a, i) => (
                   <div
                     key={a.src}
-                    className="h-8 w-8 overflow-hidden rounded-full"
+                    className="absolute h-8 w-8 overflow-hidden rounded-full"
                     style={{
-                      marginLeft: i === 0 ? 0 : -10,
-                      position: "relative",
+                      left: i * 22,
                       zIndex: HERO_AVATARS.length - i,
                       boxShadow: "0 0 0 2px var(--bg)",
                       background: "var(--surface-soft)"
