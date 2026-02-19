@@ -22,6 +22,7 @@ export const siteConfig = {
   url: normalizeCanonicalSiteUrl(configuredSiteUrl),
   author: "Longevity Leak",
   features: {
-    clinics: false
+    clinics: false,
+    brands: false
   }
 };
