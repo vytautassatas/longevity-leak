@@ -49,16 +49,7 @@ const HERO_AVATARS = [
   { src: "/avatar-5.jpg", alt: "Member 5" },
 ];
 
-const HERO_LOGOS = [
-  { name: "Peter Attia MD",    style: "font-serif"    },
-  { name: "Rhonda Patrick",    style: "font-sans"     },
-  { name: "Nature Medicine",   style: "font-serif"    },
-  { name: "Andrew Huberman",   style: "font-sans"     },
-  { name: "Bryan Johnson",     style: "font-sans"     },
-  { name: "David Sinclair",    style: "font-serif"    },
-  { name: "Examine.com",       style: "font-mono"     },
-  { name: "Mark Hyman MD",     style: "font-sans"     },
-];
+// HERO_LOGOS reserved for future logo marquee strip
 
 export const metadata: Metadata = {
   title: { absolute: "Longevity Leak - Clinical Studies. Zero Jargon." },
