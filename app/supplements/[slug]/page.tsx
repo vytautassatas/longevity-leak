@@ -65,9 +65,13 @@ export default async function SupplementDetailPage({ params }: { params: MaybePr
       <SiteHeader />
       <main className={layout.rails.wide}>
         <header className="directory-shell rounded-3xl p-7 sm:p-10">
-          <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/supplements">
-            ← Back to supplements
-          </Link>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs font-medium text-[var(--muted)]">
+            <Link className="transition-colors hover:text-[var(--text)]" href="/">Home</Link>
+            <span aria-hidden="true">›</span>
+            <Link className="transition-colors hover:text-[var(--text)]" href="/supplements">Supplements</Link>
+            <span aria-hidden="true">›</span>
+            <span className="text-[var(--text)]">{supplement.name}</span>
+          </nav>
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--muted)]">{supplement.focus}</p>
           <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl">{supplement.name}</h1>
           <p className="mt-5 max-w-3xl text-base text-[var(--muted)] sm:text-lg">{supplement.evidenceSummary}</p>

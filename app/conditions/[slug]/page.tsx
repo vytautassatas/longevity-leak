@@ -70,9 +70,13 @@ export default async function ConditionDetailPage({ params }: { params: MaybePro
       <SiteHeader />
       <main className={layout.rails.wide}>
         <header className="directory-shell rounded-3xl p-7 sm:p-10">
-          <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/conditions">
-            ← Back to conditions
-          </Link>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs font-medium text-[var(--muted)]">
+            <Link className="transition-colors hover:text-[var(--text)]" href="/">Home</Link>
+            <span aria-hidden="true">›</span>
+            <Link className="transition-colors hover:text-[var(--text)]" href="/conditions">Conditions</Link>
+            <span aria-hidden="true">›</span>
+            <span className="text-[var(--text)]">{condition.name}</span>
+          </nav>
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--muted)]">Condition Strategy</p>
           <h1 className="mt-4 text-4xl sm:text-5xl md:text-6xl">{condition.name}</h1>
           <p className="mt-5 max-w-3xl text-base text-[var(--muted)] sm:text-lg">{condition.goal}</p>

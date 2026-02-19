@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { BackToTop } from "@/components/back-to-top";
 import { EvidenceRiskNote } from "@/components/evidence-risk-guide";
 import { ReadingProgress } from "@/components/reading-progress";
 import { SubscribeForm } from "@/components/subscribe-form";
@@ -89,6 +90,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   return (
     <>
       <ReadingProgress />
+      <BackToTop />
       <SiteHeader />
       <main className={layout.rails.wide}>
         <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
