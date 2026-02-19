@@ -1,8 +1,8 @@
 export const layout = {
   rails: {
-    wide: "mx-auto w-full max-w-[1280px] px-5 pb-28 pt-12 sm:px-6 sm:pt-16 lg:px-8",
-    detail: "mx-auto w-full max-w-[1080px] px-5 pb-28 pt-12 sm:px-6 sm:pt-16 lg:px-8",
-    article: "mx-auto w-full max-w-[720px] px-5 pb-28 pt-12 sm:px-6 sm:pt-16 lg:px-8"
+    wide: "mx-auto w-full max-w-[1280px] px-5 pb-28 pt-8 sm:px-6 sm:pt-10 lg:px-8",
+    detail: "mx-auto w-full max-w-[1080px] px-5 pb-28 pt-8 sm:px-6 sm:pt-10 lg:px-8",
+    article: "mx-auto w-full max-w-[720px] px-5 pb-28 pt-8 sm:px-6 sm:pt-10 lg:px-8"
   },
   chromeRail: "mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-8",
   hero: {
@@ -13,7 +13,7 @@ export const layout = {
     badge: "mt-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em]"
   },
   spacing: {
-    section: "mt-14 sm:mt-16"
+    section: "mt-10 sm:mt-12"
   },
   grids: {
     cards: "grid gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3"
