@@ -30,7 +30,7 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
             className="inline-flex h-11 items-center rounded-full border border-[var(--border-strong)] px-7 text-sm font-bold uppercase tracking-[0.12em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
             href={`/posts/${post.slug}`}
           >
-            Read More
+            Read article →
           </Link>
         </footer>
       </div>
@@ -41,25 +41,22 @@ export function FeaturedPostCard({ post }: { post: Post }): JSX.Element {
 export function PostCard({ post }: { post: Post }): JSX.Element {
   return (
     <article className="min-w-0 group">
-      <header className="space-y-4">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
-          <time dateTime={post.date}>{formatDate(post.date)}</time>
-        </p>
-        <h2 className="text-2xl font-semibold leading-[1.2] md:text-3xl">
-          <Link className="transition-opacity hover:opacity-80" href={`/posts/${post.slug}`}>
+      <Link className="block" href={`/posts/${post.slug}`}>
+        <header className="space-y-4">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--muted)]">
+            <time dateTime={post.date}>{formatDate(post.date)}</time>
+          </p>
+          <h2 className="text-2xl font-semibold leading-[1.2] transition-opacity group-hover:opacity-75 md:text-3xl">
             {post.title}
-          </Link>
-        </h2>
-        <p className="text-lg leading-[1.6] text-[var(--muted)] line-clamp-3">{post.excerpt}</p>
-      </header>
-      <footer className="mt-6">
-        <Link
-          className="inline-flex h-11 items-center rounded-full border border-[var(--border-strong)] px-6 text-xs font-bold uppercase tracking-[0.14em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
-          href={`/posts/${post.slug}`}
-        >
-          Read
-        </Link>
-      </footer>
+          </h2>
+          <p className="text-lg leading-[1.6] text-[var(--muted)] line-clamp-3">{post.excerpt}</p>
+        </header>
+        <footer className="mt-6">
+          <span className="inline-flex h-11 items-center rounded-full border border-[var(--border-strong)] px-6 text-xs font-bold uppercase tracking-[0.14em] transition-all group-hover:bg-[var(--text)] group-hover:text-[var(--bg)]">
+            Read article →
+          </span>
+        </footer>
+      </Link>
     </article>
   );
 }

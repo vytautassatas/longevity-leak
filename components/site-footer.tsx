@@ -30,7 +30,7 @@ export function SiteFooter(): JSX.Element {
           </div>
         </div>
         <nav aria-label="Footer links" className="flex flex-wrap gap-2">
-          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/">
+          <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/#latest-research">
             News
           </Link>
           <Link className="interactive-chip h-11 px-5 text-xs font-bold uppercase tracking-[0.14em]" href="/supplements">

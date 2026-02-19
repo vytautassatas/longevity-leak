@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { EvidenceRiskNote } from "@/components/evidence-risk-guide";
+import { SubscribeForm } from "@/components/subscribe-form";
 import { mdxComponents } from "@/components/mdx-components";
 import { RelatedLinksPanel } from "@/components/related-links-panel";
 import { SiteFooter } from "@/components/site-footer";
@@ -253,25 +254,14 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
 
         <section className="mt-24 rounded-3xl bg-[var(--text)] p-7 text-[var(--bg)] sm:p-16">
           <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">Get the next leak.</h2>
-          <p className="mt-4 max-w-xl text-base opacity-80 sm:text-xl">Join 15,000+ researchers and longevity enthusiasts receiving the latest clinical insights.</p>
-          <form action="#" className="mt-10 flex flex-col gap-4 sm:flex-row" method="post">
-            <label className="sr-only" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="newsletter-input flex-1 sm:min-h-[56px] sm:px-6"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              type="email"
-            />
-            <button
-              className="h-12 rounded-full bg-[var(--bg)] px-8 text-lg font-semibold text-[var(--text)] transition-transform hover:scale-[1.02] active:scale-[0.98] sm:h-14 sm:px-10"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </form>
+          <p className="mt-4 max-w-xl text-base opacity-80 sm:text-xl">Join 1,988+ readers getting the latest longevity research weekly.</p>
+          <SubscribeForm
+            buttonLabel="Join the waitlist"
+            className="mt-10"
+            inputId="article-email"
+            placeholder="Enter your email"
+            variant="inline"
+          />
         </section>
 
         <script

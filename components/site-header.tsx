@@ -63,13 +63,16 @@ export function SiteHeader(): JSX.Element {
           <SiteSearch />
           <ThemeToggle />
         </div>
-        <nav aria-label="Primary" className="col-span-2 w-full overflow-x-auto sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:w-auto sm:justify-self-center">
-          <ul className="flex min-w-max items-center gap-2 sm:gap-3">
+        <nav aria-label="Primary" className="relative col-span-2 w-full sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:w-auto sm:justify-self-center">
+          {/* right fade hint — only on mobile to signal scrollability */}
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-[var(--bg)] to-transparent sm:hidden" aria-hidden="true" />
+          <div className="overflow-x-auto scrollbar-thin [scrollbar-color:var(--border-strong)_transparent] [&::-webkit-scrollbar]:h-[3px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[var(--border-strong)]">
+          <ul className="flex min-w-max items-center gap-2 pb-1 sm:gap-3 sm:pb-0">
             {directoryNav.map((item) => (
               <li key={item.href}>
                 <Link
                   className={`inline-flex h-10 items-center rounded-full border px-4 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors ${
-                    (item.href === "/" ? pathname === "/" : pathname.startsWith(item.href))
+                    (item.href === "/#latest-research" ? pathname === "/" : pathname.startsWith(item.href))
                       ? "border-[var(--text)] bg-[var(--text)] text-[var(--bg)]"
                       : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)] hover:text-[var(--text)]"
                   }`}
@@ -87,6 +90,7 @@ export function SiteHeader(): JSX.Element {
               </span>
             </li>
           </ul>
+          </div>
         </nav>
       </div>
     </header>
