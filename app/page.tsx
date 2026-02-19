@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SubscribeForm } from "@/components/subscribe-form";
 import { PostCard } from "@/components/post-card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -144,23 +145,12 @@ export default function HomePage(): JSX.Element {
             </p>
 
             {/* Form */}
-            <form className="mt-6 flex max-w-md flex-col gap-3 sm:flex-row lg:mt-5 xl:mt-7" action="/join" method="GET">
-              <label className="sr-only" htmlFor="hero-email">Your email address</label>
-              <input
-                id="hero-email"
-                className="newsletter-input flex-1"
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-              />
-              <button
-                className="h-[52px] shrink-0 rounded-full px-7 text-sm font-bold transition-opacity hover:opacity-80"
-                style={{ background: "var(--text)", color: "var(--bg)" }}
-                type="submit"
-              >
-                Join the waitlist
-              </button>
-            </form>
+            <SubscribeForm
+              className="mt-6 max-w-md lg:mt-5 xl:mt-7"
+              inputId="hero-email"
+              buttonLabel="Join the waitlist"
+              variant="hero"
+            />
 
             <p className="mt-2 text-xs" style={{ color: "var(--muted)" }}>
               No credit card required. Unsubscribe any time.

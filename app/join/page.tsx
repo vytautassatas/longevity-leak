@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SubscribeForm } from "@/components/subscribe-form";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { layout } from "@/lib/layout";
@@ -174,26 +175,13 @@ export default function JoinPage(): JSX.Element {
             Your chronological age is one number. Your biological age — measured through bloodwork — tells you where your body actually is on the longevity curve. We translate the research into plain language every week, and our tracker shows you exactly what to improve.
           </p>
 
-          <form
-            action="#signup-confirm"
-            className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
-            method="GET"
-          >
-            <label className="sr-only" htmlFor="join-email">Your email address</label>
-            <input
-              className="h-11 flex-1 rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] px-4 text-[0.95rem] text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-              id="join-email"
-              name="email"
-              placeholder="you@example.com"
-              type="email"
-            />
-            <button
-              className="inline-flex h-11 shrink-0 items-center justify-center rounded-lg border border-[var(--border-strong)] px-6 text-sm font-bold uppercase tracking-[0.12em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
-              type="submit"
-            >
-              Get early access
-            </button>
-          </form>
+          <SubscribeForm
+            className="mt-8 w-full max-w-md"
+            inputId="join-email"
+            buttonLabel="Get early access"
+            placeholder="you@example.com"
+            variant="inline"
+          />
           <p className="mt-3 text-xs text-[var(--muted)]">Free newsletter included. Blood tracker app in early access. No spam, no auto-renewals.</p>
         </section>
 
@@ -388,26 +376,13 @@ export default function JoinPage(): JSX.Element {
           <p className="mt-4 max-w-xl text-[var(--muted)]">
             Join the newsletter for free. Get early access to the blood tracker when it launches. No spam, no auto-renewals. Unsubscribe any time.
           </p>
-          <form
-            action="#signup-confirm"
-            className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
-            method="GET"
-          >
-            <label className="sr-only" htmlFor="final-email">Your email address</label>
-            <input
-              className="h-11 flex-1 rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] px-4 text-[0.95rem] text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-              id="final-email"
-              name="email"
-              placeholder="you@example.com"
-              type="email"
-            />
-            <button
-              className="inline-flex h-11 shrink-0 items-center justify-center rounded-lg border border-[var(--border-strong)] px-6 text-sm font-bold uppercase tracking-[0.12em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
-              type="submit"
-            >
-              Get early access
-            </button>
-          </form>
+          <SubscribeForm
+            className="mt-8 w-full max-w-md"
+            inputId="final-email"
+            buttonLabel="Get early access"
+            placeholder="you@example.com"
+            variant="inline"
+          />
           <p className="mt-4 text-xs text-[var(--muted)]">
             See the{" "}
             <Link className="underline underline-offset-2 hover:text-[var(--text)]" href="/supplements">
