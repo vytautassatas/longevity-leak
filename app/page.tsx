@@ -37,13 +37,12 @@ const HERO_BIOMARKERS = [
   { marker: "DHEA-S",             insight: "Adrenal reserve and biological ageing marker",              tag: "MEDIUM",      cat: "Hormones"        },
 ];
 
-// DiceBear "notionists" avatars — deterministic, royalty-free illustrated portraits
 const HERO_AVATARS = [
-  { seed: "Michael", alt: "Michael K." },
-  { seed: "Amanda", alt: "Amanda R." },
-  { seed: "Sophie", alt: "Sophie L." },
-  { seed: "James",  alt: "James T."  },
-  { seed: "Diana",  alt: "Diana W."  },
+  { src: "/avatar-1.jpg", alt: "Member 1" },
+  { src: "/avatar-2.jpg", alt: "Member 2" },
+  { src: "/avatar-3.jpg", alt: "Member 3" },
+  { src: "/avatar-4.jpg", alt: "Member 4" },
+  { src: "/avatar-5.jpg", alt: "Member 5" },
 ];
 
 const HERO_LOGOS = [
@@ -163,7 +162,7 @@ export default function HomePage(): JSX.Element {
               <div className="flex">
                 {HERO_AVATARS.map((a, i) => (
                   <div
-                    key={a.seed}
+                    key={a.src}
                     className="h-8 w-8 overflow-hidden rounded-full"
                     style={{
                       marginLeft: i === 0 ? 0 : -10,
@@ -176,10 +175,11 @@ export default function HomePage(): JSX.Element {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       alt={a.alt}
-                      src={`https://api.dicebear.com/9.x/notionists/svg?seed=${a.seed}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf`}
-                      width={32}
-                      height={32}
+                      src={a.src}
+                      width={80}
+                      height={80}
                       loading="eager"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
                 ))}
