@@ -282,7 +282,7 @@ export default function HomePage(): JSX.Element {
       <main className={layout.rails.wide}>
 
         {/* Latest Research */}
-        <section aria-labelledby="latest-heading" className={layout.spacing.section}>
+        <section id="latest-research" aria-labelledby="latest-heading" className={layout.spacing.section}>
           <header className="mb-8 flex items-baseline justify-between gap-4">
             <h2 className="text-2xl font-semibold" id="latest-heading">Latest Research</h2>
           </header>

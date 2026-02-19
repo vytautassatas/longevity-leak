@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site";
 
 const baseDirectoryNav = [
-  { href: "/", label: "News" },
+  { href: "/#latest-research", label: "News" },
   { href: "/supplements", label: "Supplements" },
   { href: "/conditions", label: "Conditions" }
 ];

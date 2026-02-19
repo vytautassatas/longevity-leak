@@ -62,7 +62,7 @@ export default function ThankYouPage(): JSX.Element {
             Browse conditions →
           </Link>
           <Link
-            href="/"
+            href="/#latest-research"
             className="inline-flex h-11 items-center rounded-full border px-5 text-sm font-semibold transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
             style={{ borderColor: "var(--border)", color: "var(--muted)" }}
           >
