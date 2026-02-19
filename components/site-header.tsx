@@ -79,6 +79,13 @@ export function SiteHeader(): JSX.Element {
                 </Link>
               </li>
             ))}
+            {/* Brands — coming soon, non-interactive */}
+            <li>
+              <span className="inline-flex h-10 items-center gap-1.5 rounded-full border border-[var(--border)] px-4 opacity-50 cursor-default">
+                <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Brands</span>
+                <span className="rounded-full bg-[var(--surface-soft)] px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wide text-[var(--muted)] border border-[var(--border)]">Soon</span>
+              </span>
+            </li>
           </ul>
         </nav>
       </div>

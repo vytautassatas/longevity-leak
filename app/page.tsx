@@ -8,6 +8,53 @@ import { layout } from "@/lib/layout";
 import { getAllPosts, type Post } from "@/lib/posts";
 import { siteConfig } from "@/lib/site";
 
+/* ── Newsletter hero: biomarker scroll panel ─────────────────────────── */
+
+const heroScrollKeyframes = `
+@keyframes heroScrollUp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes logoMarquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+`;
+
+const HERO_BIOMARKERS = [
+  { marker: "HbA1c",              insight: "Optimal: below 5.3% — not 6.5%",                          tag: "CRITICAL",    cat: "Blood sugar"     },
+  { marker: "hsCRP",              insight: "Inflammation's hidden damage threshold",                    tag: "HIGH IMPACT", cat: "Inflammation"    },
+  { marker: "IGF-1",              insight: "The growth axis that predicts cancer + longevity",          tag: "CRITICAL",    cat: "Hormones"        },
+  { marker: "Homocysteine",       insight: "Cardiovascular risk your GP routinely ignores",             tag: "HIGH IMPACT", cat: "Cardiovascular"  },
+  { marker: "Vitamin D (25-OH)",  insight: "Deficiency in 40% of adults — optimal ≠ sufficient",       tag: "MEDIUM",      cat: "Micronutrients"  },
+  { marker: "Fasting insulin",    insight: "Diabetes risk a decade before glucose spikes",              tag: "CRITICAL",    cat: "Metabolic"       },
+  { marker: "ApoB",               insight: "Better cardiac risk predictor than LDL cholesterol",        tag: "HIGH IMPACT", cat: "Lipids"          },
+  { marker: "ALT / AST",          insight: "Liver stress signal most panels dismiss too easily",        tag: "MEDIUM",      cat: "Liver"           },
+  { marker: "eGFR",               insight: "Kidney function declines silently for years first",         tag: "HIGH IMPACT", cat: "Kidney"          },
+  { marker: "Testosterone (free)", insight: "Free T predicts energy, mood & metabolic risk",            tag: "MEDIUM",      cat: "Hormones"        },
+  { marker: "TSH + Free T3/T4",   insight: "Thyroid range 'normal' misses early dysfunction",          tag: "HIGH IMPACT", cat: "Thyroid"         },
+  { marker: "DHEA-S",             insight: "Adrenal reserve and biological ageing marker",              tag: "MEDIUM",      cat: "Hormones"        },
+];
+
+const HERO_AVATARS = [
+  { bg: "#4ade80", text: "#052e16", initials: "MK" },
+  { bg: "#60a5fa", text: "#1e3a5f", initials: "AR" },
+  { bg: "#f472b6", text: "#4a0025", initials: "SL" },
+  { bg: "#fb923c", text: "#431407", initials: "JT" },
+  { bg: "#a78bfa", text: "#2e1065", initials: "DW" },
+];
+
+const HERO_LOGOS = [
+  { name: "Peter Attia MD",    style: "font-serif"    },
+  { name: "Rhonda Patrick",    style: "font-sans"     },
+  { name: "Nature Medicine",   style: "font-serif"    },
+  { name: "Andrew Huberman",   style: "font-sans"     },
+  { name: "Bryan Johnson",     style: "font-sans"     },
+  { name: "David Sinclair",    style: "font-serif"    },
+  { name: "Examine.com",       style: "font-mono"     },
+  { name: "Mark Hyman MD",     style: "font-sans"     },
+];
+
 export const metadata: Metadata = {
   title: { absolute: "Longevity Leak - Clinical Studies. Zero Jargon." },
   description: siteConfig.description,
@@ -51,74 +98,198 @@ export default function HomePage(): JSX.Element {
     description: siteConfig.description
   };
 
+  // Duplicate biomarker list for seamless infinite CSS scroll loop
+  const heroScrollCards = [...HERO_BIOMARKERS, ...HERO_BIOMARKERS];
+
   return (
     <>
       <SiteHeader />
-      <main className={layout.rails.wide}>
-        <h1 className="sr-only">Longevity Leak — Evidence-based longevity tracking</h1>
+      <h1 className="sr-only">Longevity Leak — Evidence-based longevity tracking</h1>
 
-        {/* Hero: Newsletter + App Signup */}
-        <section aria-labelledby="hero-heading" className={layout.hero.shell}>
-          <p className={layout.hero.eyebrow}>Early Access</p>
-          <h2 className={layout.hero.title} id="hero-heading">
-            Know your biological age.<br className="hidden sm:block" /> Track what actually moves the needle.
-          </h2>
-          <p className={layout.hero.lead}>
-            Evidence-based longevity tracking — no jargon, no hype. Enter your bloodwork, see where you stand against optimal longevity ranges, and get research translated into plain language every week.
-          </p>
+      {/* ── Hero: full-bleed newsletter signup ───────────────────────────── */}
+      <section aria-labelledby="hero-heading" style={{ background: "var(--bg)" }}>
+        <style>{heroScrollKeyframes}</style>
 
-          <ul className="mt-6 space-y-2 text-[0.95rem] text-[var(--muted)]" role="list">
-            <li className="flex items-start gap-2">
-              <span aria-hidden="true" className="mt-0.5 shrink-0 text-emerald-500">✓</span>
-              <span>
-                <strong className="text-[var(--text)]">{counts.supplements} supplements</strong>{" "}
-                tracked with evidence levels, dosing context, and safety framing
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span aria-hidden="true" className="mt-0.5 shrink-0 text-emerald-500">✓</span>
-              <span>
-                <strong className="text-[var(--text)]">{counts.conditions} conditions</strong>{" "}
-                mapped with top interventions and monitoring markers
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span aria-hidden="true" className="mt-0.5 shrink-0 text-emerald-500">✓</span>
-              <span>
-                <strong className="text-[var(--text)]">Evidence-first methodology</strong> — every claim
-                is sourced, calibrated, and uncertainty is stated explicitly
-              </span>
-            </li>
-          </ul>
+        {/*
+          Layout: left column drives height naturally.
+          Right column is position:absolute so it never inflates the row —
+          it simply fills whatever height the left content creates.
+        */}
+        <div className="relative mx-auto grid max-w-[1280px] grid-cols-1 px-5 sm:px-6 lg:grid-cols-[1fr_340px] lg:px-8 xl:grid-cols-[1fr_400px]">
 
-          <form
-            action="/join"
-            className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row"
-            method="GET"
-          >
-            <label className="sr-only" htmlFor="hero-email">Your email address</label>
-            <input
-              className="h-11 flex-1 rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] px-4 text-[0.95rem] text-[var(--text)] placeholder:text-[var(--muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-              id="hero-email"
-              name="email"
-              placeholder="you@example.com"
-              type="email"
-            />
-            <button
-              className="inline-flex h-11 shrink-0 items-center justify-center rounded-lg border border-[var(--border-strong)] px-6 text-sm font-bold uppercase tracking-[0.12em] transition-all hover:bg-[var(--text)] hover:text-[var(--bg)]"
-              type="submit"
+          {/* ── LEFT: copy + form ── */}
+          <div className="flex flex-col justify-center py-14 pr-0 lg:py-10 lg:pr-8 xl:py-16 xl:pr-10">
+
+            <span
+              className="mb-4 inline-block w-fit rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
+              style={{ borderColor: "var(--border-strong)", color: "var(--muted)", background: "var(--surface-soft)" }}
             >
-              Join the waitlist
-            </button>
-          </form>
+              Early access open now · Limited spots
+            </span>
 
-          <p className="mt-3 text-xs text-[var(--muted)]">
-            Free newsletter + early access to the blood tracker app. No spam.{" "}
-            <Link className="underline underline-offset-2 hover:text-[var(--text)]" href="/join">
-              Learn what&apos;s included →
-            </Link>
-          </p>
-        </section>
+            <h2
+              id="hero-heading"
+              className="max-w-xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-[2.1rem] xl:text-[3rem]"
+              style={{ color: "var(--text)" }}
+            >
+              Your doctor&apos;s &ldquo;normal&rdquo; results{" "}
+              <em className="not-italic" style={{ color: "var(--text)" }}>
+                could be shaving years off your life.
+              </em>
+            </h2>
+
+            <p className="mt-4 max-w-md text-[0.925rem] leading-[1.7] lg:mt-3 lg:text-[0.875rem] xl:mt-4 xl:text-[1rem] xl:leading-[1.78]" style={{ color: "var(--muted)" }}>
+              Every week we decode the clinical studies your GP doesn&apos;t have time to
+              read — bloodwork, supplements, and longevity protocols. No noise. No jargon.
+            </p>
+
+            {/* Form */}
+            <form className="mt-6 flex max-w-md flex-col gap-3 sm:flex-row lg:mt-5 xl:mt-7" action="/join" method="GET">
+              <label className="sr-only" htmlFor="hero-email">Your email address</label>
+              <input
+                id="hero-email"
+                className="newsletter-input flex-1"
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+              />
+              <button
+                className="h-[52px] shrink-0 rounded-full px-7 text-sm font-bold transition-opacity hover:opacity-80"
+                style={{ background: "var(--text)", color: "var(--bg)" }}
+                type="submit"
+              >
+                Join the waitlist
+              </button>
+            </form>
+
+            <p className="mt-2 text-xs" style={{ color: "var(--muted)" }}>
+              No credit card required. Unsubscribe any time.
+            </p>
+
+            {/* Avatar social proof */}
+            <div className="mt-5 flex items-center gap-3 lg:mt-4 xl:mt-6">
+              <div className="flex">
+                {HERO_AVATARS.map((a, i) => (
+                  <div
+                    key={a.initials}
+                    className="flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-bold"
+                    style={{
+                      background: a.bg,
+                      color: a.text,
+                      marginLeft: i === 0 ? 0 : -10,
+                      position: "relative",
+                      zIndex: HERO_AVATARS.length - i,
+                      boxShadow: "0 0 0 2px var(--bg)"
+                    }}
+                  >
+                    {a.initials}
+                  </div>
+                ))}
+              </div>
+              <p className="text-[12px] leading-tight" style={{ color: "var(--muted)" }}>
+                <span className="font-semibold" style={{ color: "var(--text)" }}>1,988+</span> joined this week
+              </p>
+            </div>
+          </div>
+
+          {/* ── RIGHT: scrolling biomarker cards — absolute so it never inflates height ── */}
+          <div
+            className="absolute right-0 top-0 hidden h-full w-[340px] lg:block xl:w-[400px]"
+            style={{ borderLeft: "1px solid var(--border)", overflow: "hidden" }}
+          >
+            {/* Top fade */}
+            <div
+              className="pointer-events-none absolute left-0 top-0 z-20 w-full"
+              style={{ height: "80px", background: "linear-gradient(to bottom, var(--bg) 0%, transparent 100%)" }}
+            />
+            {/* Bottom fade */}
+            <div
+              className="pointer-events-none absolute bottom-0 left-0 z-20 w-full"
+              style={{ height: "80px", background: "linear-gradient(to top, var(--bg) 0%, transparent 100%)" }}
+            />
+            {/* Scrolling track */}
+            <div
+              className="flex flex-col gap-2.5 px-5 py-4"
+              style={{ animation: "heroScrollUp 36s linear infinite", willChange: "transform" }}
+            >
+              {heroScrollCards.map((m, i) => (
+                <div
+                  key={`${m.marker}-${i}`}
+                  className="flex items-center justify-between gap-4 rounded-xl px-4 py-3"
+                  style={{ border: "1px solid var(--border)", background: "var(--surface-soft)" }}
+                >
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <p className="text-[0.82rem] font-semibold" style={{ color: "var(--text)" }}>{m.marker}</p>
+                      <span
+                        className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+                        style={{ background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--border-strong)" }}
+                      >
+                        {m.cat}
+                      </span>
+                    </div>
+                    <p className="mt-0.5 text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
+                  </div>
+                  <span
+                    className="shrink-0 rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+                    style={
+                      m.tag === "CRITICAL"
+                        ? { borderColor: "rgba(239,68,68,0.35)", background: "rgba(239,68,68,0.08)", color: "#ef4444" }
+                        : m.tag === "HIGH IMPACT"
+                        ? { borderColor: "rgba(234,179,8,0.35)",  background: "rgba(234,179,8,0.08)",  color: "#ca8a04"  }
+                        : { borderColor: "var(--border-strong)",   background: "var(--surface)",         color: "var(--muted)" }
+                    }
+                  >
+                    {m.tag}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom divider */}
+        <div style={{ borderBottom: "1px solid var(--border)" }} />
+      </section>
+
+      {/* ── Logo marquee strip ───────────────────────────────────────────── */}
+      <div
+        className="relative overflow-hidden py-5"
+        style={{ borderBottom: "1px solid var(--border)", background: "var(--bg)" }}
+      >
+        {/* Left fade */}
+        <div
+          className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24"
+          style={{ background: "linear-gradient(to right, var(--bg) 0%, transparent 100%)" }}
+        />
+        {/* Right fade */}
+        <div
+          className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24"
+          style={{ background: "linear-gradient(to left, var(--bg) 0%, transparent 100%)" }}
+        />
+
+        <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--muted)", opacity: 0.5 }}>
+          Where the longevity community gathers
+        </p>
+
+        {/* Scrolling track — doubled for seamless loop */}
+        <div
+          className="flex items-center gap-10"
+          style={{ animation: "logoMarquee 28s linear infinite", willChange: "transform", width: "max-content" }}
+        >
+          {[...HERO_LOGOS, ...HERO_LOGOS].map((logo, i) => (
+            <span
+              key={i}
+              className={`shrink-0 text-[0.85rem] font-semibold tracking-tight ${logo.style}`}
+              style={{ color: "var(--muted)", opacity: 0.55, whiteSpace: "nowrap" }}
+            >
+              {logo.name}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <main className={layout.rails.wide}>
 
         {/* Latest Research */}
         <section aria-labelledby="latest-heading" className={layout.spacing.section}>
