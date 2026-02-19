@@ -66,30 +66,30 @@ export function SiteHeader(): JSX.Element {
         <nav aria-label="Primary" className="relative col-span-2 w-full sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:w-auto sm:justify-self-center">
           {/* right fade hint — only on mobile to signal scrollability */}
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-[var(--bg)] to-transparent sm:hidden" aria-hidden="true" />
-          <div className="overflow-x-auto scrollbar-thin [scrollbar-color:var(--border-strong)_transparent] [&::-webkit-scrollbar]:h-[3px] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[var(--border-strong)]">
-          <ul className="flex min-w-max items-center gap-2 pb-1 sm:gap-3 sm:pb-0">
-            {directoryNav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  className={`inline-flex h-10 items-center rounded-full border px-4 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors ${
-                    (item.href === "/#latest-research" ? pathname === "/" : pathname.startsWith(item.href))
-                      ? "border-[var(--text)] bg-[var(--text)] text-[var(--bg)]"
-                      : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)] hover:text-[var(--text)]"
-                  }`}
-                  href={item.href}
-                >
-                  {item.label}
-                </Link>
+          <div className="overflow-x-auto [scrollbar-width:thin] [scrollbar-color:var(--border-strong)_transparent] [&::-webkit-scrollbar]:h-[3px] [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[var(--border-strong)] sm:[&::-webkit-scrollbar]:h-0">
+            <ul className="flex min-w-max items-center gap-1.5 pb-2 sm:gap-2 sm:pb-0">
+              {directoryNav.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    className={`inline-flex h-8 items-center rounded-full border px-3 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors sm:h-9 sm:px-3.5 sm:text-[11px] sm:tracking-[0.12em] ${
+                      (item.href === "/#latest-research" ? pathname === "/" : pathname.startsWith(item.href))
+                        ? "border-[var(--text)] bg-[var(--text)] text-[var(--bg)]"
+                        : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)] hover:text-[var(--text)]"
+                    }`}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              {/* Brands — coming soon, non-interactive */}
+              <li>
+                <span className="inline-flex h-8 items-center gap-1 rounded-full border border-[var(--border)] px-3 opacity-50 cursor-default sm:h-9 sm:gap-1.5 sm:px-3.5">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.1em] text-[var(--muted)] sm:text-[11px] sm:tracking-[0.12em]">Brands</span>
+                  <span className="rounded-full bg-[var(--surface-soft)] px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wide text-[var(--muted)] border border-[var(--border)]">Soon</span>
+                </span>
               </li>
-            ))}
-            {/* Brands — coming soon, non-interactive */}
-            <li>
-              <span className="inline-flex h-10 items-center gap-1.5 rounded-full border border-[var(--border)] px-4 opacity-50 cursor-default">
-                <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--muted)]">Brands</span>
-                <span className="rounded-full bg-[var(--surface-soft)] px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wide text-[var(--muted)] border border-[var(--border)]">Soon</span>
-              </span>
-            </li>
-          </ul>
+            </ul>
           </div>
         </nav>
       </div>

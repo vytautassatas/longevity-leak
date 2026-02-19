@@ -37,12 +37,13 @@ const HERO_BIOMARKERS = [
   { marker: "DHEA-S",             insight: "Adrenal reserve and biological ageing marker",              tag: "MEDIUM",      cat: "Hormones"        },
 ];
 
+// DiceBear "notionists" avatars — deterministic, royalty-free illustrated portraits
 const HERO_AVATARS = [
-  { bg: "#4ade80", text: "#052e16", initials: "MK" },
-  { bg: "#60a5fa", text: "#1e3a5f", initials: "AR" },
-  { bg: "#f472b6", text: "#4a0025", initials: "SL" },
-  { bg: "#fb923c", text: "#431407", initials: "JT" },
-  { bg: "#a78bfa", text: "#2e1065", initials: "DW" },
+  { seed: "Michael", alt: "Michael K." },
+  { seed: "Amanda", alt: "Amanda R." },
+  { seed: "Sophie", alt: "Sophie L." },
+  { seed: "James",  alt: "James T."  },
+  { seed: "Diana",  alt: "Diana W."  },
 ];
 
 const HERO_LOGOS = [
@@ -119,13 +120,13 @@ export default function HomePage(): JSX.Element {
         <div className="relative mx-auto grid max-w-[1280px] grid-cols-1 px-5 sm:px-6 lg:grid-cols-[1fr_340px] lg:px-8 xl:grid-cols-[1fr_400px]">
 
           {/* ── LEFT: copy + form ── */}
-          <div className="flex flex-col justify-center py-14 pr-0 lg:py-10 lg:pr-8 xl:py-16 xl:pr-10">
+          <div className="flex flex-col justify-center py-8 pr-0 lg:py-10 lg:pr-8 xl:py-16 xl:pr-10">
 
             <span
               className="mb-4 inline-block w-fit rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
               style={{ borderColor: "var(--border-strong)", color: "var(--muted)", background: "var(--surface-soft)" }}
             >
-              Early access open now · Limited spots
+              Early access open now
             </span>
 
             <h2
@@ -141,7 +142,8 @@ export default function HomePage(): JSX.Element {
 
             <p className="mt-4 max-w-md text-[0.925rem] leading-[1.7] lg:mt-3 lg:text-[0.875rem] xl:mt-4 xl:text-[1rem] xl:leading-[1.78]" style={{ color: "var(--muted)" }}>
               Every week we decode the clinical studies your GP doesn&apos;t have time to
-              read — bloodwork, supplements, and longevity protocols. No noise. No jargon.
+              read — bloodwork, supplements, and longevity protocols.{" "}
+              <span className="whitespace-nowrap">No noise. No jargon.</span>
             </p>
 
             {/* Form */}
@@ -161,18 +163,24 @@ export default function HomePage(): JSX.Element {
               <div className="flex">
                 {HERO_AVATARS.map((a, i) => (
                   <div
-                    key={a.initials}
-                    className="flex h-8 w-8 items-center justify-center rounded-full text-[10px] font-bold"
+                    key={a.seed}
+                    className="h-8 w-8 overflow-hidden rounded-full"
                     style={{
-                      background: a.bg,
-                      color: a.text,
                       marginLeft: i === 0 ? 0 : -10,
                       position: "relative",
                       zIndex: HERO_AVATARS.length - i,
-                      boxShadow: "0 0 0 2px var(--bg)"
+                      boxShadow: "0 0 0 2px var(--bg)",
+                      background: "var(--surface-soft)"
                     }}
                   >
-                    {a.initials}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      alt={a.alt}
+                      src={`https://api.dicebear.com/9.x/notionists/svg?seed=${a.seed}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf`}
+                      width={32}
+                      height={32}
+                      loading="eager"
+                    />
                   </div>
                 ))}
               </div>
