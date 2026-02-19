@@ -213,33 +213,35 @@ export default function HomePage(): JSX.Element {
               {heroScrollCards.map((m, i) => (
                 <div
                   key={`${m.marker}-${i}`}
-                  className="flex items-center justify-between gap-4 rounded-xl px-4 py-3"
+                  className="flex flex-col gap-1.5 rounded-xl px-4 py-3"
                   style={{ border: "1px solid var(--border)", background: "var(--surface-soft)" }}
                 >
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <p className="text-[0.82rem] font-semibold" style={{ color: "var(--text)" }}>{m.marker}</p>
-                      <span
-                        className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
-                        style={{ background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--border-strong)" }}
-                      >
-                        {m.cat}
-                      </span>
-                    </div>
-                    <p className="mt-0.5 text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
+                  {/* Top row: marker + category chip + priority badge all inline */}
+                  <div className="flex items-center gap-2">
+                    <p className="text-[0.82rem] font-semibold shrink-0" style={{ color: "var(--text)" }}>{m.marker}</p>
+                    <span
+                      className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide shrink-0"
+                      style={{ background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--border-strong)" }}
+                    >
+                      {m.cat}
+                    </span>
+                    {/* Spacer pushes badge to the right */}
+                    <span className="flex-1" />
+                    <span
+                      className="shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
+                      style={
+                        m.tag === "CRITICAL"
+                          ? { borderColor: "rgba(239,68,68,0.35)", background: "rgba(239,68,68,0.08)", color: "#ef4444" }
+                          : m.tag === "HIGH IMPACT"
+                          ? { borderColor: "rgba(234,179,8,0.35)", background: "rgba(234,179,8,0.08)", color: "#ca8a04" }
+                          : { borderColor: "var(--border-strong)", background: "var(--surface)", color: "var(--muted)" }
+                      }
+                    >
+                      {m.tag}
+                    </span>
                   </div>
-                  <span
-                    className="shrink-0 rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wide"
-                    style={
-                      m.tag === "CRITICAL"
-                        ? { borderColor: "rgba(239,68,68,0.35)", background: "rgba(239,68,68,0.08)", color: "#ef4444" }
-                        : m.tag === "HIGH IMPACT"
-                        ? { borderColor: "rgba(234,179,8,0.35)",  background: "rgba(234,179,8,0.08)",  color: "#ca8a04"  }
-                        : { borderColor: "var(--border-strong)",   background: "var(--surface)",         color: "var(--muted)" }
-                    }
-                  >
-                    {m.tag}
-                  </span>
+                  {/* Insight always on its own full-width row */}
+                  <p className="text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
                 </div>
               ))}
             </div>
