@@ -308,15 +308,15 @@ export function SiteSearch(): JSX.Element {
     <>
       <button
         aria-label="Open site search"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)] sm:w-auto sm:gap-2 sm:px-3"
+        className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--text)] hover:text-[var(--text)] sm:h-9 sm:w-auto sm:gap-2 sm:px-3.5"
         onClick={open ? closeModal : openModal}
         title="Search (Cmd/Ctrl+K)"
         type="button"
       >
-        <svg aria-hidden="true" fill="none" height="17" viewBox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg">
+        <svg aria-hidden="true" fill="none" height="15" viewBox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-4.35-4.35" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
         </svg>
-        <span className="hidden text-sm font-semibold sm:inline">Search</span>
+        <span className="hidden text-[11px] font-bold uppercase tracking-[0.1em] sm:inline">Search</span>
         <span className="hidden rounded-full border border-[var(--border)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[var(--muted)] lg:inline">
           {shortcutHint}
         </span>

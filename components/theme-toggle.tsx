@@ -37,7 +37,7 @@ export function ThemeToggle(): JSX.Element {
   return (
     <button
       aria-label={toggleLabel}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-all hover:border-[var(--text)] hover:text-[var(--text)]"
+      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-all hover:border-[var(--text)] hover:text-[var(--text)] sm:h-9 sm:w-9"
       onClick={toggleTheme}
       title={toggleLabel}
       type="button"
