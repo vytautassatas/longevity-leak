@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { EvidenceRiskNote } from "@/components/evidence-risk-guide";
+import { ReadingProgress } from "@/components/reading-progress";
 import { SubscribeForm } from "@/components/subscribe-form";
 import { mdxComponents } from "@/components/mdx-components";
 import { RelatedLinksPanel } from "@/components/related-links-panel";
@@ -87,6 +88,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
 
   return (
     <>
+      <ReadingProgress />
       <SiteHeader />
       <main className={layout.rails.wide}>
         <Link className="inline-flex min-h-11 items-center text-sm font-medium text-[var(--muted)] transition-colors hover:text-[var(--text)]" href="/">
