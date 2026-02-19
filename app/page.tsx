@@ -213,20 +213,17 @@ export default function HomePage(): JSX.Element {
               {heroScrollCards.map((m, i) => (
                 <div
                   key={`${m.marker}-${i}`}
-                  className="flex flex-col gap-1.5 rounded-xl px-4 py-3"
+                  className="rounded-xl px-4 py-3"
                   style={{ border: "1px solid var(--border)", background: "var(--surface-soft)" }}
                 >
-                  {/* Top row: marker + category chip + priority badge all inline */}
-                  <div className="flex items-center gap-2">
-                    <p className="text-[0.82rem] font-semibold shrink-0" style={{ color: "var(--text)" }}>{m.marker}</p>
+                  {/* Top row: category (muted, small) + priority badge pinned right */}
+                  <div className="flex items-center justify-between gap-2 mb-1">
                     <span
-                      className="rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide shrink-0"
-                      style={{ background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--border-strong)" }}
+                      className="text-[9px] font-bold uppercase tracking-widest"
+                      style={{ color: "var(--muted)" }}
                     >
                       {m.cat}
                     </span>
-                    {/* Spacer pushes badge to the right */}
-                    <span className="flex-1" />
                     <span
                       className="shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide"
                       style={
@@ -240,8 +237,10 @@ export default function HomePage(): JSX.Element {
                       {m.tag}
                     </span>
                   </div>
-                  {/* Insight always on its own full-width row */}
-                  <p className="text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
+                  {/* Marker name — prominent */}
+                  <p className="text-[0.85rem] font-semibold leading-snug" style={{ color: "var(--text)" }}>{m.marker}</p>
+                  {/* Insight — subdued, below */}
+                  <p className="mt-0.5 text-[11px] leading-[1.5]" style={{ color: "var(--muted)" }}>{m.insight}</p>
                 </div>
               ))}
             </div>
