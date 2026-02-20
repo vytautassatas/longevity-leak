@@ -127,8 +127,12 @@ const supplements: SupplementEntry[] = [
       notes: "Common research pattern uses ~500 mg two to three times daily with meals."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36467075/", "https://pubmed.ncbi.nlm.nih.gov/34956436/"],
-    articleRefs: ["berberine-natural-ozempic-weight-loss"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "berberine-natural-ozempic-weight-loss",
+      "berberine-fatty-liver-masld-evidence",
+      "liver-enzyme-elevation-silymarin-nac-evidence"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "coq10",
@@ -148,8 +152,8 @@ const supplements: SupplementEntry[] = [
       notes: "Ubiquinol forms are often used at lower mg than ubiquinone due to higher bioavailability."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36091835/", "https://pubmed.ncbi.nlm.nih.gov/39462324/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-mitochondrial-energy-aging", "coq10-blood-pressure-vascular-function"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "rapamycin",
@@ -341,8 +345,12 @@ const supplements: SupplementEntry[] = [
       notes: "Formulation and absorption enhancers can materially change effective exposure."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36181953/", "https://pubmed.ncbi.nlm.nih.gov/28732164/"],
-    articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "resveratrol-longevity-clinic-protocol",
+      "the-polyphenol-stack-quietly-winning-in-cognition-clinics",
+      "osteoarthritis-boswellia-curcumin-ginger-trials"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "quercetin",
@@ -383,8 +391,8 @@ const supplements: SupplementEntry[] = [
       notes: "Target and dose should be individualized to 25(OH)D status and clinician guidance."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30415629/", "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"],
-    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital", "osteopenia-fragility-protein-d3-k2"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "omega-3",
@@ -470,9 +478,10 @@ const supplements: SupplementEntry[] = [
     articleRefs: [
       "berberine-natural-ozempic-weight-loss",
       "resveratrol-longevity-clinic-protocol",
-      "caloric-restriction-mimetics-2025-review"
+      "caloric-restriction-mimetics-2025-review",
+      "high-glycation-burden-carnosine-metformin-context"
     ],
-    updatedAt: "2026-02-17"
+    updatedAt: "2026-02-20"
   },
   {
     slug: "vitamin-k2",
@@ -492,8 +501,8 @@ const supplements: SupplementEntry[] = [
       notes: "Often paired with vitamin D3 to support calcium direction toward bone and away from vascular tissue."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33030563/", "https://pubmed.ncbi.nlm.nih.gov/23525894/"],
-    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital", "osteopenia-fragility-protein-d3-k2"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "magnesium-glycinate",
@@ -513,8 +522,8 @@ const supplements: SupplementEntry[] = [
       notes: "Elemental magnesium amount varies widely by product, so label interpretation is critical."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40918053/", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10929570/"],
-    articleRefs: ["magnesium-threonate-brain-health", "apigenin-natural-sleep-aid"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["magnesium-threonate-brain-health", "apigenin-natural-sleep-aid", "chronic-stress-overload-adjuncts-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "l-theanine",
@@ -534,8 +543,8 @@ const supplements: SupplementEntry[] = [
       notes: "Often paired with caffeine in fixed ratios to improve sustained attention while reducing jitter burden."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40056718/", "https://pubmed.ncbi.nlm.nih.gov/31623400/"],
-    articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog", "chronic-stress-overload-adjuncts-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "alpha-gpc",
@@ -576,8 +585,13 @@ const supplements: SupplementEntry[] = [
       notes: "Daily consistency is generally more important than exact timing for tissue saturation."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29138605/", "https://pubmed.ncbi.nlm.nih.gov/24576864/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging", "silicon-valleys-200-month-memory-upgrade"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "coq10-mitochondrial-energy-aging",
+      "silicon-valleys-200-month-memory-upgrade",
+      "creatine-protein-older-adults-strength",
+      "osteopenia-fragility-protein-d3-k2"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "taurine",
@@ -618,8 +632,12 @@ const supplements: SupplementEntry[] = [
       notes: "Absorption-enhanced preparations can materially change effective exposure."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34586711/", "https://pubmed.ncbi.nlm.nih.gov/38945354/"],
-    articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "resveratrol-longevity-clinic-protocol",
+      "the-polyphenol-stack-quietly-winning-in-cognition-clinics",
+      "osteoarthritis-boswellia-curcumin-ginger-trials"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "green-tea-extract-egcg",
@@ -681,8 +699,8 @@ const supplements: SupplementEntry[] = [
       notes: "Lower starting doses can improve tolerance before escalation."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37924418/", "https://pubmed.ncbi.nlm.nih.gov/39040530/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging", "nmn-brain-aging-breakthrough"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-mitochondrial-energy-aging", "nmn-brain-aging-breakthrough", "liver-enzyme-elevation-silymarin-nac-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "glycine",
@@ -849,8 +867,8 @@ const supplements: SupplementEntry[] = [
       notes: "Standardization and extract type meaningfully affect comparability across products."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39348746/", "https://pubmed.ncbi.nlm.nih.gov/36017529/"],
-    articleRefs: ["apigenin-natural-sleep-aid", "lions-mane-silicon-valley-nootropic"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["apigenin-natural-sleep-aid", "lions-mane-silicon-valley-nootropic", "chronic-stress-overload-adjuncts-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "rhodiola-rosea",
@@ -954,8 +972,8 @@ const supplements: SupplementEntry[] = [
       notes: "Dose selection is usually individualized to baseline homocysteine and B-vitamin status."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/31210050/", "https://pubmed.ncbi.nlm.nih.gov/24944056/"],
-    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "vitamin-d-telomere-protection-vital"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "vitamin-d-telomere-protection-vital", "homocysteine-b12-tmg-methylation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "glucosamine-sulfate",
@@ -1017,8 +1035,13 @@ const supplements: SupplementEntry[] = [
       notes: "Nitrate-equivalent labeling is the key metric, not raw powder grams."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35788174/", "https://pubmed.ncbi.nlm.nih.gov/32730731/"],
-    articleRefs: ["resveratrol-longevity-clinic-protocol", "coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "resveratrol-longevity-clinic-protocol",
+      "coq10-mitochondrial-energy-aging",
+      "low-cardiorespiratory-fitness-nitric-oxide-trials",
+      "arterial-stiffness-flavanols-garlic-beetroot"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "probiotic-multistrain",
@@ -1038,8 +1061,13 @@ const supplements: SupplementEntry[] = [
       notes: "Choose protocols by named strains and indication rather than CFU count alone."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37541528/", "https://pubmed.ncbi.nlm.nih.gov/38479936/"],
-    articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "vitamin-d-immune-system-deficiency",
+      "the-polyphenol-stack-quietly-winning-in-cognition-clinics",
+      "psyllium-inulin-probiotics-constipation-evidence",
+      "ibs-fiber-probiotic-personalization"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "psyllium-husk",
@@ -1059,8 +1087,13 @@ const supplements: SupplementEntry[] = [
       notes: "Fiber tolerance and hydration status should guide dose progression."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30239559/", "https://pubmed.ncbi.nlm.nih.gov/41366295/"],
-    articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "berberine-natural-ozempic-weight-loss",
+      "resveratrol-longevity-clinic-protocol",
+      "psyllium-inulin-probiotics-constipation-evidence",
+      "ibs-fiber-probiotic-personalization"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "vitamin-b12",
@@ -1080,8 +1113,8 @@ const supplements: SupplementEntry[] = [
       notes: "Dose and route depend on absorption capacity and deficiency severity."
     },
     sourceUrls: ["https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/", "https://pubmed.ncbi.nlm.nih.gov/32819927/"],
-    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["the-nad-plus-uptick-that-cut-afternoon-brain-fog", "coq10-mitochondrial-energy-aging", "homocysteine-b12-tmg-methylation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "lutein-zeaxanthin",
@@ -1122,8 +1155,8 @@ const supplements: SupplementEntry[] = [
       notes: "Dose selection should consider baseline intake and concurrent copper exposure."
     },
     sourceUrls: ["https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/", "https://pubmed.ncbi.nlm.nih.gov/33356467/"],
-    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital", "thyroid-variability-selenium-zinc-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "selenium",
@@ -1143,8 +1176,8 @@ const supplements: SupplementEntry[] = [
       notes: "Baseline intake and total selenium exposure should guide dosing."
     },
     sourceUrls: ["https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional", "https://pubmed.ncbi.nlm.nih.gov/38243784/"],
-    articleRefs: ["sirt3-activators-breakthrough-aging", "coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["sirt3-activators-breakthrough-aging", "coq10-mitochondrial-energy-aging", "thyroid-variability-selenium-zinc-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "whey-protein-isolate",
@@ -1164,8 +1197,13 @@ const supplements: SupplementEntry[] = [
       notes: "Total daily protein target and meal distribution are more important than narrow timing windows."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39303495/", "https://pubmed.ncbi.nlm.nih.gov/38350303/"],
-    articleRefs: ["rapamycin-pearl-trial-women-benefits", "dasatinib-quercetin-mayo-clinic-senolytics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "rapamycin-pearl-trial-women-benefits",
+      "dasatinib-quercetin-mayo-clinic-senolytics",
+      "creatine-protein-older-adults-strength",
+      "osteopenia-fragility-protein-d3-k2"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "essential-amino-acids",
@@ -1185,8 +1223,8 @@ const supplements: SupplementEntry[] = [
       notes: "Leucine content and total essential amino profile determine anabolic potency."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41540398/", "https://pubmed.ncbi.nlm.nih.gov/30273819/"],
-    articleRefs: ["rapamycin-pearl-trial-women-benefits", "coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "coq10-mitochondrial-energy-aging", "creatine-protein-older-adults-strength"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "hmb",
@@ -1227,8 +1265,8 @@ const supplements: SupplementEntry[] = [
       notes: "Product labels often list total compound weight rather than active citrulline content."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41076031/", "https://pubmed.ncbi.nlm.nih.gov/31292305/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging", "resveratrol-longevity-clinic-protocol"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-mitochondrial-energy-aging", "resveratrol-longevity-clinic-protocol", "low-cardiorespiratory-fitness-nitric-oxide-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "beta-alanine",
@@ -1248,8 +1286,8 @@ const supplements: SupplementEntry[] = [
       notes: "Smaller divided doses improve tolerability and reduce tingling."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37741729/", "https://pubmed.ncbi.nlm.nih.gov/32219184/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-mitochondrial-energy-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog", "low-cardiorespiratory-fitness-nitric-oxide-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "boswellia-serrata",
@@ -1269,8 +1307,12 @@ const supplements: SupplementEntry[] = [
       notes: "Most protocols rely on standardized extracts rather than crude resin powders."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37005356/", "https://pubmed.ncbi.nlm.nih.gov/35119758/"],
-    articleRefs: ["resveratrol-longevity-clinic-protocol", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "resveratrol-longevity-clinic-protocol",
+      "the-polyphenol-stack-quietly-winning-in-cognition-clinics",
+      "osteoarthritis-boswellia-curcumin-ginger-trials"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "ginger-extract",
@@ -1290,8 +1332,13 @@ const supplements: SupplementEntry[] = [
       notes: "Standardized gingerol content improves dose comparability."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33433034/", "https://pubmed.ncbi.nlm.nih.gov/36145415/"],
-    articleRefs: ["resveratrol-longevity-clinic-protocol", "spermidine-cardiac-disease-trial"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "resveratrol-longevity-clinic-protocol",
+      "spermidine-cardiac-disease-trial",
+      "osteoarthritis-boswellia-curcumin-ginger-trials",
+      "ibs-fiber-probiotic-personalization"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "aged-garlic-extract",
@@ -1311,8 +1358,8 @@ const supplements: SupplementEntry[] = [
       notes: "Standardized aged formulations are preferred over raw garlic extrapolations."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37225597/", "https://pubmed.ncbi.nlm.nih.gov/31496104/"],
-    articleRefs: ["spermidine-cardiac-disease-trial", "resveratrol-longevity-clinic-protocol"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["spermidine-cardiac-disease-trial", "resveratrol-longevity-clinic-protocol", "arterial-stiffness-flavanols-garlic-beetroot"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "cocoa-flavanols",
@@ -1332,8 +1379,8 @@ const supplements: SupplementEntry[] = [
       notes: "Use standardized flavanol products rather than sugar-heavy cocoa foods."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37656872/", "https://pubmed.ncbi.nlm.nih.gov/35217774/"],
-    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "silicon-valleys-200-month-memory-upgrade"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "silicon-valleys-200-month-memory-upgrade", "arterial-stiffness-flavanols-garlic-beetroot"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "olive-leaf-extract",
@@ -1353,8 +1400,8 @@ const supplements: SupplementEntry[] = [
       notes: "Hydroxytyrosol and oleuropein standardization improves product consistency."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33664098/", "https://pubmed.ncbi.nlm.nih.gov/27451317/"],
-    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "resveratrol-longevity-clinic-protocol"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics", "resveratrol-longevity-clinic-protocol", "arterial-stiffness-flavanols-garlic-beetroot"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "milk-thistle-silymarin",
@@ -1374,8 +1421,8 @@ const supplements: SupplementEntry[] = [
       notes: "Standardized silymarin content is key for reproducibility across products."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30032484/", "https://pubmed.ncbi.nlm.nih.gov/28131980/"],
-    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging", "liver-enzyme-elevation-silymarin-nac-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "inulin-prebiotic-fiber",
@@ -1395,8 +1442,13 @@ const supplements: SupplementEntry[] = [
       notes: "Gradual dose titration improves tolerance while preserving prebiotic benefits."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38389996/", "https://pubmed.ncbi.nlm.nih.gov/36743690/"],
-    articleRefs: ["vitamin-d-immune-system-deficiency", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
-    updatedAt: "2026-02-17"
+    articleRefs: [
+      "vitamin-d-immune-system-deficiency",
+      "the-polyphenol-stack-quietly-winning-in-cognition-clinics",
+      "psyllium-inulin-probiotics-constipation-evidence",
+      "ibs-fiber-probiotic-personalization"
+    ],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "potassium-citrate",
@@ -1416,8 +1468,8 @@ const supplements: SupplementEntry[] = [
       notes: "Dose should be guided by urinary chemistry and renal function context."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/9366314/", "https://pubmed.ncbi.nlm.nih.gov/26439475/"],
-    articleRefs: ["coq10-mitochondrial-energy-aging", "vitamin-d-immune-system-deficiency"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-mitochondrial-energy-aging", "vitamin-d-immune-system-deficiency", "kidney-stone-recurrence-potassium-citrate-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "phosphatidylserine",
@@ -1437,8 +1489,8 @@ const supplements: SupplementEntry[] = [
       notes: "Protocol timing can be personalized to daytime stress pattern."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38767580/", "https://pubmed.ncbi.nlm.nih.gov/34275881/"],
-    articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["lions-mane-silicon-valley-nootropic", "the-nad-plus-uptick-that-cut-afternoon-brain-fog", "chronic-stress-overload-adjuncts-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "chromium-picolinate",
@@ -1479,8 +1531,8 @@ const supplements: SupplementEntry[] = [
       notes: "Dose can be split to improve GI comfort."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36080199/", "https://pubmed.ncbi.nlm.nih.gov/34941522/"],
-    articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review", "thyroid-variability-selenium-zinc-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "calcium-alpha-ketoglutarate",
@@ -1521,8 +1573,8 @@ const supplements: SupplementEntry[] = [
       notes: "Best interpreted as adjunctive support, not a replacement for glycemic control fundamentals."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36057289/", "https://pubmed.ncbi.nlm.nih.gov/39380447/"],
-    articleRefs: ["berberine-natural-ozempic-weight-loss", "vitamin-d-telomere-protection-vital"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "vitamin-d-telomere-protection-vital", "high-glycation-burden-carnosine-metformin-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "tauroursodeoxycholic-acid",
@@ -1631,8 +1683,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Home blood-pressure tracking plus sodium reduction, aerobic training, and weight management remains a high-leverage core strategy.",
     monitoring: ["home BP log", "resting heart rate", "kidney function"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29133356/", "https://pubmed.ncbi.nlm.nih.gov/26551272/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-blood-pressure-vascular-function"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "sleep-disruption-and-insomnia",
@@ -1683,8 +1735,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Strength decline is highly modifiable with structured resistance training, adequate protein, and routine functional monitoring.",
     monitoring: ["grip strength", "chair-rise", "gait speed", "lean mass"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30312372/", "https://pubmed.ncbi.nlm.nih.gov/32740889/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["creatine-protein-older-adults-strength"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "osteopenia-and-fragility",
@@ -1696,8 +1748,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Combined resistance and impact loading, adequate protein/calcium/vitamin D, and fracture-risk-guided medical follow-up produce the strongest outcomes.",
     monitoring: ["DEXA", "grip strength", "fall history", "vitamin D"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33367736/", "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["osteopenia-fragility-protein-d3-k2"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "chronic-inflammation",
@@ -1774,8 +1826,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Endothelial function improves most with regular aerobic training and blood-pressure/metabolic risk control, with additional benefit from diet quality.",
     monitoring: ["blood pressure", "resting heart rate", "lipid profile", "hs-CRP"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40079841/", "https://pubmed.ncbi.nlm.nih.gov/40818085/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["coq10-blood-pressure-vascular-function"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "cellular-senescence-burden",
@@ -1800,8 +1852,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Insulin resistance improves most with steady weight loss, regular movement, and better carbohydrate quality and timing.",
     monitoring: ["fasting insulin", "HOMA-IR", "A1C", "waist circumference"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/11832527/", "https://pubmed.ncbi.nlm.nih.gov/27550085/"],
-    articleRefs: ["berberine-natural-ozempic-weight-loss"],
-    updatedAt: "2026-02-17"
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "berberine-fatty-liver-masld-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "dyslipidemia-and-high-apob",
@@ -1826,8 +1878,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Sustained weight loss and structured exercise can reduce liver fat and improve enzymes, with larger benefits at clinically meaningful weight-loss thresholds.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "liver imaging"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/19827166/", "https://pubmed.ncbi.nlm.nih.gov/35636454/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["berberine-fatty-liver-masld-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "postprandial-glucose-spikes",
@@ -1852,8 +1904,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Structured stress-reduction programs and mindfulness-based protocols can lower stress scores when practiced consistently over weeks to months.",
     monitoring: ["sleep regularity", "resting heart rate", "HRV trend", "symptom scales"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30714811/", "https://pubmed.ncbi.nlm.nih.gov/25818837/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["chronic-stress-overload-adjuncts-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "circadian-misalignment",
@@ -1878,8 +1930,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Progressive aerobic and interval training protocols consistently improve VO2 metrics and are strong modifiers of long-term health risk.",
     monitoring: ["VO2 max estimate", "resting heart rate", "exercise tolerance", "blood pressure"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38599681/", "https://pubmed.ncbi.nlm.nih.gov/40501026/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["low-cardiorespiratory-fitness-nitric-oxide-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "gut-microbiome-dysbiosis",
@@ -1891,8 +1943,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Dietary substrate quality and diversity are foundational; probiotic effects are strain-specific and best used as targeted adjuncts.",
     monitoring: ["stool regularity", "GI symptom scores", "fiber intake", "food diversity"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41372103/", "https://pubmed.ncbi.nlm.nih.gov/29757343/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["psyllium-inulin-probiotics-constipation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "constipation-and-low-fiber-intake",
@@ -1904,8 +1956,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Guideline-aligned bowel management starts with gradual fiber and hydration optimization, then escalates to targeted therapies when needed.",
     monitoring: ["bowel frequency", "stool form", "daily fiber grams", "hydration consistency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38595176/", "https://pubmed.ncbi.nlm.nih.gov/39034608/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["psyllium-inulin-probiotics-constipation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "joint-stiffness-and-mobility-loss",
@@ -1917,8 +1969,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Progressive loading, aerobic work, and mobility practice together provide the most durable improvement in joint function and symptom burden.",
     monitoring: ["pain scores", "range of motion", "step count", "functional task tolerance"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40452037/", "https://pubmed.ncbi.nlm.nih.gov/31908149/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["osteoarthritis-boswellia-curcumin-ginger-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "oxidative-stress-burden",
@@ -1943,8 +1995,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Symptom and quality-of-life gains are strongest when resistance and aerobic training are integrated with weight and sleep management.",
     monitoring: ["sleep quality", "symptom tracking", "body composition", "bone health markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41430672/", "https://pubmed.ncbi.nlm.nih.gov/34240669/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["homocysteine-b12-tmg-methylation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "immunosenescence-risk",
@@ -1969,8 +2021,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Objective diagnosis plus adherence to airway therapy is central, and targeted weight-loss/lifestyle protocols can reduce apnea severity.",
     monitoring: ["AHI or equivalent", "daytime sleepiness scores", "blood pressure", "sleep continuity"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/27571048/", "https://pubmed.ncbi.nlm.nih.gov/35452108/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["psyllium-inulin-probiotics-constipation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "visceral-adiposity-risk",
@@ -1982,8 +2034,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exercise volume and adherence, especially aerobic plus resistance programming, consistently reduce waist and visceral fat even when scale weight changes are modest.",
     monitoring: ["waist circumference", "body composition", "fasting insulin", "triglycerides"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30711119/", "https://pubmed.ncbi.nlm.nih.gov/35383401/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["berberine-fatty-liver-masld-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "elevated-resting-heart-rate",
@@ -1995,8 +2047,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Resting heart rate generally falls with sustained aerobic training and improved cardiorespiratory fitness, making conditioning the primary lever.",
     monitoring: ["resting heart rate", "sleep regularity", "VO2 trends", "blood pressure"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30513777/", "https://pubmed.ncbi.nlm.nih.gov/16118586/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["osteoarthritis-boswellia-curcumin-ginger-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "low-hrv-recovery-strain",
@@ -2060,8 +2112,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "B-vitamin-based homocysteine lowering is reliable biochemically, while clinical benefit depends on baseline risk context and comprehensive risk control.",
     monitoring: ["homocysteine", "vitamin B12", "folate", "MMA when indicated"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/20937919/", "https://pubmed.ncbi.nlm.nih.gov/22232016/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["homocysteine-b12-tmg-methylation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "protein-intake-deficit",
@@ -2073,8 +2125,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Adequate daily protein and meal distribution are core for muscle preservation; benefit is strongest when paired with resistance training.",
     monitoring: ["daily protein grams", "lean mass", "strength metrics", "functional tests"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35886571/", "https://pubmed.ncbi.nlm.nih.gov/36087703/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["creatine-protein-older-adults-strength"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "dehydration-electrolyte-imbalance-risk",
@@ -2099,8 +2151,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Bloating reduction is most consistent with targeted dietary pattern adjustment, trigger tracking, and gradual fiber calibration.",
     monitoring: ["bloating severity", "food tolerance", "bowel regularity", "diet adherence"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33315591/", "https://pubmed.ncbi.nlm.nih.gov/34376512/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["psyllium-inulin-probiotics-constipation-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "balance-and-fall-risk",
@@ -2116,8 +2168,8 @@ const conditions: ConditionEntry[] = [
       "https://www.cdc.gov/steadi/about/index.html",
       "https://pubmed.ncbi.nlm.nih.gov/39494462/"
     ],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["creatine-protein-older-adults-strength"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "osteoarthritis-symptom-load",
@@ -2129,8 +2181,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exercise and strength-based programs are first-line for pain and function, with weight management and load calibration improving durability.",
     monitoring: ["pain scores", "walking tolerance", "range of motion", "daily activity level"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/31908149/", "https://pubmed.ncbi.nlm.nih.gov/38327570/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["osteoarthritis-boswellia-curcumin-ginger-trials"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "chronic-kidney-function-risk",
@@ -2155,8 +2207,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Stabilize dosing and follow-up labs first, then adjust treatment with clinician guidance using symptom trends plus confirmed lab changes.",
     monitoring: ["TSH", "free T4", "symptom trend", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/32367664/", "https://pubmed.ncbi.nlm.nih.gov/28402245/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["thyroid-variability-selenium-zinc-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "anemia-and-low-ferritin-risk",
@@ -2211,8 +2263,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "IBS control is strongest with structured dietary therapy, especially low-FODMAP style protocols, plus symptom-trigger personalization.",
     monitoring: ["abdominal pain score", "stool pattern", "food tolerance", "symptom-day frequency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33315591/", "https://pubmed.ncbi.nlm.nih.gov/34376512/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["ibs-fiber-probiotic-personalization"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "arterial-stiffness-risk",
@@ -2224,8 +2276,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Aerobic and resistance training alongside blood-pressure control can improve vascular elasticity and reduce pressure-wave burden.",
     monitoring: ["pulse pressure", "blood pressure", "resting heart rate", "aerobic fitness"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30520367/", "https://pubmed.ncbi.nlm.nih.gov/39474152/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["arterial-stiffness-flavanols-garlic-beetroot"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "low-daily-step-count-risk",
@@ -2250,8 +2302,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Recurrence prevention is strongest with sustained hydration, urine-guided sodium/oxalate/protein adjustment, and citrate repletion when indicated.",
     monitoring: ["24-hour urine chemistry", "fluid intake consistency", "serum creatinine", "stone events"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/8230497/", "https://pubmed.ncbi.nlm.nih.gov/9366314/", "https://pubmed.ncbi.nlm.nih.gov/27915395/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["kidney-stone-recurrence-potassium-citrate-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "liver-enzyme-elevation-risk",
@@ -2263,8 +2315,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Liver enzymes improve most when exercise, weight reduction, alcohol control, and glucose management are sustained together.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "metabolic panel"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35176096/", "https://pubmed.ncbi.nlm.nih.gov/29683979/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["liver-enzyme-elevation-silymarin-nac-evidence"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "reactive-hypoglycemia-and-energy-crash-risk",
@@ -2289,8 +2341,8 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Lowering glycation load requires stable glycemia and lower AGE dietary exposure, with sustained pattern change outperforming short-term hacks.",
     monitoring: ["fasting glucose", "A1C", "inflammatory markers", "dietary AGE intake patterns"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40673231/", "https://pubmed.ncbi.nlm.nih.gov/36472074/"],
-    articleRefs: [],
-    updatedAt: "2026-02-17"
+    articleRefs: ["high-glycation-burden-carnosine-metformin-context"],
+    updatedAt: "2026-02-20"
   },
   {
     slug: "low-muscle-power-risk",

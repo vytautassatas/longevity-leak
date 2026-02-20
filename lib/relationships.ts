@@ -70,8 +70,6 @@ const supplementAliases: Record<string, string[]> = {
   "vitamin-c": ["ascorbic acid"]
 };
 
-const conditionTokenStopwords = new Set(["and", "the", "risk", "load", "with", "for", "into", "from"]);
-
 let cachedGraph: RelationshipGraph | null = null;
 let warned = false;
 
@@ -109,13 +107,6 @@ function getTermsForCondition(condition: ConditionEntry): string[] {
   terms.add(normalizeTerm(condition.name));
   terms.add(normalizeTerm(condition.slug.replace(/-/g, " ")));
   for (const keyword of condition.keywords) terms.add(normalizeTerm(keyword));
-
-  const rawText = `${condition.name} ${condition.keywords.join(" ")}`.toLowerCase();
-  const tokens = rawText.split(/[^a-z0-9]+/g).filter(Boolean);
-  for (const token of tokens) {
-    if (token.length < 4 || conditionTokenStopwords.has(token)) continue;
-    terms.add(token);
-  }
 
   return [...terms].filter((term) => term.length > 0);
 }
