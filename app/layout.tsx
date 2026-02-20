@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import AgentationDev from "./agentation-dev";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 
@@ -44,7 +45,10 @@ gtag('config', '${gaTrackingId}');`}
         </Script>
         <style>{`:root{color-scheme:dark;} :root[data-theme=light]{color-scheme:light;} body{margin:0}`}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NODE_ENV === "development" && <AgentationDev />}
+      </body>
     </html>
   );
 }

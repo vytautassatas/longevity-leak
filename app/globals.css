@@ -215,6 +215,36 @@ select {
   opacity: 1;
 }
 
+.hero-cta-block {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-5px);
+  box-shadow: 0 24px 52px rgba(8, 15, 28, 0.14);
+  border-color: var(--border-strong);
+}
+
+.hero-cta-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.28), transparent 40%);
+  opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  .hero-cta-block {
+    border: none;
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .hero-cta-block::before {
+    display: none;
+  }
+}
+
 .interactive-chip {
   display: inline-flex;
   align-items: center;

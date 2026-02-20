@@ -210,7 +210,7 @@ const supplements: SupplementEntry[] = [
       notes: "Human evidence remains limited; cycle design varies widely across experimental protocols."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38345678/", "https://pubmed.ncbi.nlm.nih.gov/37334898/"],
-    articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "senolytics-bone-density-mayo-clinic"],
+    articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "dasatinib-quercetin-mayo-clinic-senolytics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -974,7 +974,7 @@ const supplements: SupplementEntry[] = [
       notes: "Consistency over time is usually required for detectable benefit."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30030981/", "https://pubmed.ncbi.nlm.nih.gov/39798572/"],
-    articleRefs: ["senolytics-bone-density-mayo-clinic", "fisetin-removes-zombie-cells-mayo-clinic"],
+    articleRefs: ["dasatinib-quercetin-mayo-clinic-senolytics", "fisetin-removes-zombie-cells-mayo-clinic"],
     updatedAt: "2026-02-17"
   },
   {
@@ -995,7 +995,7 @@ const supplements: SupplementEntry[] = [
       notes: "Regular daily use is more important than exact dosing time."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40324552/", "https://pubmed.ncbi.nlm.nih.gov/37432180/"],
-    articleRefs: ["senolytics-bone-density-mayo-clinic", "vitamin-d-immune-system-deficiency"],
+    articleRefs: ["dasatinib-quercetin-mayo-clinic-senolytics", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1163,7 +1163,7 @@ const supplements: SupplementEntry[] = [
       notes: "Total daily protein target and meal distribution are more important than narrow timing windows."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39303495/", "https://pubmed.ncbi.nlm.nih.gov/38350303/"],
-    articleRefs: ["rapamycin-pearl-trial-women-benefits", "senolytics-bone-density-mayo-clinic"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "dasatinib-quercetin-mayo-clinic-senolytics"],
     updatedAt: "2026-02-17"
   },
   {
