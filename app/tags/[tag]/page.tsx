@@ -77,11 +77,26 @@ export default async function TagPage({ params }: { params: MaybePromise<Params>
           </p>
         </header>
 
-        <nav aria-label={`Posts tagged ${displayTag}`} className="grid gap-x-8 gap-y-16 md:grid-cols-2">
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </nav>
+        {posts.length > 0 ? (
+          <nav aria-label={`Posts tagged ${displayTag}`} className="grid gap-x-8 gap-y-16 md:grid-cols-2">
+            {posts.map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
+          </nav>
+        ) : (
+          <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-6 sm:p-8">
+            <h2 className="text-xl font-semibold">No articles found for this tag</h2>
+            <p className="mt-3 text-sm leading-[1.7] text-[var(--muted)]">
+              This tag currently has no published articles. Browse all research to continue exploring.
+            </p>
+            <Link
+              className="mt-5 inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+              href="/posts"
+            >
+              View all news
+            </Link>
+          </section>
+        )}
       </main>
       <SiteFooter />
     </>

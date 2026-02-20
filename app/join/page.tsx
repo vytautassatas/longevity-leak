@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Join Longevity Leak — Newsletter + Blood Tracker",
   description:
-    "Know your biological age through bloodwork, not guesswork. Get longevity research in plain language weekly and track your biomarkers against optimal longevity ranges.",
+    "Get weekly longevity research summaries plus early access to a blood marker tracker with evidence-aware context.",
   alternates: { canonical: "/join" },
   openGraph: {
     title: "Join Longevity Leak — Newsletter + Blood Tracker",
     description:
-      "Know your biological age through bloodwork, not guesswork. Get longevity research in plain language weekly and track your biomarkers against optimal longevity ranges.",
+      "Get weekly longevity research summaries plus early access to a blood marker tracker with evidence-aware context.",
     type: "website",
     url: `${siteConfig.url}/join`
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Join Longevity Leak — Newsletter + Blood Tracker",
     description:
-      "Know your biological age through bloodwork, not guesswork. Get longevity research in plain language weekly and track your biomarkers against optimal longevity ranges."
+      "Get weekly longevity research summaries plus early access to a blood marker tracker with evidence-aware context."
   }
 };
 
@@ -156,7 +156,7 @@ export default function JoinPage(): JSX.Element {
     name: "Join Longevity Leak",
     url: `${siteConfig.url}/join`,
     description:
-      "Newsletter and blood tracker app for evidence-based longevity tracking. Know your biological age through biomarker monitoring."
+      "Newsletter and blood marker tracker app for evidence-first longevity monitoring."
   };
 
   return (
@@ -169,10 +169,10 @@ export default function JoinPage(): JSX.Element {
         <section aria-labelledby="join-hero-heading" className={layout.hero.shell}>
           <p className={layout.hero.eyebrow}>Newsletter + App</p>
           <h2 className={layout.hero.title} id="join-hero-heading">
-            Know your real biological age.<br className="hidden sm:block" /> Bloodwork, not guesswork.
+            Track biomarkers with evidence context,<br className="hidden sm:block" /> not generic lab-only interpretation.
           </h2>
           <p className={layout.hero.lead}>
-            Your chronological age is one number. Your biological age — measured through bloodwork — tells you where your body actually is on the longevity curve. We translate the research into plain language every week, and our tracker shows you exactly what to improve.
+            We translate longevity research into plain language each week and map biomarkers to practical next-step context. Ranges and scores are informational tools, not diagnoses or medical advice.
           </p>
 
           <SubscribeForm
@@ -215,11 +215,11 @@ export default function JoinPage(): JSX.Element {
               </div>
               <h3 className="text-lg font-semibold">Blood Tracker App</h3>
               <p className="text-sm leading-[1.7] text-[var(--muted)]">
-                Enter your lab results and see where you stand — not against standard lab ranges, but against optimal longevity ranges validated in aging research. Get your biological age score.
+                Enter your lab results and compare standard lab ranges with research-informed targets used in longevity literature.
               </p>
               <ul className="mt-auto space-y-1.5 text-sm text-[var(--muted)]">
                 <li className="flex gap-2"><span className="text-amber-500 shrink-0">✓</span> Optimal vs. standard range comparison</li>
-                <li className="flex gap-2"><span className="text-amber-500 shrink-0">✓</span> Biological age score from your results</li>
+                <li className="flex gap-2"><span className="text-amber-500 shrink-0">✓</span> Research-informed biomarker score</li>
                 <li className="flex gap-2"><span className="text-amber-500 shrink-0">✓</span> Reminders when to retest</li>
               </ul>
               <span className="mt-2 inline-flex rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-amber-500">
@@ -275,9 +275,9 @@ export default function JoinPage(): JSX.Element {
               <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-strong)] text-sm font-bold">
                 3
               </div>
-              <h3 className="font-semibold">See your biological age and what to improve</h3>
+              <h3 className="font-semibold">See your biomarker profile and what to review</h3>
               <p className="text-sm leading-[1.7] text-[var(--muted)]">
-                Your results are scored against optimal longevity ranges — not just normal lab ranges. You see where you stand, which markers need attention, and which interventions have evidence behind them.
+                Your results are scored against research-informed longevity ranges, with explicit uncertainty where evidence is limited.
               </p>
             </li>
           </ol>
@@ -349,7 +349,7 @@ export default function JoinPage(): JSX.Element {
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Everything in Free</li>
                 <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Blood tracker app — enter lab results</li>
-                <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Biological age score from biomarkers</li>
+                <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Research-informed biomarker score</li>
                 <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Optimal vs. standard range view</li>
                 <li className="flex gap-2"><span className="text-emerald-500 shrink-0">✓</span> Retest reminders</li>
                 <li className="flex gap-2 text-[var(--muted)]"><span className="text-[var(--muted)] shrink-0">○</span> Community access (when live)</li>
@@ -371,7 +371,7 @@ export default function JoinPage(): JSX.Element {
           id="signup-confirm"
         >
           <h2 className="max-w-2xl text-3xl font-semibold sm:text-4xl" id="final-cta-heading">
-            Start tracking what actually predicts how you age.
+            Start tracking biomarkers with clear evidence framing.
           </h2>
           <p className="mt-4 max-w-xl text-[var(--muted)]">
             Join the newsletter for free. Get early access to the blood tracker when it launches. No spam, no auto-renewals. Unsubscribe any time.

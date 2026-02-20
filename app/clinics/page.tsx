@@ -8,19 +8,27 @@ import { getClinics } from "@/lib/directory";
 import { layout } from "@/lib/layout";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Clinics Directory",
-  description: "Clinic profiles with protocol focus, specialization, and evidence-minded notes.",
-  alternates: {
-    canonical: "/clinics"
-  },
-  openGraph: {
-    title: "Clinics Directory | Longevity Leak",
-    description: "Clinic profiles with protocol focus, specialization, and evidence-minded notes.",
-    type: "website",
-    url: `${siteConfig.url}/clinics`
-  }
-};
+export const metadata: Metadata = siteConfig.features.clinics
+  ? {
+      title: "Clinics Directory",
+      description: "Clinic profiles with protocol focus, specialization, and evidence-minded notes.",
+      alternates: {
+        canonical: "/clinics"
+      },
+      openGraph: {
+        title: "Clinics Directory | Longevity Leak",
+        description: "Clinic profiles with protocol focus, specialization, and evidence-minded notes.",
+        type: "website",
+        url: `${siteConfig.url}/clinics`
+      }
+    }
+  : {
+      title: "Not Found",
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
 
 export default function ClinicsPage(): JSX.Element {
   if (!siteConfig.features.clinics) notFound();

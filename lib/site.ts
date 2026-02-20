@@ -18,7 +18,7 @@ const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL;
 export const siteConfig = {
   name: "Longevity Leak",
   title: "Longevity Leak - Clinical Studies. Zero Jargon.",
-  description: "Clinical studies. Zero jargon. The stuff that actually works.",
+  description: "Evidence-first longevity research with clear risk, uncertainty, and practical context.",
   url: normalizeCanonicalSiteUrl(configuredSiteUrl),
   author: "Longevity Leak",
   features: {
