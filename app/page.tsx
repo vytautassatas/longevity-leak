@@ -117,7 +117,7 @@ export default function HomePage(): JSX.Element {
               className="mb-4 inline-block w-fit rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
               style={{ borderColor: "var(--border-strong)", color: "var(--muted)", background: "var(--surface-soft)" }}
             >
-              Early access open now
+              Evidence-first updates
             </span>
 
             <h2
@@ -125,16 +125,15 @@ export default function HomePage(): JSX.Element {
               className="max-w-xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-[2.1rem] xl:text-[3rem]"
               style={{ color: "var(--text)" }}
             >
-              Your doctor&apos;s &ldquo;normal&rdquo; results{" "}
+              Standard lab ranges were built for diagnosis,{" "}
               <em className="not-italic" style={{ color: "var(--text)" }}>
-                could be shaving years off your life.
+                not longevity optimization.
               </em>
             </h2>
 
             <p className="mt-4 max-w-md text-[0.925rem] leading-[1.7] lg:mt-3 lg:text-[0.875rem] xl:mt-4 xl:text-[1rem] xl:leading-[1.78]" style={{ color: "var(--muted)" }}>
-              Every week we decode the clinical studies your GP doesn&apos;t have time to
-              read — bloodwork, supplements, and longevity protocols.{" "}
-              <span className="whitespace-nowrap">No noise. No jargon.</span>
+              Each week we review clinical studies on bloodwork, supplements, and longevity
+              protocols with clear evidence strength, uncertainty, and risk context.
             </p>
 
             {/* Form */}
@@ -297,11 +296,33 @@ export default function HomePage(): JSX.Element {
           <header className="mb-8 flex items-baseline justify-between gap-4">
             <h2 className="text-2xl font-semibold" id="latest-heading">Latest Research</h2>
           </header>
-          <nav aria-label="Latest research articles" className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-            {latestSix.map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </nav>
+          {latestSix.length > 0 ? (
+            <nav aria-label="Latest research articles" className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+              {latestSix.map((post) => (
+                <PostCard key={post.slug} post={post} />
+              ))}
+            </nav>
+          ) : (
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-6 sm:p-8">
+              <p className="text-sm leading-[1.7] text-[var(--muted)]">
+                No research posts are published yet. Browse the directories to explore evidence summaries and safety context.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link
+                  className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                  href="/supplements"
+                >
+                  Supplements
+                </Link>
+                <Link
+                  className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                  href="/conditions"
+                >
+                  Conditions
+                </Link>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Directory Overview */}

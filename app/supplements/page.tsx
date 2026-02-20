@@ -45,7 +45,30 @@ export default function SupplementsPage(): JSX.Element {
 
         <EvidenceRiskGuide className={layout.spacing.section} />
 
-        <SupplementsBrowser className={layout.spacing.section} supplements={supplements} />
+        {supplements.length > 0 ? (
+          <SupplementsBrowser className={layout.spacing.section} supplements={supplements} />
+        ) : (
+          <section className={`${layout.spacing.section} rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-6 sm:p-8`}>
+            <h2 className="text-xl font-semibold">No supplements published yet</h2>
+            <p className="mt-3 text-sm leading-[1.7] text-[var(--muted)]">
+              Supplement profiles are being prepared. Browse condition guides and current research while this index is expanded.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                href="/conditions"
+              >
+                Browse conditions
+              </Link>
+              <Link
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                href="/posts"
+              >
+                Browse news
+              </Link>
+            </div>
+          </section>
+        )}
       </main>
       <SiteFooter />
     </>

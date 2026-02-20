@@ -19,6 +19,7 @@ export function SupplementsBrowser({ supplements, className }: SupplementsBrowse
   const [query, setQuery] = useState("");
   const [evidence, setEvidence] = useState<EvidenceFilter>("All");
   const [safety, setSafety] = useState<SafetyFilter>("All");
+  const hasActiveFilters = query.trim().length > 0 || evidence !== "All" || safety !== "All";
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -83,13 +84,46 @@ export function SupplementsBrowser({ supplements, className }: SupplementsBrowse
         <p className="mt-3 text-xs font-semibold uppercase tracking-[0.11em] text-[var(--muted)]">
           Showing {filtered.length} of {supplements.length} supplements
         </p>
+        {hasActiveFilters && (
+          <button
+            className="mt-3 inline-flex min-h-10 items-center rounded-full border border-[var(--border)] px-4 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--muted)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
+            onClick={() => {
+              setQuery("");
+              setEvidence("All");
+              setSafety("All");
+            }}
+            type="button"
+          >
+            Clear filters
+          </button>
+        )}
       </div>
 
-      <div className="mt-6 grid gap-6 md:grid-cols-2 lg:gap-8">
-        {filtered.map((supplement) => (
-          <SupplementCard key={supplement.slug} supplement={supplement} />
-        ))}
-      </div>
+      {filtered.length > 0 ? (
+        <div className="mt-6 grid gap-6 md:grid-cols-2 lg:gap-8">
+          {filtered.map((supplement) => (
+            <SupplementCard key={supplement.slug} supplement={supplement} />
+          ))}
+        </div>
+      ) : (
+        <div className="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-6 sm:p-8">
+          <h3 className="text-lg font-semibold">No supplements match these filters</h3>
+          <p className="mt-2 text-sm leading-[1.7] text-[var(--muted)]">
+            Try a broader search term or clear filters to view the full directory.
+          </p>
+          <button
+            className="mt-4 inline-flex min-h-10 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+            onClick={() => {
+              setQuery("");
+              setEvidence("All");
+              setSafety("All");
+            }}
+            type="button"
+          >
+            Reset filters
+          </button>
+        </div>
+      )}
     </section>
   );
 }

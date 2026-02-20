@@ -45,11 +45,34 @@ export default function ConditionsPage(): JSX.Element {
 
         <EvidenceRiskGuide className={layout.spacing.section} />
 
-        <section className={`${layout.spacing.section} grid gap-6 md:grid-cols-2 lg:gap-8`}>
-          {conditions.map((condition) => (
-            <ConditionCard key={condition.slug} condition={condition} />
-          ))}
-        </section>
+        {conditions.length > 0 ? (
+          <section className={`${layout.spacing.section} grid gap-6 md:grid-cols-2 lg:gap-8`}>
+            {conditions.map((condition) => (
+              <ConditionCard key={condition.slug} condition={condition} />
+            ))}
+          </section>
+        ) : (
+          <section className={`${layout.spacing.section} rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-6 sm:p-8`}>
+            <h2 className="text-xl font-semibold">No conditions published yet</h2>
+            <p className="mt-3 text-sm leading-[1.7] text-[var(--muted)]">
+              Condition profiles are being prepared. Browse supplements and related articles in the meantime.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                href="/supplements"
+              >
+                Browse supplements
+              </Link>
+              <Link
+                className="inline-flex min-h-11 items-center rounded-full border border-[var(--border)] px-4 text-sm font-semibold transition-colors hover:border-[var(--border-strong)]"
+                href="/posts"
+              >
+                Browse news
+              </Link>
+            </div>
+          </section>
+        )}
       </main>
       <SiteFooter />
     </>
