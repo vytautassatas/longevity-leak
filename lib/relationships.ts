@@ -297,6 +297,29 @@ export function getSupplementsForPostSlug(postSlug: string): SupplementEntry[] {
   return [...slugs].map((slug) => bySlug.get(slug)).filter((item): item is SupplementEntry => Boolean(item)).sort(byNameAsc);
 }
 
+export function getExplicitSupplementsForPostSlug(postSlug: string): SupplementEntry[] {
+  return getSupplements()
+    .filter((s) => s.articleRefs.includes(postSlug))
+    .sort(byNameAsc);
+}
+
+export function getConditionsForSupplements(supplements: SupplementEntry[]): ConditionEntry[] {
+  const graph = getGraph();
+  const conditionSlugs = new Set<string>();
+  for (const supplement of supplements) {
+    const slugs = graph.supplementToConditions.get(supplement.slug);
+    if (slugs) for (const slug of slugs) conditionSlugs.add(slug);
+  }
+  const bySlug = new Map(getConditions().map((item) => [item.slug, item]));
+  return [...conditionSlugs].map((slug) => bySlug.get(slug)).filter((item): item is ConditionEntry => Boolean(item)).sort(byNameAsc);
+}
+
+export function getExplicitConditionsForPostSlug(postSlug: string): ConditionEntry[] {
+  return getConditions()
+    .filter((c) => c.articleRefs.includes(postSlug))
+    .sort(byNameAsc);
+}
+
 export function getPostsForSupplementSlug(supplementSlug: string): Post[] {
   const graph = getGraph();
   const slugs = graph.supplementToPosts.get(supplementSlug) ?? new Set<string>();

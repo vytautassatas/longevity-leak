@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { ArticleSidebar } from "@/components/article-sidebar";
 import { BackToTop } from "@/components/back-to-top";
 import { EvidenceRiskNote } from "@/components/evidence-risk-guide";
 import { ReadingProgress } from "@/components/reading-progress";
@@ -16,10 +17,8 @@ import { formatDate, getAllPosts, getRelatedPosts, getTagHref } from "@/lib/post
 import {
   getClinicLinkReasonForPost,
   getClinicsForPostSlug,
-  getConditionLinkReasonForPost,
-  getConditionsForPostSlug,
-  getSupplementLinkReasonForPost,
-  getSupplementsForPostSlug
+  getExplicitConditionsForPostSlug,
+  getExplicitSupplementsForPostSlug,
 } from "@/lib/relationships";
 import { siteConfig } from "@/lib/site";
 
@@ -70,8 +69,8 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   if (!post) notFound();
 
   const relatedPosts = getRelatedPosts(post, 3);
-  const relatedSupplements = getSupplementsForPostSlug(post.slug);
-  const relatedConditions = getConditionsForPostSlug(post.slug);
+  const relatedSupplements = getExplicitSupplementsForPostSlug(post.slug);
+  const relatedConditions = getExplicitConditionsForPostSlug(post.slug);
   const relatedClinics = siteConfig.features.clinics ? getClinicsForPostSlug(post.slug) : [];
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
   const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
@@ -165,17 +164,24 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
 
           <EvidenceRiskNote />
 
-          <section className="mt-14 max-w-none">
-            <MDXRemote
-              components={mdxComponents}
-              options={{
-                mdxOptions: {
-                  remarkPlugins: [remarkGfm]
-                }
-              }}
-              source={post.content}
+          <div className="mt-14 lg:grid lg:grid-cols-[1fr_340px] lg:gap-10 xl:grid-cols-[1fr_380px]">
+            <section className="max-w-none">
+              <MDXRemote
+                components={mdxComponents}
+                options={{
+                  mdxOptions: {
+                    remarkPlugins: [remarkGfm]
+                  }
+                }}
+                source={post.content}
+              />
+            </section>
+
+            <ArticleSidebar
+              conditions={relatedConditions}
+              supplements={relatedSupplements}
             />
-          </section>
+          </div>
 
           {hasStudyUrl && (
             <section className="mt-24 border-t border-[var(--border)] pt-12">
@@ -192,34 +198,6 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
             </section>
           )}
         </article>
-
-        <RelatedLinksPanel
-          className="mt-24 border-t border-[var(--border)] pt-12"
-          columns={2}
-          items={relatedSupplements.map((supplement) => ({
-            id: supplement.slug,
-            href: `/supplements/${supplement.slug}`,
-            eyebrow: `Evidence ${supplement.evidenceLevel} · ${supplement.safety}`,
-            title: supplement.name,
-            description: supplement.focus,
-            reason: getSupplementLinkReasonForPost(post.slug, supplement.slug)
-          }))}
-          title="Related Supplements"
-        />
-
-        <RelatedLinksPanel
-          className="mt-24 border-t border-[var(--border)] pt-12"
-          columns={2}
-          items={relatedConditions.map((condition) => ({
-            id: condition.slug,
-            href: `/conditions/${condition.slug}`,
-            eyebrow: `Evidence ${condition.evidenceLevel}`,
-            title: condition.name,
-            description: condition.goal,
-            reason: getConditionLinkReasonForPost(post.slug, condition.slug)
-          }))}
-          title="Related Conditions"
-        />
 
         {siteConfig.features.clinics ? (
           <RelatedLinksPanel

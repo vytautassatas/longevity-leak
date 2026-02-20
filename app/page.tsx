@@ -106,15 +106,12 @@ export default function HomePage(): JSX.Element {
       <section aria-labelledby="hero-heading" style={{ background: "var(--bg)" }}>
         <style>{heroScrollKeyframes}</style>
 
-        {/*
-          Layout: left column drives height naturally.
-          Right column is position:absolute so it never inflates the row —
-          it simply fills whatever height the left content creates.
-        */}
-        <div className="relative mx-auto grid max-w-[1280px] grid-cols-1 px-5 sm:px-6 lg:grid-cols-[1fr_340px] lg:px-8 xl:grid-cols-[1fr_400px]">
+        {/* Hero card: full 1280px container with copy + scrolling biomarkers inside */}
+        <div className="hero-cta-block relative mx-auto my-8 max-w-[1280px] overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--surface-soft)] px-5 sm:px-6 lg:my-10 lg:mx-8 lg:px-0 xl:mx-auto">
+          <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_340px] xl:grid-cols-[1fr_400px]">
 
           {/* ── LEFT: copy + form ── */}
-          <div className="flex flex-col justify-center py-8 pr-0 lg:py-10 lg:pr-8 xl:py-16 xl:pr-10">
+          <div className="flex flex-col justify-center py-8 pr-0 lg:p-10 xl:p-16">
 
             <span
               className="mb-4 inline-block w-fit rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
@@ -234,7 +231,7 @@ export default function HomePage(): JSX.Element {
           {/* ── RIGHT: scrolling biomarker cards — absolute so it never inflates height ── */}
           <div
             className="absolute right-0 top-0 hidden h-full w-[340px] lg:block xl:w-[400px]"
-            style={{ borderLeft: "1px solid var(--border)", overflow: "hidden" }}
+            style={{ overflow: "hidden" }}
           >
             {/* Top fade */}
             <div
@@ -255,7 +252,7 @@ export default function HomePage(): JSX.Element {
                 <div
                   key={`${m.marker}-${i}`}
                   className="rounded-xl px-4 py-3"
-                  style={{ border: "1px solid var(--border)", background: "var(--surface-soft)" }}
+                  style={{ border: "1px solid var(--border)", background: "var(--surface)" }}
                 >
                   {/* Top row: category (muted, small) + priority badge pinned right */}
                   <div className="flex items-center justify-between gap-2 mb-1">
@@ -286,10 +283,9 @@ export default function HomePage(): JSX.Element {
               ))}
             </div>
           </div>
-        </div>
+          </div>{/* end grid */}
+        </div>{/* end hero-cta-block */}
 
-        {/* Bottom divider */}
-        <div style={{ borderBottom: "1px solid var(--border)" }} />
       </section>
 
       {/* Logo marquee strip hidden for now */}

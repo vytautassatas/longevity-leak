@@ -32,6 +32,7 @@ export type ConditionEntry = {
   guidanceSummary: string;
   monitoring: string[];
   sourceUrls: string[];
+  articleRefs: string[];
   updatedAt: string;
 };
 
@@ -210,7 +211,7 @@ const supplements: SupplementEntry[] = [
       notes: "Human evidence remains limited; cycle design varies widely across experimental protocols."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38345678/", "https://pubmed.ncbi.nlm.nih.gov/37334898/"],
-    articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "senolytics-bone-density-mayo-clinic"],
+    articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "dasatinib-quercetin-mayo-clinic-senolytics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -974,7 +975,7 @@ const supplements: SupplementEntry[] = [
       notes: "Consistency over time is usually required for detectable benefit."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30030981/", "https://pubmed.ncbi.nlm.nih.gov/39798572/"],
-    articleRefs: ["senolytics-bone-density-mayo-clinic", "fisetin-removes-zombie-cells-mayo-clinic"],
+    articleRefs: ["dasatinib-quercetin-mayo-clinic-senolytics", "fisetin-removes-zombie-cells-mayo-clinic"],
     updatedAt: "2026-02-17"
   },
   {
@@ -995,7 +996,7 @@ const supplements: SupplementEntry[] = [
       notes: "Regular daily use is more important than exact dosing time."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40324552/", "https://pubmed.ncbi.nlm.nih.gov/37432180/"],
-    articleRefs: ["senolytics-bone-density-mayo-clinic", "vitamin-d-immune-system-deficiency"],
+    articleRefs: ["dasatinib-quercetin-mayo-clinic-senolytics", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1163,7 +1164,7 @@ const supplements: SupplementEntry[] = [
       notes: "Total daily protein target and meal distribution are more important than narrow timing windows."
     },
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39303495/", "https://pubmed.ncbi.nlm.nih.gov/38350303/"],
-    articleRefs: ["rapamycin-pearl-trial-women-benefits", "senolytics-bone-density-mayo-clinic"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "dasatinib-quercetin-mayo-clinic-senolytics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1578,6 +1579,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Treat metabolic syndrome with a combined plan for movement, nutrition, sleep, and coaching rather than single-domain changes.",
     monitoring: ["A1C", "fasting glucose", "triglyceride:HDL", "waist circumference"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41207299/", "https://pubmed.ncbi.nlm.nih.gov/17922167/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "caloric-restriction-mimetics-2025-review", "resveratrol-longevity-clinic-protocol", "sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1590,6 +1592,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Durable adiposity reduction is most likely when calorie control, protein adequacy, resistance training, and behavioral adherence systems are combined and adjusted over months, not weeks.",
     monitoring: ["waist circumference", "body composition", "A1C", "fasting insulin"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29466592/", "https://pubmed.ncbi.nlm.nih.gov/21836103/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1602,6 +1605,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Early structured intervention centered on weight loss, physical activity, and nutrition quality can produce durable diabetes-risk reduction.",
     monitoring: ["A1C", "fasting glucose", "time in range", "fasting insulin"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/11832527/", "https://pubmed.ncbi.nlm.nih.gov/26377054/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1614,6 +1618,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Risk reduction is strongest when blood pressure, atherogenic lipids, glucose, activity, and tobacco exposure are managed together.",
     monitoring: ["apoB/LDL-C", "blood pressure", "hs-CRP", "VO2 max"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30879339/", "https://pubmed.ncbi.nlm.nih.gov/26551272/"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "rapamycin-pearl-trial-women-benefits", "resveratrol-longevity-clinic-protocol", "spermidine-autophagy-cellular-renewal", "spermidine-cardiac-disease-trial", "the-polyphenol-stack-quietly-winning-in-cognition-clinics", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1626,6 +1631,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Home blood-pressure tracking plus sodium reduction, aerobic training, and weight management remains a high-leverage core strategy.",
     monitoring: ["home BP log", "resting heart rate", "kidney function"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29133356/", "https://pubmed.ncbi.nlm.nih.gov/26551272/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1638,6 +1644,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "CBT-I remains first-line, while timing of light and targeted adjunctive compounds can support sleep-onset and recovery.",
     monitoring: ["sleep latency", "night awakenings", "total sleep", "subjective recovery"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36461882/", "https://pubmed.ncbi.nlm.nih.gov/32950013/"],
+    articleRefs: ["apigenin-natural-sleep-aid", "magnesium-threonate-brain-health"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1650,6 +1657,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Best results come from a combined plan: regular exercise, blood-pressure control, quality sleep, and ongoing cognitive activity.",
     monitoring: ["blood pressure", "sleep duration", "executive function screens"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29055814/", "https://pubmed.ncbi.nlm.nih.gov/39875685/"],
+    articleRefs: ["fisetin-removes-zombie-cells-mayo-clinic", "lions-mane-silicon-valley-nootropic", "magnesium-threonate-brain-health", "nad-boosters-human-trial-comparison", "nmn-brain-aging-breakthrough", "silicon-valleys-200-month-memory-upgrade", "spermidine-autophagy-cellular-renewal", "the-nad-plus-uptick-that-cut-afternoon-brain-fog", "the-polyphenol-stack-quietly-winning-in-cognition-clinics", "vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1662,6 +1670,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exercise and behavioral therapies can reduce anxiety burden, with strongest effects from consistent adherence rather than short bursts.",
     monitoring: ["symptom scores", "sleep quality", "HRV"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/28819746/", "https://pubmed.ncbi.nlm.nih.gov/39952828/"],
+    articleRefs: ["lions-mane-silicon-valley-nootropic", "magnesium-threonate-brain-health"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1674,6 +1683,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Strength decline is highly modifiable with structured resistance training, adequate protein, and routine functional monitoring.",
     monitoring: ["grip strength", "chair-rise", "gait speed", "lean mass"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30312372/", "https://pubmed.ncbi.nlm.nih.gov/32740889/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1686,6 +1696,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Combined resistance and impact loading, adequate protein/calcium/vitamin D, and fracture-risk-guided medical follow-up produce the strongest outcomes.",
     monitoring: ["DEXA", "grip strength", "fall history", "vitamin D"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33367736/", "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1698,6 +1709,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Lower chronic inflammation through sustained diet quality, regular activity, sleep consistency, and body-composition improvement.",
     monitoring: ["hs-CRP", "sleep quality", "waist circumference", "fasting glucose"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41211687/", "https://pubmed.ncbi.nlm.nih.gov/27445361/"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging", "dasatinib-quercetin-mayo-clinic-senolytics", "fisetin-removes-zombie-cells-mayo-clinic", "resveratrol-longevity-clinic-protocol", "spermidine-autophagy-cellular-renewal", "spermidine-cardiac-disease-trial", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1710,6 +1722,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Energy-related fatigue improves most when graded conditioning and recovery are combined with targeted metabolic and micronutrient support.",
     monitoring: ["fatigue scores", "activity tolerance", "sleep", "heart-rate recovery"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36091835/", "https://pubmed.ncbi.nlm.nih.gov/33668309/"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "coq10-mitochondrial-energy-aging", "nad-boosters-human-trial-comparison", "nmn-brain-aging-breakthrough", "silicon-valleys-200-month-memory-upgrade", "sirt3-activators-breakthrough-aging", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1722,6 +1735,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Brain-fog management is strongest with sleep regularity, glucose stability, and structured cognitive pacing, while reversible drivers such as medication effects, mood load, and apnea are actively screened.",
     monitoring: ["subjective focus scores", "work-block duration", "sleep quality", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39040197/", "https://pubmed.ncbi.nlm.nih.gov/37158780/"],
+    articleRefs: ["coq10-mitochondrial-energy-aging", "lions-mane-silicon-valley-nootropic", "magnesium-threonate-brain-health", "nad-boosters-human-trial-comparison", "nmn-brain-aging-breakthrough", "silicon-valleys-200-month-memory-upgrade", "the-nad-plus-uptick-that-cut-afternoon-brain-fog", "the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1734,6 +1748,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Lifestyle programs emphasizing physical activity and diet quality show the strongest evidence for slowing telomere attrition trajectories.",
     monitoring: ["vitamin D status", "hs-CRP", "sleep duration", "longitudinal biomarker panels"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35760212/", "https://pubmed.ncbi.nlm.nih.gov/37478811/"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "dasatinib-quercetin-mayo-clinic-senolytics", "epigenetic-reprogramming-eye-disease-trial", "fisetin-removes-zombie-cells-mayo-clinic", "gene-therapy-telomere-disorders-success", "nmn-brain-aging-breakthrough", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1746,6 +1761,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Correcting deficiency states, sleep regularity, and metabolic risk control are the most reproducible foundations for lower respiratory-infection burden.",
     monitoring: ["25(OH)D", "infection frequency", "sleep regularity", "hs-CRP"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30675873/", "https://pubmed.ncbi.nlm.nih.gov/28202713/"],
+    articleRefs: ["rapamycin-pearl-trial-women-benefits", "spermidine-autophagy-cellular-renewal", "vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1758,6 +1774,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Endothelial function improves most with regular aerobic training and blood-pressure/metabolic risk control, with additional benefit from diet quality.",
     monitoring: ["blood pressure", "resting heart rate", "lipid profile", "hs-CRP"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40079841/", "https://pubmed.ncbi.nlm.nih.gov/40818085/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1770,6 +1787,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Human senolytic evidence is still early and condition-specific, so protocols should stay conservative, prioritize functional monitoring, and avoid extrapolating animal-effect sizes to broad anti-aging claims.",
     monitoring: ["hs-CRP", "functional strength metrics", "recovery markers", "bone health trends"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30616998/", "https://pubmed.ncbi.nlm.nih.gov/40437670/"],
+    articleRefs: ["caloric-restriction-mimetics-2025-review", "dasatinib-quercetin-mayo-clinic-senolytics", "epigenetic-reprogramming-eye-disease-trial", "fisetin-removes-zombie-cells-mayo-clinic", "gene-therapy-telomere-disorders-success", "nad-boosters-human-trial-comparison", "rapamycin-pearl-trial-women-benefits", "resveratrol-longevity-clinic-protocol", "sirt3-activators-breakthrough-aging", "spermidine-autophagy-cellular-renewal", "spermidine-cardiac-disease-trial", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1782,6 +1800,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Insulin resistance improves most with steady weight loss, regular movement, and better carbohydrate quality and timing.",
     monitoring: ["fasting insulin", "HOMA-IR", "A1C", "waist circumference"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/11832527/", "https://pubmed.ncbi.nlm.nih.gov/27550085/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1794,6 +1813,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "ApoB-centered risk management can sharpen atherogenic risk assessment beyond LDL-C alone and improve intervention targeting.",
     monitoring: ["apoB", "LDL-C", "non-HDL-C", "triglycerides"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30586774/", "https://pubmed.ncbi.nlm.nih.gov/21487090/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss", "resveratrol-longevity-clinic-protocol"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1806,6 +1826,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Sustained weight loss and structured exercise can reduce liver fat and improve enzymes, with larger benefits at clinically meaningful weight-loss thresholds.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "liver imaging"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/19827166/", "https://pubmed.ncbi.nlm.nih.gov/35636454/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1818,6 +1839,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Meal sequencing and post-meal walking can meaningfully blunt glucose excursions and reduce daily glycemic variability.",
     monitoring: ["CGM time in range", "post-meal glucose peak", "fasting glucose", "A1C"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/32277270/", "https://pubmed.ncbi.nlm.nih.gov/26704625/"],
+    articleRefs: ["berberine-natural-ozempic-weight-loss"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1830,6 +1852,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Structured stress-reduction programs and mindfulness-based protocols can lower stress scores when practiced consistently over weeks to months.",
     monitoring: ["sleep regularity", "resting heart rate", "HRV trend", "symptom scales"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30714811/", "https://pubmed.ncbi.nlm.nih.gov/25818837/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1842,6 +1865,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Morning/shift-timed light exposure, consistent wake anchors, and daytime-aligned eating are core levers for circadian correction.",
     monitoring: ["sleep midpoint", "wake consistency", "daytime alertness", "sleep latency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39747347/", "https://pubmed.ncbi.nlm.nih.gov/34860550/"],
+    articleRefs: ["apigenin-natural-sleep-aid"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1854,6 +1878,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Progressive aerobic and interval training protocols consistently improve VO2 metrics and are strong modifiers of long-term health risk.",
     monitoring: ["VO2 max estimate", "resting heart rate", "exercise tolerance", "blood pressure"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38599681/", "https://pubmed.ncbi.nlm.nih.gov/40501026/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1866,6 +1891,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Dietary substrate quality and diversity are foundational; probiotic effects are strain-specific and best used as targeted adjuncts.",
     monitoring: ["stool regularity", "GI symptom scores", "fiber intake", "food diversity"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41372103/", "https://pubmed.ncbi.nlm.nih.gov/29757343/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1878,6 +1904,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Guideline-aligned bowel management starts with gradual fiber and hydration optimization, then escalates to targeted therapies when needed.",
     monitoring: ["bowel frequency", "stool form", "daily fiber grams", "hydration consistency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38595176/", "https://pubmed.ncbi.nlm.nih.gov/39034608/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1890,6 +1917,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Progressive loading, aerobic work, and mobility practice together provide the most durable improvement in joint function and symptom burden.",
     monitoring: ["pain scores", "range of motion", "step count", "functional task tolerance"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40452037/", "https://pubmed.ncbi.nlm.nih.gov/31908149/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1902,6 +1930,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "The biggest gains usually come from consistent exercise, better sleep, and nutrition quality rather than single-compound strategies.",
     monitoring: ["hs-CRP", "recovery quality", "sleep duration", "training load response"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35199237/", "https://pubmed.ncbi.nlm.nih.gov/33668309/"],
+    articleRefs: ["sirt3-activators-breakthrough-aging"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1914,6 +1943,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Symptom and quality-of-life gains are strongest when resistance and aerobic training are integrated with weight and sleep management.",
     monitoring: ["sleep quality", "symptom tracking", "body composition", "bone health markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41430672/", "https://pubmed.ncbi.nlm.nih.gov/34240669/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1926,6 +1956,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Immune-aging risk improves most with regular exercise and foundational health behaviors that preserve vaccine and infection resilience.",
     monitoring: ["infection frequency", "sleep quality", "vitamin D status", "inflammatory markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35490790/", "https://pubmed.ncbi.nlm.nih.gov/20121985/"],
+    articleRefs: ["dasatinib-quercetin-mayo-clinic-senolytics", "gene-therapy-telomere-disorders-success", "rapamycin-pearl-trial-women-benefits", "vitamin-d-immune-system-deficiency", "vitamin-d-telomere-protection-vital"],
     updatedAt: "2026-02-17"
   },
   {
@@ -1938,6 +1969,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Objective diagnosis plus adherence to airway therapy is central, and targeted weight-loss/lifestyle protocols can reduce apnea severity.",
     monitoring: ["AHI or equivalent", "daytime sleepiness scores", "blood pressure", "sleep continuity"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/27571048/", "https://pubmed.ncbi.nlm.nih.gov/35452108/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1950,6 +1982,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exercise volume and adherence, especially aerobic plus resistance programming, consistently reduce waist and visceral fat even when scale weight changes are modest.",
     monitoring: ["waist circumference", "body composition", "fasting insulin", "triglycerides"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30711119/", "https://pubmed.ncbi.nlm.nih.gov/35383401/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1962,6 +1995,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Resting heart rate generally falls with sustained aerobic training and improved cardiorespiratory fitness, making conditioning the primary lever.",
     monitoring: ["resting heart rate", "sleep regularity", "VO2 trends", "blood pressure"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30513777/", "https://pubmed.ncbi.nlm.nih.gov/16118586/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1974,6 +2008,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "HRV trends improve with consistent aerobic conditioning, sleep regularity, and stress-load management rather than device-only optimization.",
     monitoring: ["HRV trend", "resting heart rate", "sleep duration", "subjective fatigue"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39015867/", "https://pubmed.ncbi.nlm.nih.gov/40574815/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1986,6 +2021,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Use pacing and gradual activity return to rebuild capacity while reducing the risk of post-exertional crashes.",
     monitoring: ["fatigue scores", "activity tolerance", "sleep continuity", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39218998/", "https://pubmed.ncbi.nlm.nih.gov/40083165/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -1998,6 +2034,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "High-yield management starts with targeted screening and deficiency-specific repletion rather than broad high-dose stacking.",
     monitoring: ["targeted nutrient labs", "symptom response", "diet quality score", "follow-up labs"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36904074/", "https://pubmed.ncbi.nlm.nih.gov/38280831/"],
+    articleRefs: ["vitamin-d-immune-system-deficiency"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2010,6 +2047,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Best-supported strategy is systemic risk-factor control plus AREDS-style targeted retinal nutrition in appropriate patients.",
     monitoring: ["visual acuity trend", "contrast sensitivity", "retinal exams", "metabolic markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/23644932/", "https://pubmed.ncbi.nlm.nih.gov/39025435/"],
+    articleRefs: ["epigenetic-reprogramming-eye-disease-trial"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2022,6 +2060,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "B-vitamin-based homocysteine lowering is reliable biochemically, while clinical benefit depends on baseline risk context and comprehensive risk control.",
     monitoring: ["homocysteine", "vitamin B12", "folate", "MMA when indicated"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/20937919/", "https://pubmed.ncbi.nlm.nih.gov/22232016/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2034,6 +2073,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Adequate daily protein and meal distribution are core for muscle preservation; benefit is strongest when paired with resistance training.",
     monitoring: ["daily protein grams", "lean mass", "strength metrics", "functional tests"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35886571/", "https://pubmed.ncbi.nlm.nih.gov/36087703/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2046,6 +2086,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Hydration and electrolyte plans should be individualized to climate, age, medications, and activity load to reduce dizziness, cramps, and performance drop.",
     monitoring: ["hydration consistency", "bodyweight fluctuation", "symptom episodes", "training tolerance"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34684642/", "https://pubmed.ncbi.nlm.nih.gov/34432569/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2058,6 +2099,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Bloating reduction is most consistent with targeted dietary pattern adjustment, trigger tracking, and gradual fiber calibration.",
     monitoring: ["bloating severity", "food tolerance", "bowel regularity", "diet adherence"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33315591/", "https://pubmed.ncbi.nlm.nih.gov/34376512/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2074,6 +2116,7 @@ const conditions: ConditionEntry[] = [
       "https://www.cdc.gov/steadi/about/index.html",
       "https://pubmed.ncbi.nlm.nih.gov/39494462/"
     ],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2086,6 +2129,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exercise and strength-based programs are first-line for pain and function, with weight management and load calibration improving durability.",
     monitoring: ["pain scores", "walking tolerance", "range of motion", "daily activity level"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/31908149/", "https://pubmed.ncbi.nlm.nih.gov/38327570/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2098,6 +2142,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Renal-risk reduction relies on integrated pressure, albuminuria, glucose, and medication-aware nutrition planning aligned with current CKD guidance.",
     monitoring: ["eGFR", "urine albumin-creatinine ratio", "blood pressure", "fasting glucose"],
     sourceUrls: ["https://kdigo.org/guidelines/ckd-evaluation-and-management/", "https://pubmed.ncbi.nlm.nih.gov/33338413/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2110,6 +2155,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Stabilize dosing and follow-up labs first, then adjust treatment with clinician guidance using symptom trends plus confirmed lab changes.",
     monitoring: ["TSH", "free T4", "symptom trend", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/32367664/", "https://pubmed.ncbi.nlm.nih.gov/28402245/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2126,6 +2172,7 @@ const conditions: ConditionEntry[] = [
       "https://www.who.int/publications/i/item/9789240000124",
       "https://pubmed.ncbi.nlm.nih.gov/36017572/"
     ],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2138,6 +2185,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Dietary/lifestyle strategy should be paired with treat-to-target urate management to reduce flare frequency and long-term joint burden.",
     monitoring: ["serum uric acid", "flare frequency", "joint symptom days", "kidney function"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/32391934/", "https://pubmed.ncbi.nlm.nih.gov/27457514/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2150,6 +2198,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Durable reflux control usually requires meal-timing changes, weight and abdominal-pressure reduction, trigger tracking, and stepwise acid-suppression decisions with reassessment for persistent or alarm symptoms.",
     monitoring: ["symptom days per week", "night awakenings", "trigger log", "bodyweight trend"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34807007/", "https://pubmed.ncbi.nlm.nih.gov/34324432/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2162,6 +2211,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "IBS control is strongest with structured dietary therapy, especially low-FODMAP style protocols, plus symptom-trigger personalization.",
     monitoring: ["abdominal pain score", "stool pattern", "food tolerance", "symptom-day frequency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33315591/", "https://pubmed.ncbi.nlm.nih.gov/34376512/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2174,6 +2224,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Aerobic and resistance training alongside blood-pressure control can improve vascular elasticity and reduce pressure-wave burden.",
     monitoring: ["pulse pressure", "blood pressure", "resting heart rate", "aerobic fitness"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30520367/", "https://pubmed.ncbi.nlm.nih.gov/39474152/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2186,6 +2237,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Baseline daily movement is one of the most scalable longevity levers, with risk reduction observable even below traditional 10k-step targets.",
     monitoring: ["daily steps", "sitting time", "resting heart rate", "activity adherence"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34417979/", "https://pubmed.ncbi.nlm.nih.gov/37555441/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2198,6 +2250,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Recurrence prevention is strongest with sustained hydration, urine-guided sodium/oxalate/protein adjustment, and citrate repletion when indicated.",
     monitoring: ["24-hour urine chemistry", "fluid intake consistency", "serum creatinine", "stone events"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/8230497/", "https://pubmed.ncbi.nlm.nih.gov/9366314/", "https://pubmed.ncbi.nlm.nih.gov/27915395/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2210,6 +2263,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Liver enzymes improve most when exercise, weight reduction, alcohol control, and glucose management are sustained together.",
     monitoring: ["ALT/AST", "GGT", "waist circumference", "metabolic panel"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35176096/", "https://pubmed.ncbi.nlm.nih.gov/29683979/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2222,6 +2276,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Most people improve with meal composition and timing changes that reduce rapid glucose swings after eating.",
     monitoring: ["post-meal glucose trend", "symptom episodes", "time in range", "meal-response logs"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/28285645/", "https://pubmed.ncbi.nlm.nih.gov/24784832/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2234,6 +2289,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Lowering glycation load requires stable glycemia and lower AGE dietary exposure, with sustained pattern change outperforming short-term hacks.",
     monitoring: ["fasting glucose", "A1C", "inflammatory markers", "dietary AGE intake patterns"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40673231/", "https://pubmed.ncbi.nlm.nih.gov/36472074/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2246,6 +2302,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Power-oriented resistance training improves functional speed and independence outcomes beyond strength-only prescriptions in many older cohorts.",
     monitoring: ["sit-to-stand speed", "gait speed", "jump or power proxy tests", "functional task timing"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38472180/", "https://pubmed.ncbi.nlm.nih.gov/33721573/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2258,6 +2315,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Recovery interventions can reduce soreness modestly, but best outcomes still depend on load programming, sleep, and nutrition consistency.",
     monitoring: ["recovery time between sessions", "soreness scores", "training adherence", "sleep duration"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/33493991/", "https://pubmed.ncbi.nlm.nih.gov/29021762/"],
+    articleRefs: ["coq10-mitochondrial-energy-aging"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2270,6 +2328,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Persistent daytime sleepiness should trigger sleep-disorder evaluation and circadian correction rather than escalating stimulant use.",
     monitoring: ["daytime alertness ratings", "sleep duration", "sleep fragmentation", "post-meal energy trend"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/27571048/", "https://pubmed.ncbi.nlm.nih.gov/35452108/"],
+    articleRefs: ["apigenin-natural-sleep-aid", "the-nad-plus-uptick-that-cut-afternoon-brain-fog"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2282,6 +2341,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Cardiometabolic improvements are more consistent with sustained whole-food polyphenol intake than short, isolated supplement bursts.",
     monitoring: ["food diversity score", "fruit and vegetable servings", "inflammatory markers", "cardiometabolic markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/39683599/", "https://pubmed.ncbi.nlm.nih.gov/36796437/"],
+    articleRefs: ["the-polyphenol-stack-quietly-winning-in-cognition-clinics"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2298,6 +2358,7 @@ const conditions: ConditionEntry[] = [
       "https://www.who.int/publications/i/item/9789241504829",
       "https://pubmed.ncbi.nlm.nih.gov/38507482/"
     ],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2310,6 +2371,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Stress-related cognitive dips improve most when stress-regulation practice, sleep stability, and workload pacing are implemented together.",
     monitoring: ["focus stability", "perceived stress scale", "sleep quality", "daytime recovery breaks"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35761477/", "https://pubmed.ncbi.nlm.nih.gov/34536088/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2322,6 +2384,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Lp(a) is largely genetically determined; once elevated, risk reduction depends on aggressive apoB and blood-pressure control plus full-risk-factor optimization.",
     monitoring: ["Lp(a)", "apoB", "blood pressure", "hs-CRP"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34647487/", "https://pubmed.ncbi.nlm.nih.gov/36036785/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2334,6 +2397,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Non-dipping patterns often require ambulatory-BP-guided treatment timing, sleep-apnea evaluation, sodium-load reduction, and close follow-up because stroke and renal risk rise when nighttime pressure stays elevated.",
     monitoring: ["24-hour ambulatory BP", "night/day BP ratio", "sleep quality", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41028404/", "https://pubmed.ncbi.nlm.nih.gov/31480717/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2346,6 +2410,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Periodontal disease is linked to systemic inflammatory and cardiovascular risk; consistent dental treatment and oral-hygiene adherence are key risk modifiers.",
     monitoring: ["periodontal assessment", "bleeding on probing", "oral hygiene adherence", "inflammatory markers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35946825/", "https://pubmed.ncbi.nlm.nih.gov/37682950/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2358,6 +2423,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Treating hearing loss can reduce cognitive listening strain and is linked with better long-term cognitive trajectories.",
     monitoring: ["audiometry trend", "listening fatigue", "social engagement", "subjective cognitive effort"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/37583856/", "https://pubmed.ncbi.nlm.nih.gov/33710952/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2370,6 +2436,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Functional restoration with graded loading, education, and biopsychosocial support is more durable than rest-centered care.",
     monitoring: ["pain intensity", "movement tolerance", "activity consistency", "sleep impact"],
     sourceUrls: ["https://www.who.int/publications/i/item/9789240081789", "https://pubmed.ncbi.nlm.nih.gov/28192789/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2382,6 +2449,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Structured social and behavioral interventions can reduce loneliness and improve downstream mood and health outcomes in older adults.",
     monitoring: ["social-contact frequency", "loneliness scale", "mood trend", "activity participation"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/36251294/", "https://pubmed.ncbi.nlm.nih.gov/41573241/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2394,6 +2462,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Medication-burden review and deprescribing frameworks are central for reducing adverse events in older adults with complex regimens.",
     monitoring: ["medication count", "interaction alerts", "adverse event frequency", "functional status"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30693946/", "https://pubmed.ncbi.nlm.nih.gov/32734707/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2406,6 +2475,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Start mobility early and continue a structured home-recovery plan to restore function and reduce long-term decline.",
     monitoring: ["gait speed", "chair-rise performance", "daily activity", "readmission risk"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/31974063/", "https://pubmed.ncbi.nlm.nih.gov/32330558/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2418,6 +2488,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Progressive high-intent resistance training can improve grip-linked functional outcomes and lower frailty trajectory risk.",
     monitoring: ["handgrip strength", "chair-rise test", "gait speed", "lean-mass trend"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38472180/", "https://pubmed.ncbi.nlm.nih.gov/33721573/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2430,6 +2501,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Long-term medication plans should include nutrient surveillance, especially for drug classes with documented depletion risk.",
     monitoring: ["targeted nutrient labs", "symptom trend", "medication timeline", "follow-up nutrient status"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34293712/", "https://pubmed.ncbi.nlm.nih.gov/35638251/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2442,6 +2514,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Reducing alcohol intake improves blood pressure, sleep, and liver-risk markers, with brief interventions effective in many primary-care settings.",
     monitoring: ["weekly alcohol units", "sleep quality", "ALT/AST", "blood pressure"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/15883236/", "https://pubmed.ncbi.nlm.nih.gov/29476653/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2454,6 +2527,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Tobacco/nicotine cessation is one of the largest modifiable risk levers for lifespan and healthspan.",
     monitoring: ["tobacco/nicotine use frequency", "resting heart rate", "respiratory symptoms", "blood pressure"],
     sourceUrls: ["https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/tobacco-smoking-cessation-in-adults-including-pregnant-persons-interventions", "https://pubmed.ncbi.nlm.nih.gov/38135881/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2466,6 +2540,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Exposure reduction, including indoor filtration and high-AQI-day behavior changes, can improve cardiopulmonary risk profiles.",
     monitoring: ["local AQI exposure", "respiratory symptoms", "blood pressure", "activity-adjustment adherence"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/40767818/", "https://pubmed.ncbi.nlm.nih.gov/30208394/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2478,6 +2553,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Orthostatic symptom control typically needs fluid-salt strategy, medication review, compression and conditioning tactics, and clinician-guided autonomic evaluation when dizziness, tachycardia, or presyncope persists.",
     monitoring: ["supine-standing blood pressure", "dizziness episodes", "hydration consistency", "activity tolerance"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/30583909/", "https://pubmed.ncbi.nlm.nih.gov/41088986/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2490,6 +2566,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Vestibular physical therapy has strong evidence for reducing dizziness burden and improving balance confidence in peripheral vestibular hypofunction.",
     monitoring: ["dizziness severity", "fall incidents", "gait confidence", "vestibular symptom triggers"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/34864777/", "https://pubmed.ncbi.nlm.nih.gov/28483885/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2502,6 +2579,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Structured prevention plans using behavioral, non-antibiotic, and selective prophylactic strategies reduce recurrence burden and antibiotic exposure.",
     monitoring: ["UTI episodes per year", "urinary symptom days", "hydration consistency", "culture-confirmed infections"],
     sourceUrls: ["https://www.auanet.org/guidelines-and-quality/guidelines/recurrent-uti", "https://pubmed.ncbi.nlm.nih.gov/31042112/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2514,6 +2592,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Allergic burden is best managed with guideline-based airway care, trigger reduction, and symptom-directed anti-inflammatory therapy.",
     monitoring: ["symptom severity", "sleep disruption", "trigger exposure log", "medication use frequency"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/38685482/", "https://pubmed.ncbi.nlm.nih.gov/39251016/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2526,6 +2605,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Reduce heat risk with personalized hydration, gradual heat acclimation, and schedule changes on high-heat days.",
     monitoring: ["heat symptom episodes", "hydration status", "activity tolerance in heat", "resting heart rate"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/41228151/", "https://pubmed.ncbi.nlm.nih.gov/38732589/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   },
   {
@@ -2538,6 +2618,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Best outcomes come from structured tapering plans paired with CBT-I style sleep retraining and close follow-up.",
     monitoring: ["sleep-aid use frequency", "sleep latency", "night awakenings", "daytime sedation"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/29760253/", "https://pubmed.ncbi.nlm.nih.gov/33508280/"],
+    articleRefs: ["apigenin-natural-sleep-aid"],
     updatedAt: "2026-02-17"
   },
   {
@@ -2550,6 +2631,7 @@ const conditions: ConditionEntry[] = [
     guidanceSummary: "Interventions that directly address social and financial barriers can improve care continuity, adherence, and long-term outcomes.",
     monitoring: ["care-visit continuity", "medication adherence", "cost-related nonadherence", "stress scale trend"],
     sourceUrls: ["https://pubmed.ncbi.nlm.nih.gov/35801145/", "https://pubmed.ncbi.nlm.nih.gov/33656528/"],
+    articleRefs: [],
     updatedAt: "2026-02-17"
   }
 ];

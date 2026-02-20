@@ -2,13 +2,13 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ClinicEntry, ConditionEntry, EvidenceLevel, SupplementEntry } from "@/lib/directory";
 
-function evidenceTone(level: EvidenceLevel): string {
+export function evidenceTone(level: EvidenceLevel): string {
   if (level === "A") return "bg-emerald-500";
   if (level === "B") return "bg-amber-500";
   return "bg-rose-500";
 }
 
-function safetyTone(safety: SupplementEntry["safety"]): string {
+export function safetyTone(safety: SupplementEntry["safety"]): string {
   if (safety === "Low Risk") return "text-[#0f766e]";
   if (safety === "Moderate Risk") return "text-[#b45309]";
   return "text-[#be123c]";
