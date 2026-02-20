@@ -314,6 +314,12 @@ export function getConditionsForSupplements(supplements: SupplementEntry[]): Con
   return [...conditionSlugs].map((slug) => bySlug.get(slug)).filter((item): item is ConditionEntry => Boolean(item)).sort(byNameAsc);
 }
 
+export function getExplicitConditionsForPostSlug(postSlug: string): ConditionEntry[] {
+  return getConditions()
+    .filter((c) => c.articleRefs.includes(postSlug))
+    .sort(byNameAsc);
+}
+
 export function getPostsForSupplementSlug(supplementSlug: string): Post[] {
   const graph = getGraph();
   const slugs = graph.supplementToPosts.get(supplementSlug) ?? new Set<string>();

@@ -17,7 +17,7 @@ import { formatDate, getAllPosts, getRelatedPosts, getTagHref } from "@/lib/post
 import {
   getClinicLinkReasonForPost,
   getClinicsForPostSlug,
-  getConditionsForSupplements,
+  getExplicitConditionsForPostSlug,
   getExplicitSupplementsForPostSlug,
 } from "@/lib/relationships";
 import { siteConfig } from "@/lib/site";
@@ -70,7 +70,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
 
   const relatedPosts = getRelatedPosts(post, 3);
   const relatedSupplements = getExplicitSupplementsForPostSlug(post.slug);
-  const relatedConditions = getConditionsForSupplements(relatedSupplements);
+  const relatedConditions = getExplicitConditionsForPostSlug(post.slug);
   const relatedClinics = siteConfig.features.clinics ? getClinicsForPostSlug(post.slug) : [];
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
   const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
