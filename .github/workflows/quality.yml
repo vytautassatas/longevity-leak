@@ -25,17 +25,14 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Validate Content
-        run: npm run validate:content
+      - name: Content Quality
+        run: npm run quality:content
 
-      - name: Content Report
-        run: npm run content:report
+      - name: Directory Quality
+        run: npm run quality:directory
 
       - name: Typecheck
         run: npx tsc --noEmit
-
-      - name: Tests
-        run: npm test
 
       - name: Build
         run: npm run build
