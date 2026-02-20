@@ -18,7 +18,7 @@ import {
   getClinicLinkReasonForPost,
   getClinicsForPostSlug,
   getExplicitConditionsForPostSlug,
-  getExplicitSupplementsForPostSlug,
+  getExplicitSupplementsForPostSlug
 } from "@/lib/relationships";
 import { siteConfig } from "@/lib/site";
 
@@ -26,6 +26,34 @@ type Params = { slug: string };
 type MaybePromise<T> = T | Promise<T>;
 
 export const dynamicParams = false;
+
+function stripLeadingMdxH1(content: string): string {
+  const lines = content.split("\n");
+  let firstContentIndex = 0;
+
+  while (firstContentIndex < lines.length && lines[firstContentIndex].trim() === "") {
+    firstContentIndex += 1;
+  }
+
+  const firstLine = lines[firstContentIndex] ?? "";
+  const secondLine = lines[firstContentIndex + 1] ?? "";
+
+  const isAtxH1 = /^#\s+.+/.test(firstLine.trim());
+  const isSetextH1 = firstLine.trim().length > 0 && /^=+\s*$/.test(secondLine.trim());
+
+  if (!isAtxH1 && !isSetextH1) {
+    return content;
+  }
+
+  const removeCount = isSetextH1 ? 2 : 1;
+  lines.splice(firstContentIndex, removeCount);
+
+  while (firstContentIndex < lines.length && lines[firstContentIndex].trim() === "") {
+    lines.splice(firstContentIndex, 1);
+  }
+
+  return lines.join("\n");
+}
 
 export function generateStaticParams(): Params[] {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -69,11 +97,12 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
   if (!post) notFound();
 
   const relatedPosts = getRelatedPosts(post, 3);
-  const relatedSupplements = getExplicitSupplementsForPostSlug(post.slug);
-  const relatedConditions = getExplicitConditionsForPostSlug(post.slug);
+  const relatedSupplements = getExplicitSupplementsForPostSlug(post.slug).slice(0, 8);
+  const relatedConditions = getExplicitConditionsForPostSlug(post.slug).slice(0, 8);
   const relatedClinics = siteConfig.features.clinics ? getClinicsForPostSlug(post.slug) : [];
   const postUrl = `${siteConfig.url}/posts/${post.slug}`;
   const hasStudyUrl = typeof post.study_url === "string" && post.study_url.length > 0;
+  const renderedContent = stripLeadingMdxH1(post.content);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -173,7 +202,7 @@ export default async function PostPage({ params }: { params: MaybePromise<Params
                     remarkPlugins: [remarkGfm]
                   }
                 }}
-                source={post.content}
+                source={renderedContent}
               />
             </section>
 
