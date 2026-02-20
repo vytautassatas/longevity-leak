@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/site";
 
 const baseDirectoryNav = [
-  { href: "/#latest-research", label: "News" },
+  { href: "/posts", label: "News" },
   { href: "/supplements", label: "Supplements" },
   { href: "/conditions", label: "Conditions" }
 ];
@@ -72,7 +72,7 @@ export function SiteHeader(): JSX.Element {
                 <li key={item.href}>
                   <Link
                     className={`inline-flex h-8 items-center rounded-full border px-3 text-[10px] font-bold uppercase tracking-[0.1em] transition-colors sm:h-9 sm:px-3.5 sm:text-[11px] sm:tracking-[0.12em] ${
-                      (item.href === "/#latest-research" ? pathname === "/" : pathname.startsWith(item.href))
+                      pathname.startsWith(item.href)
                         ? "border-[var(--text)] bg-[var(--text)] text-[var(--bg)]"
                         : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--border-strong)] hover:text-[var(--text)]"
                     }`}
